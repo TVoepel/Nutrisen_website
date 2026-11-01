@@ -31,7 +31,7 @@ TITLE_DE = {
     'how': 'Wie funktioniert der Premium-Service von NutriSen?',
     'test': 'Nitratgehalt Ihres Feldes kostenlos testen',
     'lab': 'Über uns',
-    'calc': 'LiveSen-MAP Düngerechner: Vergleich von 3 Gaben',
+    'calc': 'NutriSen Düngerechner: Vergleich von 3 Gaben',
     'cases': 'Praxisfälle 2025/2026: weniger Dünger, gleicher oder höherer Ertrag',
 }
 TITLE_EN_LEGAL = {'legal': 'NutriSen GmbH Legal Notice', 'privacy': 'Privacy Policy'}
@@ -245,7 +245,7 @@ DE.update({
     'Compare your own fertilization in detail': 'Eigene Düngung im Detail vergleichen',
     # --- fertilizer calculator page
     'Fertilizer calculator': 'Düngerechner',
-    'LiveSen-MAP fertilizer calculator:': 'LiveSen-MAP Düngerechner:',
+    'NutriSen fertilizer calculator:': 'NutriSen Düngerechner:',
     'compare 3 applications': 'Vergleich von 3 Gaben',
     'Compare your usual fertilization with a LiveSen-MAP optimized one. Fertilizer prices are suggested from official EU data and can be replaced by your own purchase prices.':
         'Vergleichen Sie Ihre betriebsübliche Düngung mit einer LiveSen-MAP-optimierten Düngung. Düngerpreise werden aus amtlichen EU-Daten vorgeschlagen und können durch Ihre eigenen Einkaufspreise ersetzt werden.',

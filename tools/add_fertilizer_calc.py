@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add the LiveSen-MAP fertilizer calculator page (/agriculture/calculator/) and a menu entry on every page.
+"""Add the NutriSen fertilizer calculator page (/agriculture/calculator/) and a menu entry on every page.
 Run after add_usecases.py and BEFORE i18n.py. Prices come from assets/fertilizer-prices.json (tools/fetch_prices.py).
 Usage: python3 tools/add_fertilizer_calc.py <site root>"""
 import os, re, sys, posixpath
@@ -21,7 +21,7 @@ for p in PAGES:
 BODY = '''<div class="ns-fc">
 <section class="ns-fc-hero"><div class="ns-fc-wrap">
 <p class="ns-fc-eyebrow">Fertilizer calculator</p>
-<h1>LiveSen-MAP fertilizer calculator: <span>compare 3 applications</span></h1>
+<h1>NutriSen fertilizer calculator: <span>compare 3 applications</span></h1>
 <p class="ns-fc-lead">Compare your usual fertilization with a LiveSen-MAP optimized one. Fertilizer prices are suggested from official EU data and can be replaced by your own purchase prices.</p>
 </div></section>
 <div class="ns-fc-wrap">
@@ -43,7 +43,7 @@ t = re.sub(r'(<div data-page-id="b10b79d3[^>]*class="[^"]*?) navigation-selected
 t = re.sub(r'(<div data-page-id="%s"[^>]*class="[^"]*?)"' % NEW_ID, r'\1 navigation-selected"', t)
 t = re.sub(r'(<div data-page-id="b10b79d3[^>]*><div><a href=")\./(")', r'\1../how-does-it-work/\2', t)
 t = re.sub(r'(<div data-page-id="%s"[^>]*><div><a href=")[^"]*(")' % NEW_ID, r'\1./\2', t)
-t = re.sub(r'<title>[^<]*</title>', '<title>LiveSen-MAP fertilizer calculator: compare 3 applications</title>', t, count=1)
+t = re.sub(r'<title>[^<]*</title>', '<title>NutriSen fertilizer calculator: compare 3 applications</title>', t, count=1)
 t = re.sub(r'(<meta\s+name="description" content=")[^"]*(")', r'\1Compare your usual fertilization with LiveSen-MAP in three applications, with fertilizer price suggestions from official EU data.\2', t, count=1, flags=re.S)
 t = t.replace('</head>', '<link rel="stylesheet" href="../../assets/fcalc.css">\n</head>', 1)
 os.makedirs(os.path.join(ROOT, NEW), exist_ok=True)

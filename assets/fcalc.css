@@ -1,4 +1,4 @@
-/* LiveSen-MAP fertilizer calculator page */
+/* NutriSen fertilizer calculator page */
 .ns-fc{--blue:#0b4ea2;--navy:#0f2a5e;--green:#06b262;--gdk:#02733e;--ink:#1b1f27;font-family:Poppins,Hind,system-ui,sans-serif;color:var(--ink);background:#e9e9e9;padding-bottom:clamp(30px,5vw,60px)}
 .ns-fc *{box-sizing:border-box}
 .ns-fc [hidden]{display:none!important}

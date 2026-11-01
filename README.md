@@ -93,7 +93,7 @@ The two unlinked pages are still publicly reachable on the live site because the
   | Agriculture, desktop | 1,131 KB | 229 KB |
   | How does it work, mobile | 1,804 KB | 379 KB |
 
-- **LiveSen-MAP fertilizer calculator (2026-11-02):** `/agriculture/calculator/` (German: `/de/agriculture/calculator/`)
+- **NutriSen fertilizer calculator (2026-11-02):** `/agriculture/calculator/` (German: `/de/agriculture/calculator/`)
   compares the usual fertilization with a LiveSen-MAP fertilization in three applications (fertilizer, price per
   tonne, N content, target kg N/ha, costs, savings, detail table). In the Agriculture menu on every page, and linked
   from the quick calculator. Sources: `assets/fcalc.js`, `assets/fcalc.css`; generator: `tools/add_fertilizer_calc.py`.
