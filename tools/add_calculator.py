@@ -17,7 +17,8 @@ def section(prefix):
 <div class="ns-calc-out"><div><b data-calc="save">€8,000</b><span class="l">fertilizer costs saved per year, about 80 € per ha</span></div>
 <div><b><em>up to</em> <span data-calc="gain">€24,000</span></b><span class="l">extra revenue per year, up to 240 € per ha</span></div>
 <a class="ns-calc-btn" href="{prefix}agriculture/test-your-field/">Test your field for free</a>
-<small>Average values for wheat, December 2022 prices. Results vary by farm, see the <a href="{prefix}agriculture/use-cases/">practice cases</a>.</small></div></div>
+<small>Average values for wheat, December 2022 prices. Results vary by farm, see the <a href="{prefix}agriculture/use-cases/">practice cases</a>.</small>
+<a class="ns-calc-more" href="{prefix}agriculture/calculator/">Compare your own fertilization in detail</a></div></div>
 <script>{js}</script></section>
 '''
 

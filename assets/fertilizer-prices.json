@@ -1,0 +1,771 @@
+{
+ "agridata": {
+  "K": {
+   "avg_ref_year": 357.8,
+   "change_pct": 1.4,
+   "month": 9,
+   "price": 363.0,
+   "year": 2026
+  },
+  "N": {
+   "avg_ref_year": 380.4,
+   "change_pct": 23.3,
+   "month": 9,
+   "price": 469.0,
+   "year": 2026
+  },
+  "P": {
+   "avg_ref_year": 594.5,
+   "change_pct": 24.8,
+   "month": 9,
+   "price": 742.0,
+   "year": 2026
+  },
+  "ref_year": 2025,
+  "unit": "EUR per tonne (as published, aggregated by nutrient)",
+  "url": "https://agridata.ec.europa.eu/extensions/DashboardFertiliser/FertiliserPrices.html"
+ },
+ "countries": {
+  "AT": {
+   "de": "Österreich",
+   "en": "Austria",
+   "excluded": [],
+   "prices": {},
+   "reported": false
+  },
+  "BE": {
+   "de": "Belgien",
+   "en": "Belgium",
+   "excluded": [
+    "AM203111",
+    "AM203112",
+    "AM203113",
+    "AM203116",
+    "AM203118",
+    "AM203131"
+   ],
+   "prices": {
+    "AM203133": {
+     "p": 1,
+     "v": 806.85
+    }
+   },
+   "reported": true
+  },
+  "BG": {
+   "de": "Bulgarien",
+   "en": "Bulgaria",
+   "excluded": [
+    "AM203111",
+    "AM203113",
+    "AM203114",
+    "AM203116",
+    "AM203118",
+    "AM203119",
+    "AM203121",
+    "AM203131",
+    "AM203133"
+   ],
+   "prices": {},
+   "reported": true
+  },
+  "CY": {
+   "de": "Zypern",
+   "en": "Cyprus",
+   "excluded": [
+    "AM203111",
+    "AM203112",
+    "AM203113",
+    "AM203114",
+    "AM203115",
+    "AM203133"
+   ],
+   "prices": {
+    "AM203116": {
+     "p": 0,
+     "v": 1616.77
+    }
+   },
+   "reported": true
+  },
+  "CZ": {
+   "de": "Tschechien",
+   "en": "Czechia",
+   "excluded": [
+    "AM203133"
+   ],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1357.91
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1230.76
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1229.83
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1591.87
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1099.12
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1134.28
+    },
+    "AM203119": {
+     "p": 0,
+     "v": 1836.24
+    },
+    "AM203121": {
+     "p": 0,
+     "v": 2784.51
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 718.69
+    }
+   },
+   "reported": true
+  },
+  "DE": {
+   "de": "Deutschland",
+   "en": "Germany",
+   "excluded": [],
+   "prices": {
+    "AM203113": {
+     "p": 0,
+     "v": 1303.82
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1058.11
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1166.32
+    },
+    "AM203132": {
+     "p": 0,
+     "v": 789.15
+    }
+   },
+   "reported": true
+  },
+  "DK": {
+   "de": "Dänemark",
+   "en": "Denmark",
+   "excluded": [],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1521.43
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1326.24
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1219.72
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1429.87
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1161.91
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1869.99
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 712.26
+    },
+    "AM203132": {
+     "p": 0,
+     "v": 709.28
+    },
+    "AM203133": {
+     "p": 0,
+     "v": 1090.75
+    }
+   },
+   "reported": true
+  },
+  "EE": {
+   "de": "Estland",
+   "en": "Estonia",
+   "excluded": [],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1328.25
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1315.02
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1016.54
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1337.93
+    }
+   },
+   "reported": true
+  },
+  "EL": {
+   "de": "Griechenland",
+   "en": "Greece",
+   "excluded": [
+    "AM203111",
+    "AM203113",
+    "AM203114",
+    "AM203115",
+    "AM203116"
+   ],
+   "prices": {
+    "AM203117": {
+     "p": 0,
+     "v": 724.58
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 897.81
+    },
+    "AM203119": {
+     "p": 0,
+     "v": 694.94
+    },
+    "AM203132": {
+     "p": 0,
+     "v": 436.91
+    }
+   },
+   "reported": true
+  },
+  "ES": {
+   "de": "Spanien",
+   "en": "Spain",
+   "excluded": [
+    "AM203133"
+   ],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1563.81
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1471.54
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1649.25
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1153.7
+    },
+    "AM203121": {
+     "p": 0,
+     "v": 1812.22
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 812.67
+    }
+   },
+   "reported": true
+  },
+  "FI": {
+   "de": "Finnland",
+   "en": "Finland",
+   "excluded": [],
+   "prices": {},
+   "reported": true
+  },
+  "FR": {
+   "de": "Frankreich",
+   "en": "France",
+   "excluded": [],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1825.72
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1431.56
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1684.65
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1152.1
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1205.32
+    },
+    "AM203119": {
+     "p": 0,
+     "v": 1411.75
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 699.15
+    }
+   },
+   "reported": true
+  },
+  "HR": {
+   "de": "Kroatien",
+   "en": "Croatia",
+   "excluded": [
+    "AM203113",
+    "AM203114",
+    "AM203116"
+   ],
+   "prices": {},
+   "reported": true
+  },
+  "HU": {
+   "de": "Ungarn",
+   "en": "Hungary",
+   "excluded": [
+    "AM203133"
+   ],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1628.85
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1197.4
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1213.54
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1432.49
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1031.58
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1221.27
+    },
+    "AM203119": {
+     "p": 0,
+     "v": 1543.44
+    },
+    "AM203121": {
+     "p": 0,
+     "v": 2232.71
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 549.89
+    },
+    "AM203132": {
+     "p": 0,
+     "v": 604.71
+    }
+   },
+   "reported": true
+  },
+  "IE": {
+   "de": "Irland",
+   "en": "Ireland",
+   "excluded": [
+    "AM203111",
+    "AM203133"
+   ],
+   "prices": {
+    "AM203113": {
+     "p": 1,
+     "v": 1539.69
+    },
+    "AM203116": {
+     "p": 1,
+     "v": 1162.54
+    },
+    "AM203121": {
+     "p": 1,
+     "v": 3357.29
+    },
+    "AM203131": {
+     "p": 1,
+     "v": 976.8
+    }
+   },
+   "reported": true
+  },
+  "IT": {
+   "de": "Italien",
+   "en": "Italy",
+   "excluded": [
+    "AM203111",
+    "AM203112",
+    "AM203114",
+    "AM203115",
+    "AM203116",
+    "AM203117"
+   ],
+   "prices": {
+    "AM203133": {
+     "p": 1,
+     "v": 698.4
+    }
+   },
+   "reported": true
+  },
+  "LT": {
+   "de": "Litauen",
+   "en": "Lithuania",
+   "excluded": [
+    "AM203133"
+   ],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1296.47
+    },
+    "AM203112": {
+     "p": 0,
+     "v": 1300.6
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1265.05
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1067.5
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1381.91
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1080.26
+    },
+    "AM203117": {
+     "p": 0,
+     "v": 1062.34
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1092.9
+    },
+    "AM203119": {
+     "p": 0,
+     "v": 1223.57
+    },
+    "AM203121": {
+     "p": 0,
+     "v": 2451.8
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 647.34
+    },
+    "AM203132": {
+     "p": 0,
+     "v": 715.16
+    }
+   },
+   "reported": true
+  },
+  "LU": {
+   "de": "Luxemburg",
+   "en": "Luxembourg",
+   "excluded": [],
+   "prices": {
+    "AM203111": {
+     "p": 1,
+     "v": 1259.3
+    },
+    "AM203113": {
+     "p": 1,
+     "v": 1328.31
+    },
+    "AM203115": {
+     "p": 1,
+     "v": 1544.37
+    },
+    "AM203116": {
+     "p": 1,
+     "v": 1049.61
+    },
+    "AM203118": {
+     "p": 1,
+     "v": 1109.59
+    }
+   },
+   "reported": true
+  },
+  "LV": {
+   "de": "Lettland",
+   "en": "Latvia",
+   "excluded": [
+    "AM203116",
+    "AM203117",
+    "AM203133"
+   ],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1102.48
+    },
+    "AM203112": {
+     "p": 0,
+     "v": 1102.48
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1322.44
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1046.21
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1046.21
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1089.53
+    },
+    "AM203119": {
+     "p": 0,
+     "v": 1175.59
+    },
+    "AM203121": {
+     "p": 0,
+     "v": 2807.53
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 682.22
+    },
+    "AM203132": {
+     "p": 0,
+     "v": 682.22
+    }
+   },
+   "reported": true
+  },
+  "MT": {
+   "de": "Malta",
+   "en": "Malta",
+   "excluded": [],
+   "prices": {},
+   "reported": false
+  },
+  "NL": {
+   "de": "Niederlande",
+   "en": "Netherlands",
+   "excluded": [
+    "AM203111",
+    "AM203113",
+    "AM203116",
+    "AM203118",
+    "AM203131",
+    "AM203133"
+   ],
+   "prices": {},
+   "reported": true
+  },
+  "PL": {
+   "de": "Polen",
+   "en": "Poland",
+   "excluded": [
+    "AM203111",
+    "AM203112",
+    "AM203113",
+    "AM203114",
+    "AM203115",
+    "AM203116",
+    "AM203117",
+    "AM203118",
+    "AM203119",
+    "AM203121",
+    "AM203132"
+   ],
+   "prices": {
+    "AM203131": {
+     "p": 0,
+     "v": 436.13
+    },
+    "AM203133": {
+     "p": 0,
+     "v": 847.37
+    }
+   },
+   "reported": true
+  },
+  "PT": {
+   "de": "Portugal",
+   "en": "Portugal",
+   "excluded": [
+    "AM203133"
+   ],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1847.67
+    },
+    "AM203112": {
+     "p": 0,
+     "v": 1744.91
+    },
+    "AM203113": {
+     "p": 0,
+     "v": 1527.26
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1164.23
+    },
+    "AM203121": {
+     "p": 0,
+     "v": 1933.12
+    },
+    "AM203131": {
+     "p": 0,
+     "v": 849.65
+    }
+   },
+   "reported": true
+  },
+  "RO": {
+   "de": "Rumänien",
+   "en": "Romania",
+   "excluded": [
+    "AM203133"
+   ],
+   "prices": {
+    "AM203113": {
+     "p": 0,
+     "v": 1417.58
+    },
+    "AM203114": {
+     "p": 0,
+     "v": 1742.82
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1232.95
+    },
+    "AM203117": {
+     "p": 0,
+     "v": 1284.71
+    }
+   },
+   "reported": true
+  },
+  "SE": {
+   "de": "Schweden",
+   "en": "Sweden",
+   "excluded": [],
+   "prices": {},
+   "reported": true
+  },
+  "SI": {
+   "de": "Slowenien",
+   "en": "Slovenia",
+   "excluded": [],
+   "prices": {},
+   "reported": true
+  },
+  "SK": {
+   "de": "Slowakei",
+   "en": "Slovakia",
+   "excluded": [
+    "AM203133"
+   ],
+   "prices": {
+    "AM203111": {
+     "p": 0,
+     "v": 1421.95
+    },
+    "AM203115": {
+     "p": 0,
+     "v": 1228
+    },
+    "AM203116": {
+     "p": 0,
+     "v": 1037
+    },
+    "AM203118": {
+     "p": 0,
+     "v": 1221.72
+    }
+   },
+   "reported": true
+  }
+ },
+ "eurostat": {
+  "dataset": "apri_aip_ft",
+  "label": "Purchase prices for fertilisers (expressed in nutritive content)",
+  "median": {
+   "AM203111": 1152.9,
+   "AM203112": 1152.9,
+   "AM203113": 1152.9,
+   "AM203114": 1152.9,
+   "AM203115": 1152.9,
+   "AM203116": 1152.9,
+   "AM203117": 1152.9,
+   "AM203118": 1152.9,
+   "AM203119": 1152.9,
+   "AM203121": 2232.71,
+   "AM203131": 716.925,
+   "AM203132": 716.925,
+   "AM203133": 716.925
+  },
+  "rule": "Values outside 0.6x-1.7x of the EU median of the same nutrient group (all N products, P, K) are not used (probable unit differences in reporting).",
+  "unit": "EUR per tonne of nutrient",
+  "updated": "2026-10-02",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/apri_aip_ft",
+  "year": 2025
+ },
+ "items": {
+  "AM203111": "Ammonium sulphate 16-26% (AS) - granular",
+  "AM203112": "Ammonium sulphate 16-26% (AS) - crystalized",
+  "AM203113": "Calcium ammonium nitrate 22-32% (CAN) - all forms",
+  "AM203114": "Ammonium nitrate (AN) 28-38% - granular",
+  "AM203115": "Ammonium nitrate (AN-24S) 20-30% N+S - granular",
+  "AM203116": "Urea (AUS) 46% - granular",
+  "AM203117": "Urea (AUS) 46% - prilled",
+  "AM203118": "Urea ammonium nitrate (UAN) 27-37%",
+  "AM203119": "Urea ammonium nitrate + S (UAN-26S) 22-32% N+S",
+  "AM203121": "Single superphosphate (SSP) under 25% - all forms",
+  "AM203131": "Potassium chloride (KCl) 55-65% - granular/compacted",
+  "AM203132": "Potassium chloride (KCl) 55-65% - prilled",
+  "AM203133": "Potassium sulphate (K2SO4) 45-55% - all forms"
+ },
+ "retrieved": "2026-11-01"
+}

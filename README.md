@@ -93,6 +93,25 @@ The two unlinked pages are still publicly reachable on the live site because the
   | Agriculture, desktop | 1,131 KB | 229 KB |
   | How does it work, mobile | 1,804 KB | 379 KB |
 
+- **LiveSen-MAP fertilizer calculator (2026-11-02):** `/agriculture/calculator/` (German: `/de/agriculture/calculator/`)
+  compares the usual fertilization with a LiveSen-MAP fertilization in three applications (fertilizer, price per
+  tonne, N content, target kg N/ha, costs, savings, detail table). In the Agriculture menu on every page, and linked
+  from the quick calculator. Sources: `assets/fcalc.js`, `assets/fcalc.css`; generator: `tools/add_fertilizer_calc.py`.
+  - **Where the prices come from (free sources only, nothing is invented):**
+    Eurostat dataset `apri_aip_ft` "Purchase prices for fertilisers", EUR per tonne of nutrient, annual 2025, per
+    Member State. Only products that match a fertilizer in the list are suggested: KAS = CAN, ASS = AN with sulphur,
+    urea, AHL = UAN. For Alzon Neo, DAP and Innofert Star there is no EU price, so the user enters their own.
+    The dataset is marked provisional by Eurostat and some countries clearly report in another unit, so values outside
+    0.6x to 1.7x of the EU median of the nutrient group are not used (shown as "enter your own price"). Austria and
+    Malta are not in the dataset. The EU Agri-food data portal supplies a monthly EU nitrogen price indicator that
+    is shown as a trend only. It is not used in any cost calculation, because it is aggregated by nutrient and its
+    unit basis differs from Eurostat's. Every price can be overwritten with the user's own purchase price.
+  - **Refreshing the prices:** `python3 tools/fetch_prices.py` rewrites `assets/fertilizer-prices.json`. The GitHub
+    workflow `.github/workflows/update-fertilizer-prices.yml` does this monthly and commits changes. The page reads the
+    JSON at runtime, so no rebuild is needed. The browser cannot call the EU API directly (no CORS), hence the file.
+  - The disclaimer text on the page (market data source, no liability) was provided by the site owner. The
+    paragraph about Eurostat was added to cover the second source.
+
 ## Refreshing the mirror
 
 ```
@@ -101,6 +120,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
+`apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
-`usecases.css`, `calc.css`, `calc.js`. `i18n.py` refuses to run twice on the same files.
+`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`. `i18n.py` refuses to run twice on the same files.

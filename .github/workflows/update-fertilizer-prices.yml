@@ -1,0 +1,24 @@
+name: Update fertilizer prices
+# Refreshes assets/fertilizer-prices.json from Eurostat and the EU Agri-food data portal (free, no key).
+on:
+  schedule:
+    - cron: '17 5 3 * *'   # monthly, on the 3rd
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python3 tools/fetch_prices.py
+      - name: Commit if the source data changed
+        run: |
+          if ! git diff --quiet -- assets/fertilizer-prices.json; then
+            git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
+            git add assets/fertilizer-prices.json
+            git commit -m "Update fertilizer price data (Eurostat, EU Agri-food data portal)"
+            git push
+          fi

@@ -16,4 +16,5 @@
 .ns-calc-btn:hover,.ns-calc-btn:focus-visible{transform:translateY(-2px);outline:none}
 .ns-calc-out small{font-size:12px;line-height:1.5;color:#6a7080}
 .ns-calc-out small a{color:inherit;text-decoration:underline}
+.ns-calc-more{align-self:flex-start;font-size:14px;font-weight:500;color:#0b4ea2!important;text-decoration:underline!important;text-underline-offset:3px}
 @media (max-width:760px){.ns-calc-card{grid-template-columns:1fr}.ns-calc-btn{align-self:stretch;text-align:center}}

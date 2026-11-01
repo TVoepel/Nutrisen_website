@@ -1,0 +1,56 @@
+/* LiveSen-MAP fertilizer calculator page */
+.ns-fc{--blue:#0b4ea2;--navy:#0f2a5e;--green:#06b262;--gdk:#02733e;--ink:#1b1f27;font-family:Poppins,Hind,system-ui,sans-serif;color:var(--ink);background:#e9e9e9;padding-bottom:clamp(30px,5vw,60px)}
+.ns-fc *{box-sizing:border-box}
+.ns-fc [hidden]{display:none!important}
+.ns-fc-wrap{max-width:1180px;margin:0 auto;padding:0 clamp(14px,4vw,40px)}
+.ns-fc-hero{background:radial-gradient(1200px 400px at 85% -10%,#2a6ad0 0,transparent 60%),linear-gradient(135deg,#0f2a5e,#1f4e9c);color:#fff;padding:clamp(34px,5vw,64px) 0 clamp(70px,9vw,104px)}
+.ns-fc-eyebrow{margin:0 0 10px;font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#9fd0ff}
+.ns-fc-hero h1{margin:0;font-size:clamp(26px,4vw,46px);line-height:1.12;font-weight:700;color:#fff;max-width:900px}
+.ns-fc-hero h1 span{color:#7dffb8}
+.ns-fc-lead{margin:16px 0 0;max-width:760px;font-size:17px;line-height:1.55;color:rgba(255,255,255,.9)}
+.ns-fc-app{margin-top:-52px;position:relative}
+.ns-fc-card{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(15,42,94,.16);padding:clamp(16px,3vw,28px);margin-bottom:20px}
+.ns-fc label{display:block;margin:10px 0 5px;font-size:13px;font-weight:600;color:#4a5160}
+.ns-fc select,.ns-fc input{width:100%;padding:11px 12px;border:1.5px solid #c9d3cd;border-radius:10px;font:inherit;font-size:15px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.ns-fc select:focus,.ns-fc input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(11,78,162,.18)}
+.ns-fc-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 22px;align-items:end}
+.ns-fc-tip{margin-top:16px;padding:12px 14px;border-left:4px solid var(--blue);background:#eef3fa;border-radius:8px;font-size:14px;line-height:1.5}
+.ns-fc-ex{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:99px;background:#fff6d6;color:#6b5200;font-size:13px;font-weight:500}
+.ns-fc-cmp{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ns-fc-sc{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(15,42,94,.12);overflow:hidden}
+.ns-fc-sh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 20px;color:#fff;font-size:19px;font-weight:600;background:linear-gradient(135deg,#0f2a5e,#1f4e9c)}
+.ns-fc-sc--live .ns-fc-sh{background:linear-gradient(135deg,#02733e,#06b262)}
+.ns-fc-copy{padding:8px 14px;border:0;border-radius:10px;background:#fff;color:var(--gdk);font:600 13px Poppins,Hind,system-ui,sans-serif;cursor:pointer;transition:transform .2s}
+.ns-fc-copy:hover,.ns-fc-copy:focus-visible{transform:scale(1.05);outline:none}
+.ns-fc-ev{margin:14px;padding:14px;border-radius:12px;background:#f4f6f8}
+.ns-fc-et{margin:0 0 4px;font-size:16px;font-weight:700}
+.ns-fc-g{display:grid;grid-template-columns:repeat(2,1fr);gap:0 12px}
+.ns-fc-g .wide{grid-column:1/-1}
+.ns-fc-hint{margin:6px 0 0;font-size:12.5px;line-height:1.45;color:#4a5160}
+.ns-fc-hint.warn{color:#8a4b00}
+.ns-fc-out{margin-top:10px;font-size:14px;font-weight:600;color:#2b2f36}
+.ns-fc-res{margin:14px;padding:16px 18px;border-radius:14px;color:#fff;background:linear-gradient(135deg,#0f2a5e,#1f4e9c)}
+.ns-fc-sc--live .ns-fc-res{background:linear-gradient(135deg,#02733e,#06b262)}
+.ns-fc-rr{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:6px 0;font-size:14px}
+.ns-fc-rr b{font-size:clamp(18px,2.2vw,24px);font-weight:700;white-space:nowrap}
+.ns-fc-rr.t{margin-top:6px;padding-top:10px;border-top:2px solid rgba(255,255,255,.4)}
+.ns-fc-sv{padding:clamp(18px,3vw,28px);border-radius:18px;text-align:center;background:#d8f3e3;color:#0f5132}
+.ns-fc-sv.neg{background:#f8d7da;color:#842029}.ns-fc-sv.neu{background:#eef3fa;color:#31405a}
+.ns-fc-sv h2{margin:0 0 6px;font-size:18px;font-weight:600;color:inherit}
+.ns-fc-sv b{display:block;font-size:clamp(30px,5vw,46px);line-height:1.1;font-weight:700}
+.ns-fc-sv span{display:block;margin-top:4px;font-size:15px}
+.ns-fc-dt{width:100%;border-collapse:collapse;font-size:14px}
+.ns-fc-dt th,.ns-fc-dt td{padding:10px;text-align:left;border-bottom:1px solid #e1e4ea;vertical-align:top}
+.ns-fc-dt th{background:#f1f3f5;font-weight:600;color:#4a5160}
+.ns-fc-dt tr.tot td{background:#e7f0fb;font-weight:700}
+.ns-fc-pos{color:#0f5132;font-weight:700}.ns-fc-negt{color:#842029;font-weight:700}
+.ns-fc-card h2.dh{margin:0 0 12px;font-size:20px;color:var(--ink)}
+.ns-fc-mkt{font-size:13.5px;line-height:1.55;color:#31405a}
+.ns-fc-cta{margin:20px 0;padding:clamp(24px,4vw,40px);border-radius:18px;background:linear-gradient(135deg,#02733e,#06b262);color:#fff;display:flex;gap:18px 40px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.ns-fc-cta h2{margin:0 0 6px;font-size:clamp(21px,2.8vw,30px);color:#fff;font-weight:700}
+.ns-fc-cta p{margin:0;font-size:16px;color:rgba(255,255,255,.92);max-width:560px}
+.ns-fc-btn{display:inline-block;padding:15px 26px;border-radius:12px;background:#fff;color:var(--gdk)!important;font-weight:600;font-size:17px;text-decoration:none!important;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s}
+.ns-fc-btn:hover,.ns-fc-btn:focus-visible{transform:translateY(-2px);outline:none}
+.ns-fc-disc{margin:0 0 10px;font-size:12.5px;line-height:1.6;color:#4a5160}
+.ns-fc-disc a{color:inherit;text-decoration:underline}
+@media (max-width:900px){.ns-fc-cmp{grid-template-columns:1fr}.ns-fc-dt{display:block;overflow-x:auto}}

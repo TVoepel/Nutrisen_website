@@ -133,16 +133,19 @@ open('.htaccess', 'w').write('''# Speed: compression + long caching for versione
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/json "access plus 1 hour"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   ExpiresByType text/html "access plus 10 minutes"
 </IfModule>
 ''')
-open('_headers', 'w').write('''/wp-content/*
+open('_headers', 'w').write('''/wp-content/uploads/go-x/u/*
   Cache-Control: public, max-age=31536000, immutable
-/assets/*
+/wp-content/themes/gox/public/fonts/*
   Cache-Control: public, max-age=31536000, immutable
-/wp-includes/*
+/assets/hero-*
   Cache-Control: public, max-age=31536000, immutable
+/assets/fertilizer-prices.json
+  Cache-Control: public, max-age=3600
 ''')
 print('images converted: %d, files removed: %d, size %.1f MB -> %.1f MB' % (len(conv), removed, before / 1e6, du() / 1e6))

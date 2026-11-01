@@ -9,6 +9,7 @@ NAV_DE = {
     'How does it work': 'So funktioniert es',
     'Test your field': 'Feld testen',
     'Use cases': 'Praxisfälle',
+    'Calculator': 'Düngerechner',
     'Impressum': 'Impressum',
     'Datenschutzerklärung': 'Datenschutzerklärung',
     '© Copyright. All rights reserved.': '© Copyright. Alle Rechte vorbehalten.',
@@ -30,6 +31,7 @@ TITLE_DE = {
     'how': 'Wie funktioniert der Premium-Service von NutriSen?',
     'test': 'Nitratgehalt Ihres Feldes kostenlos testen',
     'lab': 'Über uns',
+    'calc': 'LiveSen-MAP Düngerechner: Vergleich von 3 Gaben',
     'cases': 'Praxisfälle 2025/2026: weniger Dünger, gleicher oder höherer Ertrag',
 }
 TITLE_EN_LEGAL = {'legal': 'NutriSen GmbH Legal Notice', 'privacy': 'Privacy Policy'}
@@ -44,6 +46,8 @@ DESC_DE = {
         'Im Labor haben wir den ersten enzymbasierten Sensor zur Messung von Pflanzennährstoffen direkt auf dem Feld entwickelt.',
     'Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, or up to 14 % more yield.':
         'Fünf Praxisfälle 2025/2026: bis zu 30 % weniger Dünger bei gleichem Ertrag oder bis zu 14 % Mehrertrag.',
+    'Compare your usual fertilization with LiveSen-MAP in three applications, with fertilizer price suggestions from official EU data.':
+        'Vergleichen Sie Ihre betriebsübliche Düngung mit LiveSen-MAP in drei Gaben, mit Düngerpreis-Vorschlägen aus amtlichen EU-Daten.',
     'Company founded in 2023, with headquarters in Straubing.':
         'Unternehmen, gegründet 2023, mit Sitz in Straubing.',
 }
@@ -51,6 +55,7 @@ DESC_EN_LEGAL = {}   # the English legal pages keep the existing English descrip
 
 # ---------------------------------------------------------------- text that stays as it is
 KEEP = {
+    'Eurostat apri_aip_ft', '·',
     '10 ha', '100 ha', '.',
     '1 · Bayern', '2 · Bayern', '3 · Bayern', '4 · Niedersachsen', '5 · Bayern', 'KWS Emerick', 'Kometus', 'KWS Carusum', 'Spectral',
     'Tobias Vöpel', 'Débora Moretti', 'Alaa Oughli', 'Nicolas Plumeré', 'co-CEO', 'CTO', 'CSO',
@@ -237,6 +242,22 @@ DE.update({
         'Das EU-geförderte Projekt eCONFIDENCE untersuchte mögliche kommerzielle Anwendungen eines Multisensor-Teststreifens sowie der dafür nötigen Sauerstoffbinder, patentiert im Rahmen des ERC Starting Grants „REDOX SHIELDS“. Solche Multi-Analyt-Teststreifen können genutzt werden, um die Millionen Datenpunkte zu kalibrieren, die Wearables täglich erzeugen, und so die Genauigkeit nicht-invasiver Sensoren in Big-Data-Anwendungen für Gesundheit und Fitness zu verbessern. Wir haben den Biosensor weiter verbessert, auch für Gesundheitsanwendungen!',
     'After publishing outstanding papers and patenting the technology behind the biosensor, we were able to secure a EXIST Research Transfer funding, taking a step closer to the market.':
         'Nach herausragenden Veröffentlichungen und der Patentierung der Technologie hinter dem Biosensor konnten wir eine EXIST-Forschungstransfer-Förderung gewinnen und sind dem Markt einen Schritt nähergekommen.',
+    'Compare your own fertilization in detail': 'Eigene Düngung im Detail vergleichen',
+    # --- fertilizer calculator page
+    'Fertilizer calculator': 'Düngerechner',
+    'LiveSen-MAP fertilizer calculator:': 'LiveSen-MAP Düngerechner:',
+    'compare 3 applications': 'Vergleich von 3 Gaben',
+    'Compare your usual fertilization with a LiveSen-MAP optimized one. Fertilizer prices are suggested from official EU data and can be replaced by your own purchase prices.':
+        'Vergleichen Sie Ihre betriebsübliche Düngung mit einer LiveSen-MAP-optimierten Düngung. Düngerpreise werden aus amtlichen EU-Daten vorgeschlagen und können durch Ihre eigenen Einkaufspreise ersetzt werden.',
+    'This calculator needs JavaScript.': 'Dieser Rechner benötigt JavaScript.',
+    'Want exact numbers for your fields?': 'Möchten Sie genaue Zahlen für Ihre Felder?',
+    'Our sensors and the fertilization platform show what each field really needs.': 'Unsere Sensoren und die Düngeplattform zeigen, was jedes Feld wirklich braucht.',
+    "May contain market data from the source: European Commission – Agri-food data portal (agridata.ec.europa.eu). These are aggregated EU market data reported by the Member States. No liability is accepted for the up-to-date accuracy of this data or for trading decisions or losses resulting from it. The European Commission, for its part, excludes any liability for the use of its API and portal data. All other prices in this calculator are based on the user's own purchase prices entered by the user.":
+        'Enthält ggf. Marktdaten der Quelle: Europäische Kommission – Agri-Food Data Portal (agridata.ec.europa.eu). Es handelt sich um aggregierte, von den Mitgliedstaaten gemeldete EU-Marktdaten. Für die tagesaktuelle Richtigkeit dieser Daten oder daraus resultierende Handelsentscheidungen/-verluste wird keine Haftung übernommen. Die Europäische Kommission schließt ihrerseits jegliche Haftung für die Nutzung ihrer API- bzw. Portaldaten aus. Alle übrigen Preisangaben in diesem Rechner beruhen auf selbst erfassten, eigenen Einkaufspreisen des Nutzers.',
+    'Suggested fertilizer prices come, where shown, from the Eurostat dataset apri_aip_ft “Purchase prices for fertilisers” (annual average 2025, per tonne of nutrient, marked provisional by Eurostat). Values that differ strongly from the EU median are not used. The disclaimer above applies accordingly.':
+        'Vorgeschlagene Düngerpreise stammen, soweit angezeigt, aus dem Eurostat-Datensatz apri_aip_ft „Purchase prices for fertilisers“ (Jahresdurchschnitt 2025, je Tonne Nährstoff, von Eurostat als vorläufig gekennzeichnet). Werte, die stark vom EU-Median abweichen, werden nicht verwendet. Der obige Haftungsausschluss gilt entsprechend.',
+    'Sources:': 'Quellen:',
+    'EU Agri-food data portal': 'Agri-Food Data Portal der EU',
     # --- calculator
     'What could NutriSen save on your farm?': 'Was kann NutriSen auf Ihrem Betrieb einsparen?',
     'Move the slider to your farm size.': 'Stellen Sie den Regler auf Ihre Betriebsgröße.',
@@ -322,6 +343,6 @@ EN_LEGAL = {
     'Diese Webseite verwendet Webanalytics. Dabei werden keine personenbezogenen Daten verwendet oder Cookies verwendet. Besucher werden z.B. über die IP-Adresse und Browserkennungen eindeutig identifiziert werden. Dabei werden die IP-Adresse und Browserkennung anonymisiert gespeichert, damit keine Rückschlüsse auf die einzelnen Besucher mehr gezogen werden können.':
         'This website uses web analytics. No personal data or cookies are used in the process. Visitors may be uniquely identified, for example, via their IP address and browser identifiers. The IP address and browser identifier are stored in anonymized form so that no conclusions can be drawn about individual visitors.',
 }
-KEEP_LEGAL = {'Use cases', 'NutriSen GmbH', 'Europaring 4', '94315 Straubing', 'Email: debora.moretti@nutrisen.eu',
+KEEP_LEGAL = {'Use cases', 'Calculator', 'NutriSen GmbH', 'Europaring 4', '94315 Straubing', 'Email: debora.moretti@nutrisen.eu',
               'Tobias Vöpel & Alaa A. Oughli', 'HRB 13438', 'How does it work', 'Test your field',
               '© Copyright. All rights reserved.'}
