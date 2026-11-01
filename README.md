@@ -122,4 +122,4 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
 `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
-`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`. `i18n.py` refuses to run twice on the same files.
+`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`. `i18n.py` refuses to run twice on the same files.

@@ -20,6 +20,9 @@
 .ns-fc-sc{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(15,42,94,.12);overflow:hidden}
 .ns-fc-sh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 20px;color:#fff;font-size:19px;font-weight:600;background:linear-gradient(135deg,#0f2a5e,#1f4e9c)}
 .ns-fc-sc--live .ns-fc-sh{background:linear-gradient(135deg,#02733e,#06b262)}
+.ns-fc-hl{display:flex;align-items:center}
+.ns-fc-brand{display:inline-flex;align-items:center;margin-right:10px;padding:5px 10px;border-radius:10px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.ns-fc-brand img{display:block;height:28px;width:auto}
 .ns-fc-copy{padding:8px 14px;border:0;border-radius:10px;background:#fff;color:var(--gdk);font:600 13px Poppins,Hind,system-ui,sans-serif;cursor:pointer;transition:transform .2s}
 .ns-fc-copy:hover,.ns-fc-copy:focus-visible{transform:scale(1.05);outline:none}
 .ns-fc-ev{margin:14px;padding:14px;border-radius:12px;background:#f4f6f8}
