@@ -46,8 +46,8 @@ DESC_DE = {
         'Im Labor haben wir den ersten enzymbasierten Sensor zur Messung von Pflanzennährstoffen direkt auf dem Feld entwickelt.',
     'Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, or up to 14 % more yield.':
         'Fünf Praxisfälle 2025/2026: bis zu 30 % weniger Dünger bei gleichem Ertrag oder bis zu 14 % Mehrertrag.',
-    'Compare your usual fertilization with LiveSen-MAP in three applications, with fertilizer price suggestions from official EU data.':
-        'Vergleichen Sie Ihre betriebsübliche Düngung mit LiveSen-MAP in drei Gaben, mit Düngerpreis-Vorschlägen aus amtlichen EU-Daten.',
+    'Compare your usual fertilization with NutriSen in three applications, with fertilizer price suggestions from official EU data.':
+        'Vergleichen Sie Ihre betriebsübliche Düngung mit NutriSen in drei Gaben, mit Düngerpreis-Vorschlägen aus amtlichen EU-Daten.',
     'Company founded in 2023, with headquarters in Straubing.':
         'Unternehmen, gegründet 2023, mit Sitz in Straubing.',
 }
@@ -247,8 +247,8 @@ DE.update({
     'Fertilizer calculator': 'Düngerechner',
     'NutriSen fertilizer calculator:': 'NutriSen Düngerechner:',
     'compare 3 applications': 'Vergleich von 3 Gaben',
-    'Compare your usual fertilization with a LiveSen-MAP optimized one. Fertilizer prices are suggested from official EU data and can be replaced by your own purchase prices.':
-        'Vergleichen Sie Ihre betriebsübliche Düngung mit einer LiveSen-MAP-optimierten Düngung. Düngerpreise werden aus amtlichen EU-Daten vorgeschlagen und können durch Ihre eigenen Einkaufspreise ersetzt werden.',
+    'Compare your usual fertilization with a NutriSen optimized one. Fertilizer prices are suggested from official EU data and can be replaced by your own purchase prices.':
+        'Vergleichen Sie Ihre betriebsübliche Düngung mit einer NutriSen-optimierten Düngung. Düngerpreise werden aus amtlichen EU-Daten vorgeschlagen und können durch Ihre eigenen Einkaufspreise ersetzt werden.',
     'This calculator needs JavaScript.': 'Dieser Rechner benötigt JavaScript.',
     'Want exact numbers for your fields?': 'Möchten Sie genaue Zahlen für Ihre Felder?',
     'Our sensors and the fertilization platform show what each field really needs.': 'Unsere Sensoren und die Düngeplattform zeigen, was jedes Feld wirklich braucht.',
