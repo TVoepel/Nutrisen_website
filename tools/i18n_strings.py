@@ -8,6 +8,7 @@ NAV_DE = {
     'Medical': 'Medizin',
     'How does it work': 'So funktioniert es',
     'Test your field': 'Feld testen',
+    'Use cases': 'Praxisfälle',
     'Impressum': 'Impressum',
     'Datenschutzerklärung': 'Datenschutzerklärung',
     '© Copyright. All rights reserved.': '© Copyright. Alle Rechte vorbehalten.',
@@ -29,6 +30,7 @@ TITLE_DE = {
     'how': 'Wie funktioniert der Premium-Service von NutriSen?',
     'test': 'Nitratgehalt Ihres Feldes kostenlos testen',
     'lab': 'Über uns',
+    'cases': 'Praxisfälle 2025/2026: weniger Dünger, gleicher oder höherer Ertrag',
 }
 TITLE_EN_LEGAL = {'legal': 'NutriSen GmbH Legal Notice', 'privacy': 'Privacy Policy'}
 DESC_DE = {
@@ -40,6 +42,8 @@ DESC_DE = {
         'Fragen Sie sich jedes Jahr, wann und wie viel Dünger Sie auf dem Feld ausbringen sollen?\nWir suchen Innovatoren, die eine neue Technologie kostenlos testen möchten.',
     'In the laboratory we developed the first enzymatic-based sensor for measuring plant nutrients, directly in the field.':
         'Im Labor haben wir den ersten enzymbasierten Sensor zur Messung von Pflanzennährstoffen direkt auf dem Feld entwickelt.',
+    'Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, or up to 14 % more yield.':
+        'Fünf Praxisfälle 2025/2026: bis zu 30 % weniger Dünger bei gleichem Ertrag oder bis zu 14 % Mehrertrag.',
     'Company founded in 2023, with headquarters in Straubing.':
         'Unternehmen, gegründet 2023, mit Sitz in Straubing.',
 }
@@ -47,6 +51,7 @@ DESC_EN_LEGAL = {}   # the English legal pages keep the existing English descrip
 
 # ---------------------------------------------------------------- text that stays as it is
 KEEP = {
+    '1 · Bayern', '2 · Bayern', '3 · Bayern', '4 · Niedersachsen', '5 · Bayern', 'KWS Emerick', 'Kometus', 'KWS Carusum', 'Spectral',
     'Tobias Vöpel', 'Débora Moretti', 'Alaa Oughli', 'Nicolas Plumeré', 'co-CEO', 'CTO', 'CSO',
     'Lactate', 'Name', 'PoC LiveSEN', 'PoC eConfidence', 'EXIST Research Transfer', 'info@nutrisen.eu',
     'Bio-Security, Bönen.', 'Forum Moderne Landwirtschaft, Berlin.', 'Plan B Competition, Straubing.',
@@ -231,6 +236,40 @@ DE.update({
         'Das EU-geförderte Projekt eCONFIDENCE untersuchte mögliche kommerzielle Anwendungen eines Multisensor-Teststreifens sowie der dafür nötigen Sauerstoffbinder, patentiert im Rahmen des ERC Starting Grants „REDOX SHIELDS“. Solche Multi-Analyt-Teststreifen können genutzt werden, um die Millionen Datenpunkte zu kalibrieren, die Wearables täglich erzeugen, und so die Genauigkeit nicht-invasiver Sensoren in Big-Data-Anwendungen für Gesundheit und Fitness zu verbessern. Wir haben den Biosensor weiter verbessert, auch für Gesundheitsanwendungen!',
     'After publishing outstanding papers and patenting the technology behind the biosensor, we were able to secure a EXIST Research Transfer funding, taking a step closer to the market.':
         'Nach herausragenden Veröffentlichungen und der Patentierung der Technologie hinter dem Biosensor konnten wir eine EXIST-Forschungstransfer-Förderung gewinnen und sind dem Markt einen Schritt nähergekommen.',
+    # --- use cases
+    'Results from practice': 'Ergebnisse aus der Praxis',
+    'Practice cases 2025/2026:': 'Praxisfälle 2025/2026:',
+    'less fertilizer, same or higher yield': 'weniger Dünger, gleicher oder höherer Ertrag',
+    'up to −30 %': 'bis zu −30 %',
+    'fertilizer compared to the standard recommendation': 'Dünger im Vergleich zur Standardempfehlung',
+    'up to +14 %': 'bis zu +14 %',
+    'extra yield': 'Mehrertrag',
+    'up to 90 €/ha': 'bis zu 90 €/ha',
+    'fertilizer costs saved': 'Düngerkosten gespart',
+    'up to +150 €/ha': 'bis zu +150 €/ha',
+    'extra revenue': 'Mehrerlös',
+    'Practice cases 2025/2026': 'Praxisfälle 2025/2026',
+    'Farm · variety': 'Betrieb · Sorte',
+    'Fertilizer amount compared to DBE': 'Düngermenge im Vergleich zur DBE',
+    'Yield': 'Ertrag',
+    'Economic result': 'Wirtschaftlich',
+    'Wheat KWS Carusum': 'Weizen KWS Carusum',
+    'within the DBE': 'im Rahmen der DBE',
+    'same yield': 'gleicher Ertrag',
+    '36 €/ha saved': '36 €/ha gespart',
+    '30 €/ha saved': '30 €/ha gespart',
+    '90 €/ha saved': '90 €/ha gespart',
+    '+14 % extra yield': '+14 % Mehrertrag',
+    '+5.5 % extra yield': '+5,5 % Mehrertrag',
+    '−4 % protein': '−4 % Protein',
+    '+150 €/ha revenue': '+150 €/ha Erlös',
+    'DBE = fertilizer requirement assessment (Düngebedarfsermittlung) under the German Fertilizer Ordinance (standard recommendation). Fertilizer costs: 30 €/ha per 10 % of fertilizer.':
+        'DBE = Düngebedarfsermittlung nach deutscher Düngeverordnung (Standardempfehlung). Düngerkosten: 30 €/ha je 10 % Dünger.',
+    'Results of individual farms. Actual savings and yields depend on site, variety and season.':
+        'Ergebnisse einzelner Betriebe. Tatsächliche Einsparungen und Erträge hängen von Standort, Sorte und Saison ab.',
+    'Curious what your field needs?': 'Neugierig, was Ihr Feld braucht?',
+    'We are looking for partner farms in Bayern and test the nitrate status of your plants for free.':
+        'Wir suchen Partnerbetriebe in Bayern und messen den Nitratstatus Ihrer Pflanzen kostenlos.',
     'Within EXIST, the sensor has achieved TRL 6, ready to be tested by first clients.':
         'Im Rahmen von EXIST hat der Sensor TRL 6 erreicht und kann von ersten Kunden getestet werden.',
 })
@@ -271,6 +310,6 @@ EN_LEGAL = {
     'Diese Webseite verwendet Webanalytics. Dabei werden keine personenbezogenen Daten verwendet oder Cookies verwendet. Besucher werden z.B. über die IP-Adresse und Browserkennungen eindeutig identifiziert werden. Dabei werden die IP-Adresse und Browserkennung anonymisiert gespeichert, damit keine Rückschlüsse auf die einzelnen Besucher mehr gezogen werden können.':
         'This website uses web analytics. No personal data or cookies are used in the process. Visitors may be uniquely identified, for example, via their IP address and browser identifiers. The IP address and browser identifier are stored in anonymized form so that no conclusions can be drawn about individual visitors.',
 }
-KEEP_LEGAL = {'NutriSen GmbH', 'Europaring 4', '94315 Straubing', 'Email: debora.moretti@nutrisen.eu',
+KEEP_LEGAL = {'Use cases', 'NutriSen GmbH', 'Europaring 4', '94315 Straubing', 'Email: debora.moretti@nutrisen.eu',
               'Tobias Vöpel & Alaa A. Oughli', 'HRB 13438', 'How does it work', 'Test your field',
               '© Copyright. All rights reserved.'}

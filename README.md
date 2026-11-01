@@ -69,6 +69,11 @@ The two unlinked pages are still publicly reachable on the live site because the
   English contact page said "Telefon:" (now "Phone:"). The typo "Haftungsauschluss" in the German legal notice is fixed.
 - `/the-npknowledge/` is still English only and unlinked, because it contains placeholder text.
 
+- **Practice cases page (2026-11-01):** `/agriculture/use-cases/` (German: `/de/agriculture/use-cases/`) shows five
+  farm results from 2025/2026 (fertilizer vs. the standard recommendation, yield, economic result) with a bar chart,
+  four headline figures and a link to the free field test. It is added to the Agriculture menu on every page.
+  Styles: `assets/usecases.css`; generator: `tools/add_usecases.py`.
+
 ## Refreshing the mirror
 
 ```
@@ -76,6 +81,6 @@ tools/fetch.sh /tmp/nutrisen-work        # downloads pages and assets with wget/
 python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
-Then copy the contents of the output directory over this repository and run
-`python3 tools/apply_home_split.py .` and then `python3 tools/i18n.py .` to restore the new home hero and the
-German version. `i18n.py` refuses to run twice on the same files.
+Then copy the contents of the output directory over this repository and run, in this order,
+`python3 tools/apply_home_split.py .`, `python3 tools/add_usecases.py .` and `python3 tools/i18n.py .` to restore the
+new home hero, the practice cases page and the German version. `i18n.py` refuses to run twice on the same files.

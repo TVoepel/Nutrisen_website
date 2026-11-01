@@ -17,17 +17,17 @@ if 'class="ns-lang"' in open(os.path.join(ROOT, 'index.html'), encoding='utf-8')
     sys.exit('already applied')
 
 SRC = {'home': '', 'medical': 'medical', 'agri': 'agriculture', 'how': 'agriculture/how-does-it-work',
-       'test': 'agriculture/test-your-field', 'lab': 'agriculture/from-lab-to-field',
+       'test': 'agriculture/test-your-field', 'cases': 'agriculture/use-cases', 'lab': 'agriculture/from-lab-to-field',
        'npk': 'the-npknowledge', 'legal': 'impressum', 'privacy': 'datenschutzerklarung'}
 SRC_REV = {v: k for k, v in SRC.items()}
 LANGPATH = {
     ('en', 'home'): '', ('en', 'medical'): 'medical', ('en', 'agri'): 'agriculture',
     ('en', 'how'): 'agriculture/how-does-it-work', ('en', 'test'): 'agriculture/test-your-field',
-    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'npk'): 'the-npknowledge',
+    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'cases'): 'agriculture/use-cases', ('en', 'npk'): 'the-npknowledge',
     ('en', 'legal'): 'legal-notice', ('en', 'privacy'): 'privacy-policy',
     ('de', 'home'): 'de', ('de', 'medical'): 'de/medical', ('de', 'agri'): 'de/agriculture',
     ('de', 'how'): 'de/agriculture/how-does-it-work', ('de', 'test'): 'de/agriculture/test-your-field',
-    ('de', 'lab'): 'de/agriculture/from-lab-to-field', ('de', 'legal'): 'impressum', ('de', 'privacy'): 'datenschutzerklarung',
+    ('de', 'lab'): 'de/agriculture/from-lab-to-field', ('de', 'cases'): 'de/agriculture/use-cases', ('de', 'legal'): 'impressum', ('de', 'privacy'): 'datenschutzerklarung',
 }
 def lp(lang, key):  # npk has no German version: link to the English page
     return LANGPATH.get((lang, key)) if (lang, key) in LANGPATH else LANGPATH[('en', key)]
@@ -85,8 +85,12 @@ def translate(text, table, keep, label, report=True):
         if report and key not in keep and re.search(r'[A-Za-zÄÖÜäöü]{3,}', key):
             unmatched.setdefault(label, set()).add(key)
         return m.group(0)
+    def attr(m):   # translatable attributes (mobile table labels, aria-labels)
+        k = html.unescape(m.group(2))
+        return m.group(1) + html.escape(table[k], quote=True) + m.group(3) if k in table else m.group(0)
     for i in range(0, len(parts), 2):
         parts[i] = re.sub(r'>([^<>]+)<', seg, parts[i])
+        parts[i] = re.sub(r'(\b(?:data-label|aria-label)=")([^"]*)(")', attr, parts[i])
     return ''.join(parts)
 
 def set_title(text, title):

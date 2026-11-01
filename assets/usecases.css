@@ -1,0 +1,52 @@
+/* Agriculture: practice cases (use cases) page */
+.ns-uc{--blue:#1f4e9c;--navy:#0f2a5e;--green:#06b262;--ink:#2b2f36;font-family:Poppins,Hind,system-ui,sans-serif;color:var(--ink);background:#e9e9e9}
+.ns-uc *{box-sizing:border-box}
+.ns-uc-wrap{max-width:1120px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.ns-uc-hero{background:radial-gradient(1200px 400px at 85% -10%,#2a6ad0 0,transparent 60%),linear-gradient(135deg,#0f2a5e,#1f4e9c);color:#fff;padding:clamp(36px,6vw,72px) 0 clamp(60px,8vw,96px)}
+.ns-uc-eyebrow{margin:0 0 10px;font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#9fd0ff}
+.ns-uc-hero h1{margin:0;font-size:clamp(28px,4.4vw,52px);line-height:1.12;font-weight:700;color:#fff;max-width:880px}
+.ns-uc-hero h1 span{color:#7dffb8}
+.ns-uc-kpis{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ns-uc-kpis li{padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(4px)}
+.ns-uc-kpis b{display:block;font-size:clamp(20px,2.1vw,27px);line-height:1.15;color:#7dffb8;white-space:nowrap}
+.ns-uc-kpis span{display:block;margin-top:6px;font-size:13.5px;line-height:1.4;color:rgba(255,255,255,.88)}
+.ns-uc-card{margin:-44px auto 0;position:relative;background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(15,42,94,.18);padding:clamp(14px,3vw,34px)}
+.ns-uc-table{width:100%;border-collapse:collapse}
+.ns-uc-table caption{position:absolute;left:-9999px}
+.ns-uc-table thead th{padding:0 12px 14px;text-align:left;font-size:14px;font-weight:600;color:#4a5160;border-bottom:2px solid #1b1f27}
+.ns-uc-table tbody tr+tr th,.ns-uc-table tbody tr+tr td{border-top:1px solid #e1e4ea}
+.ns-uc-table tbody th,.ns-uc-table td{padding:16px 12px;vertical-align:middle;text-align:left;font-weight:400}
+.ns-uc-table tbody th b{display:block;font-size:18px;font-weight:600;color:#1b1f27}
+.ns-uc-table tbody th span{display:block;margin-top:2px;font-size:14px;color:#555c6b}
+.ns-uc-col-bar{width:36%}
+.ns-uc-axis{display:flex;height:38px;position:relative}
+.ns-uc-half{flex:1 1 0;display:flex;align-items:center}
+.ns-uc-left{justify-content:flex-end;border-right:2px solid #1b1f27}
+.ns-uc-fill{display:grid;place-items:center;height:38px;min-width:58px;color:#fff;font-size:14px;font-weight:600;background:var(--blue)}
+.ns-uc-pos .ns-uc-fill{background:var(--navy)}
+.ns-uc-within{margin-right:12px;font-size:13px;color:#555c6b}
+.ns-uc-yield{font-size:17px;font-weight:500;color:#1b1f27}
+.ns-uc-yield span{display:block}
+.ns-uc-eco{font-size:17px;font-weight:600;color:var(--blue)}
+.ns-uc-foot{margin:22px 0 0;font-size:13.5px;line-height:1.55;color:#4a5160}
+.ns-uc-foot+.ns-uc-foot{margin-top:6px;color:#6a7080}
+.ns-uc-cta{margin:36px auto 0;padding:clamp(26px,4vw,44px);border-radius:18px;background:linear-gradient(135deg,#02733e,#06b262);color:#fff;display:flex;gap:20px 40px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.ns-uc-cta h2{margin:0 0 6px;font-size:clamp(22px,3vw,32px);color:#fff;font-weight:700}
+.ns-uc-cta p{margin:0;font-size:16px;color:rgba(255,255,255,.92);max-width:560px}
+.ns-uc-actions{display:flex;gap:14px 22px;align-items:center;flex-wrap:wrap}
+.ns-uc-btn{display:inline-block;padding:15px 26px;border-radius:12px;background:#fff;color:#02733e!important;font-weight:600;font-size:17px;text-decoration:none!important;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s}
+.ns-uc-btn:hover,.ns-uc-btn:focus-visible{transform:translateY(-2px);outline:none}
+.ns-uc-link{color:#fff!important;text-decoration:underline!important;text-underline-offset:4px;font-weight:500}
+.ns-uc-space{height:clamp(30px,5vw,60px)}
+@media (max-width:900px){
+  .ns-uc-kpis{grid-template-columns:repeat(2,1fr)}
+  .ns-uc-table thead{position:absolute;left:-9999px}
+  .ns-uc-table,.ns-uc-table tbody,.ns-uc-table tr,.ns-uc-table th,.ns-uc-table td{display:block;width:100%}
+  .ns-uc-table tbody tr{padding:18px 0;border-top:1px solid #e1e4ea}
+  .ns-uc-table tbody tr:first-child{border-top:0}
+  .ns-uc-table tbody tr+tr th,.ns-uc-table tbody tr+tr td{border-top:0}
+  .ns-uc-table tbody th,.ns-uc-table td{padding:6px 4px}
+  .ns-uc-table td[data-label]::before{content:attr(data-label);display:block;margin-bottom:4px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#6a7080}
+  .ns-uc-card{margin-top:-30px}
+}
+@media (max-width:520px){.ns-uc-kpis{grid-template-columns:1fr 1fr;gap:10px}.ns-uc-kpis li{padding:12px}}
