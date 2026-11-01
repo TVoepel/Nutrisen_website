@@ -112,6 +112,14 @@ The two unlinked pages are still publicly reachable on the live site because the
   - The disclaimer text on the page (market data source, no liability) was provided by the site owner. The
     paragraph about Eurostat was added to cover the second source.
 
+- **Blog (2026-11-01):** `/blog/` (German: `/de/blog/`) with two articles, each 3 to 5 minutes of reading time, in English
+  and German and linked in the main menu: "Nutrient prices: why the EU reports them and how to use them" and "JUBIL®: where
+  the stem-juice nitrate test comes from and why it works" (links to the ARVALIS page `arvalis.fr/jubil-en-detail`). The
+  texts are in `tools/blog_content.py` (both languages, with their sources); `tools/add_blog.py` builds the pages and
+  `assets/blog.css` styles them. Every statement is taken from the sources listed under each article. The reading time
+  is computed from the word count at 200 words per minute. To add an article, add an entry to `POSTS` and register its
+  key and slug in `tools/i18n.py`.
+
 ## Refreshing the mirror
 
 ```
@@ -120,6 +128,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
+`apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
-`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`. `i18n.py` refuses to run twice on the same files.
+`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`. `i18n.py` refuses to run twice on the same files.

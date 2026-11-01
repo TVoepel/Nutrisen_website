@@ -17,17 +17,17 @@ if 'class="ns-lang"' in open(os.path.join(ROOT, 'index.html'), encoding='utf-8')
     sys.exit('already applied')
 
 SRC = {'home': '', 'medical': 'medical', 'agri': 'agriculture', 'how': 'agriculture/how-does-it-work',
-       'test': 'agriculture/test-your-field', 'cases': 'agriculture/use-cases', 'calc': 'agriculture/calculator', 'lab': 'agriculture/from-lab-to-field',
+       'test': 'agriculture/test-your-field', 'cases': 'agriculture/use-cases', 'calc': 'agriculture/calculator', 'blog': 'blog', 'post_prices': 'blog/nutrient-prices-eu-reporting', 'post_jubil': 'blog/jubil-nitrate-method', 'lab': 'agriculture/from-lab-to-field',
        'npk': 'the-npknowledge', 'legal': 'impressum', 'privacy': 'datenschutzerklarung'}
 SRC_REV = {v: k for k, v in SRC.items()}
 LANGPATH = {
     ('en', 'home'): '', ('en', 'medical'): 'medical', ('en', 'agri'): 'agriculture',
     ('en', 'how'): 'agriculture/how-does-it-work', ('en', 'test'): 'agriculture/test-your-field',
-    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'cases'): 'agriculture/use-cases', ('en', 'calc'): 'agriculture/calculator', ('en', 'npk'): 'the-npknowledge',
+    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'cases'): 'agriculture/use-cases', ('en', 'calc'): 'agriculture/calculator', ('en', 'blog'): 'blog', ('en', 'post_prices'): 'blog/nutrient-prices-eu-reporting', ('en', 'post_jubil'): 'blog/jubil-nitrate-method', ('en', 'npk'): 'the-npknowledge',
     ('en', 'legal'): 'legal-notice', ('en', 'privacy'): 'privacy-policy',
     ('de', 'home'): 'de', ('de', 'medical'): 'de/medical', ('de', 'agri'): 'de/agriculture',
     ('de', 'how'): 'de/agriculture/how-does-it-work', ('de', 'test'): 'de/agriculture/test-your-field',
-    ('de', 'lab'): 'de/agriculture/from-lab-to-field', ('de', 'cases'): 'de/agriculture/use-cases', ('de', 'calc'): 'de/agriculture/calculator', ('de', 'legal'): 'impressum', ('de', 'privacy'): 'datenschutzerklarung',
+    ('de', 'lab'): 'de/agriculture/from-lab-to-field', ('de', 'cases'): 'de/agriculture/use-cases', ('de', 'calc'): 'de/agriculture/calculator', ('de', 'blog'): 'de/blog', ('de', 'post_prices'): 'de/blog/nutrient-prices-eu-reporting', ('de', 'post_jubil'): 'de/blog/jubil-nitrate-method', ('de', 'legal'): 'impressum', ('de', 'privacy'): 'datenschutzerklarung',
 }
 def lp(lang, key):  # npk has no German version: link to the English page
     return LANGPATH.get((lang, key)) if (lang, key) in LANGPATH else LANGPATH[('en', key)]

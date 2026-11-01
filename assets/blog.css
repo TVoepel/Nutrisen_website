@@ -1,0 +1,41 @@
+/* NutriSen blog: index and articles */
+.ns-blog{--blue:#0b4ea2;--navy:#0f2a5e;--green:#06b262;--gdk:#02733e;--ink:#1b1f27;font-family:Poppins,Hind,system-ui,sans-serif;color:var(--ink);background:#e9e9e9;padding-bottom:clamp(30px,5vw,64px)}
+.ns-blog *{box-sizing:border-box}
+.ns-blog-wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.ns-blog-wrap.narrow{max-width:760px}
+.ns-blog-hero{background:radial-gradient(1200px 400px at 85% -10%,#2a6ad0 0,transparent 60%),linear-gradient(135deg,#0f2a5e,#1f4e9c);color:#fff;padding:clamp(32px,5vw,64px) 0 clamp(40px,6vw,72px)}
+.ns-blog-eyebrow,.ns-blog-tag{margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#9fd0ff}
+.ns-blog-hero h1{margin:0;font-size:clamp(28px,4.4vw,48px);line-height:1.15;font-weight:700;color:#fff;max-width:860px}
+.ns-blog-lead{margin:14px 0 0;max-width:720px;font-size:18px;line-height:1.55;color:rgba(255,255,255,.9)}
+.ns-blog-back{display:inline-block;margin-bottom:18px;color:#fff!important;font-size:14px;font-weight:500;text-decoration:none!important;opacity:.85}
+.ns-blog-back:hover,.ns-blog-back:focus-visible{opacity:1;text-decoration:underline!important}
+.ns-blog-meta{display:flex;flex-wrap:wrap;gap:0 10px;align-items:center;margin:16px 0 0;font-size:14px;color:inherit;opacity:.85}
+.ns-blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;margin-top:-28px;position:relative}
+.ns-blog-card{display:flex;flex-direction:column;padding:clamp(22px,3vw,32px);border-radius:18px;background:#fff;box-shadow:0 18px 50px rgba(15,42,94,.14);transition:transform .2s,box-shadow .2s}
+.ns-blog-card:hover{transform:translateY(-3px);box-shadow:0 22px 56px rgba(15,42,94,.2)}
+.ns-blog-card .ns-blog-tag{color:var(--gdk)}
+.ns-blog-card h2{margin:0 0 10px;font-size:clamp(21px,2.4vw,26px);line-height:1.25;font-weight:700}
+.ns-blog-card h2 a{color:var(--navy)!important;text-decoration:none!important}
+.ns-blog-card h2 a:hover,.ns-blog-card h2 a:focus-visible{text-decoration:underline!important}
+.ns-blog-ex{margin:0;font-size:16px;line-height:1.6;color:#3d4452}
+.ns-blog-card .ns-blog-meta{color:#5a6272;margin-top:auto;padding-top:18px}
+.ns-blog-more{margin-top:14px;font-weight:600;color:var(--blue)!important;text-decoration:none!important}
+.ns-blog-more::after{content:" →"}
+.ns-blog-more:hover,.ns-blog-more:focus-visible{text-decoration:underline!important}
+.ns-blog-article{margin-top:-28px;position:relative;padding:clamp(22px,4vw,48px);border-radius:18px;background:#fff;box-shadow:0 18px 50px rgba(15,42,94,.14);font-size:18px;line-height:1.75;color:#262b34}
+.ns-blog-article .ns-blog-intro{margin:0 0 1.2em;font-size:20px;line-height:1.65;color:#1b1f27;font-weight:500}
+.ns-blog-article h2{margin:1.9em 0 .5em;font-size:clamp(22px,2.6vw,28px);line-height:1.25;font-weight:700;color:var(--navy)}
+.ns-blog-article p{margin:0 0 1.1em}
+.ns-blog-article ol,.ns-blog-article ul{margin:0 0 1.2em;padding-left:1.4em}
+.ns-blog-article li{margin:0 0 .7em}
+.ns-blog-article a{color:var(--blue);text-underline-offset:3px}
+.ns-blog-link{margin:0 0 1.4em;padding:14px 18px;border-left:4px solid var(--blue);border-radius:8px;background:#eef3fa;font-size:16px;line-height:1.5}
+.ns-blog-link a{font-weight:600}
+.ns-blog-cta{margin:2em 0 1.4em;padding:clamp(20px,3vw,30px);border-radius:16px;background:linear-gradient(135deg,#02733e,#06b262);color:#fff}
+.ns-blog-cta h2{margin:0 0 6px;font-size:22px;color:#fff}
+.ns-blog-cta p{margin:0 0 16px;font-size:16px;line-height:1.55;color:rgba(255,255,255,.93)}
+.ns-blog-article .ns-blog-cta a.ns-blog-btn{display:inline-block;padding:13px 24px;border-radius:12px;background:#fff;color:var(--gdk);font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.ns-blog-note{font-size:14px!important;line-height:1.6;color:#5a6272}
+.ns-blog-src{margin-top:2.2em;padding-top:1.2em;border-top:1px solid #dfe3ea}
+.ns-blog-src h2{margin:0 0 .6em;font-size:18px;color:var(--ink)}
+.ns-blog-src li{font-size:15px;line-height:1.55;margin-bottom:.5em;overflow-wrap:anywhere}

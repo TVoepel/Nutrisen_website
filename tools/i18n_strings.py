@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Translation tables for tools/i18n.py. Keys are the visible English (or German) text, HTML-unescaped."""
+import blog_content as BC
 
 # ---------------------------------------------------------------- navigation / footer (all pages)
 NAV_DE = {
@@ -346,3 +347,11 @@ EN_LEGAL = {
 KEEP_LEGAL = {'Use cases', 'Calculator', 'NutriSen GmbH', 'Europaring 4', '94315 Straubing', 'Email: debora.moretti@nutrisen.eu',
               'Tobias Vöpel & Alaa A. Oughli', 'HRB 13438', 'How does it work', 'Test your field',
               '© Copyright. All rights reserved.'}
+
+# ---------------------------------------------------------------- blog (texts live in tools/blog_content.py)
+DE.update(BC.de_pairs())
+TITLE_DE.update({'blog': 'Blog', **{p['key']: p['title']['de'] for p in BC.POSTS}})
+DESC_DE[BC.BLOG['desc']['en']] = BC.BLOG['desc']['de']
+DESC_DE.update({p['excerpt']['en']: p['excerpt']['de'] for p in BC.POSTS})
+KEEP.update({'Jubil® en détail', 'Blog', '·', 'NutriSen blog'})
+KEEP_LEGAL.add('Blog')
