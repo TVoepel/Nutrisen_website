@@ -17,8 +17,8 @@ relative, so the site works from a sub-path as well as from a domain root.
   exposed via `srcset`.
 - **Scripts:** three small front-end scripts (go-x post editor front end, Gutenberg hooks and i18n), the go-x form
   script, and the WordPress emoji loader. No analytics, no cookie banner, no external embeds.
-- **Language:** the `<html lang>` is `de`, but most page content is English; Impressum and Datenschutzerklärung are
-  German.
+- **Language (before this change):** every page declared `lang="de"`, but all content except Impressum and
+  Datenschutzerklärung was English, and there was no language switcher.
 
 ## Pages (from the site's `wp-sitemap`)
 
@@ -60,6 +60,15 @@ The two unlinked pages are still publicly reachable on the live site because the
   awards sits underneath. Styles are in `assets/home-split.css`; `tools/apply_home_split.py` applies the change
   and is safe to re-run after a refresh.
 
+- **Two languages (2026-11-01):** English stays at the existing URLs (`lang="en"`). A full German version lives
+  under `/de/`. A DE | EN switcher sits in the header of every page that has a translation, and every page
+  carries `canonical` and `hreflang` tags. The legal pages keep their German URLs (`/impressum/`,
+  `/datenschutzerklarung/`) and have new English courtesy translations at `/legal-notice/` and `/privacy-policy/`.
+  All translations are in `tools/i18n_strings.py`; `tools/i18n.py` generates the pages.
+  Two wording bugs were fixed on the way: the contact form button read "Seed" (now "Send" / "Absenden"), and the
+  English contact page said "Telefon:" (now "Phone:"). The typo "Haftungsauschluss" in the German legal notice is fixed.
+- `/the-npknowledge/` is still English only and unlinked, because it contains placeholder text.
+
 ## Refreshing the mirror
 
 ```
@@ -67,5 +76,6 @@ tools/fetch.sh /tmp/nutrisen-work        # downloads pages and assets with wget/
 python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
-Then copy the contents of the output directory over this repository and re-run
-`python3 tools/apply_home_split.py .` to restore the new home hero.
+Then copy the contents of the output directory over this repository and run
+`python3 tools/apply_home_split.py .` and then `python3 tools/i18n.py .` to restore the new home hero and the
+German version. `i18n.py` refuses to run twice on the same files.
