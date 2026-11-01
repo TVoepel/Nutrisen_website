@@ -52,6 +52,14 @@ The two unlinked pages are still publicly reachable on the live site because the
   from this mirror. Wire it to a form service or replace it with a `mailto:` link if you host this copy.
 - Nothing else on the site is dynamic.
 
+## Changes beyond the mirror
+
+- **Home hero (2026-11-01):** the two stacked banners are replaced by a full-screen audience split. Farmers get
+  "Test your field for free" with the 20% fertilizer saving and up to 10% yield figures from the agriculture page.
+  Medical-device makers get "Schedule a meeting" with the lactate and creatinine readiness levels. A strip of
+  awards sits underneath. Styles are in `assets/home-split.css`; `tools/apply_home_split.py` applies the change
+  and is safe to re-run after a refresh.
+
 ## Refreshing the mirror
 
 ```
@@ -59,4 +67,5 @@ tools/fetch.sh /tmp/nutrisen-work        # downloads pages and assets with wget/
 python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
-Then copy the contents of the output directory over this repository.
+Then copy the contents of the output directory over this repository and re-run
+`python3 tools/apply_home_split.py .` to restore the new home hero.
