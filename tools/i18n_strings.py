@@ -51,6 +51,7 @@ DESC_EN_LEGAL = {}   # the English legal pages keep the existing English descrip
 
 # ---------------------------------------------------------------- text that stays as it is
 KEEP = {
+    '10 ha', '100 ha', '.',
     '1 · Bayern', '2 · Bayern', '3 · Bayern', '4 · Niedersachsen', '5 · Bayern', 'KWS Emerick', 'Kometus', 'KWS Carusum', 'Spectral',
     'Tobias Vöpel', 'Débora Moretti', 'Alaa Oughli', 'Nicolas Plumeré', 'co-CEO', 'CTO', 'CSO',
     'Lactate', 'Name', 'PoC LiveSEN', 'PoC eConfidence', 'EXIST Research Transfer', 'info@nutrisen.eu',
@@ -236,6 +237,17 @@ DE.update({
         'Das EU-geförderte Projekt eCONFIDENCE untersuchte mögliche kommerzielle Anwendungen eines Multisensor-Teststreifens sowie der dafür nötigen Sauerstoffbinder, patentiert im Rahmen des ERC Starting Grants „REDOX SHIELDS“. Solche Multi-Analyt-Teststreifen können genutzt werden, um die Millionen Datenpunkte zu kalibrieren, die Wearables täglich erzeugen, und so die Genauigkeit nicht-invasiver Sensoren in Big-Data-Anwendungen für Gesundheit und Fitness zu verbessern. Wir haben den Biosensor weiter verbessert, auch für Gesundheitsanwendungen!',
     'After publishing outstanding papers and patenting the technology behind the biosensor, we were able to secure a EXIST Research Transfer funding, taking a step closer to the market.':
         'Nach herausragenden Veröffentlichungen und der Patentierung der Technologie hinter dem Biosensor konnten wir eine EXIST-Forschungstransfer-Förderung gewinnen und sind dem Markt einen Schritt nähergekommen.',
+    # --- calculator
+    'What could NutriSen save on your farm?': 'Was kann NutriSen auf Ihrem Betrieb einsparen?',
+    'Move the slider to your farm size.': 'Stellen Sie den Regler auf Ihre Betriebsgröße.',
+    'Your farm size': 'Ihre Betriebsgröße',
+    '1,000 ha': '1.000 ha',
+    '€8,000': '8.000 €', '€24,000': '24.000 €',
+    'up to': 'bis zu',
+    'fertilizer costs saved per year, about 80 € per ha': 'gesparte Düngerkosten pro Jahr, etwa 80 € pro ha',
+    'extra revenue per year, up to 240 € per ha': 'Mehrerlös pro Jahr, bis zu 240 € pro ha',
+    'Average values for wheat, December 2022 prices. Results vary by farm, see the': 'Durchschnittswerte für Weizen, Preise Dezember 2022. Die Ergebnisse variieren je nach Betrieb, siehe die',
+    'practice cases': 'Praxisfälle',
     # --- use cases
     'Results from practice': 'Ergebnisse aus der Praxis',
     'Practice cases 2025/2026:': 'Praxisfälle 2025/2026:',

@@ -74,6 +74,25 @@ The two unlinked pages are still publicly reachable on the live site because the
   four headline figures and a link to the free field test. It is added to the Agriculture menu on every page.
   Styles: `assets/usecases.css`; generator: `tools/add_usecases.py`.
 
+- **Savings calculator (2026-11-02):** a slider for farm size on the home page and the agriculture page shows the
+  expected fertilizer saving (about 80 EUR/ha) and extra revenue (up to 240 EUR/ha), using the figures already
+  published on the site, and sends the visitor to the free field test with the farm size pre-filled in the message.
+  CSS and JS are inlined into the page (no extra requests). Sources: `assets/calc.css`, `assets/calc.js`;
+  generator: `tools/add_calculator.py`.
+- **Speed pass (2026-11-02):** `tools/optimize.py` runs last. All photos and graphics are WebP (larger than 1920 px
+  are scaled down), the home hero uses small responsive images, fonts are woff2 only with `font-display:swap` and
+  the three most used faces are preloaded, HTML comments and dead scripts (emoji, Gutenberg i18n, old-IE banner)
+  are gone, inline CSS is minified, images below the fold are lazy, `background-attachment:fixed` is removed, and
+  the site's analytics script (cdn.pagepulse.info) is requested only after the page has loaded. `.htaccess` (Apache,
+  IONOS) and `_headers` (Netlify/Cloudflare style) add compression and one-year caching for assets.
+
+  | Page transfer (gzip, scrolled to the end) | Before | After |
+  | --- | --- | --- |
+  | Home, desktop | 1,817 KB | 310 KB |
+  | Home, mobile | 2,320 KB | 562 KB |
+  | Agriculture, desktop | 1,131 KB | 229 KB |
+  | How does it work, mobile | 1,804 KB | 379 KB |
+
 ## Refreshing the mirror
 
 ```
@@ -81,6 +100,7 @@ tools/fetch.sh /tmp/nutrisen-work        # downloads pages and assets with wget/
 python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
-Then copy the contents of the output directory over this repository and run, in this order,
-`python3 tools/apply_home_split.py .`, `python3 tools/add_usecases.py .` and `python3 tools/i18n.py .` to restore the
-new home hero, the practice cases page and the German version. `i18n.py` refuses to run twice on the same files.
+Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
+`apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
+`python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
+`usecases.css`, `calc.css`, `calc.js`. `i18n.py` refuses to run twice on the same files.

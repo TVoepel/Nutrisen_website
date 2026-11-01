@@ -4,6 +4,7 @@
   font-family:Poppins,Hind,system-ui,sans-serif;color:#fff;background:#0d2a22;position:relative;overflow:hidden}
 .ns-panel{position:relative;flex:1 1 0;display:flex;align-items:flex-end;isolation:isolate;
   background-size:cover;background-position:50% 50%;transition:flex-grow .6s cubic-bezier(.2,.7,.2,1)}
+.ns-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .ns-panel::before{content:"";position:absolute;inset:0;z-index:-1;transition:opacity .4s;
   background:linear-gradient(to top,rgba(6,24,18,.92) 0%,rgba(6,24,18,.62) 45%,rgba(6,24,18,.28) 100%)}
 .ns-panel--med::before{background:linear-gradient(to top,rgba(8,22,46,.94) 0%,rgba(8,22,46,.64) 45%,rgba(8,22,46,.30) 100%)}

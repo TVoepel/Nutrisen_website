@@ -2,6 +2,7 @@
 """Replace the two stacked homepage banners with the audience-split hero (assets/home-split.css).
 Idempotent. Usage: python3 tools/apply_home_split.py <site root>   (run after tools/build.py)"""
 import os, re, sys
+from PIL import Image   # pip install pillow
 root = sys.argv[1] if len(sys.argv) > 1 else '.'
 p = os.path.join(root, 'index.html')
 t = open(p, encoding='utf-8').read()
@@ -14,8 +15,18 @@ assert t.find('Real-time nutrient sensing') > a and t.find('Direct molecular sen
 AG = 'wp-content/uploads/go-x/u/6a085a64-991b-4982-8977-a632194db683/image.jpg'
 MD = 'wp-content/uploads/go-x/u/e4fbeee7-9d69-4d62-8d2d-2e68bdb021aa/image.jpg'
 BOOK = '//outlook.office365.com/owa/calendar/Meetingswithpartners@livesen.eu/bookings/'
+def variants(src, name):
+    im = Image.open(os.path.join(root, src)).convert('RGB'); os.makedirs(os.path.join(root, 'assets'), exist_ok=True)
+    for w in (960, 1600):
+        v = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+        v.save(os.path.join(root, 'assets', f'hero-{name}-{w}.webp'), 'WEBP', quality=68, method=6)
+    return f'assets/hero-{name}-960.webp 960w,assets/hero-{name}-1600.webp 1600w', round(im.height * 1600 / im.width)
+AG_SET, AG_H = variants(AG, 'agri'); MD_SET, MD_H = variants(MD, 'med')
+def bg(sset, h, first):
+    return (f'<img class="ns-bg" src="{sset.split()[0]}" srcset="{sset}" sizes="(max-width:860px) 100vw,50vw" width="1600" height="{h}" alt="" decoding="async" '
+            + ('fetchpriority="high"' if first else 'loading="lazy"') + '>')
 html = f'''<section class="ns-split" aria-label="Choose your field">
-<div class="ns-panel ns-panel--ag" style="background-image:url('{AG}')"><div class="ns-inner">
+<div class="ns-panel ns-panel--ag">{bg(AG_SET, AG_H, True)}<div class="ns-inner">
 <span class="ns-tag">For farmers &amp; agronomists</span>
 <h2>Real-time nutrient sensing for smart fertilization</h2>
 <p class="ns-lead">Measure the nitrate in your plants' sap directly on the field and fertilize exactly what the crop needs.</p>
@@ -24,7 +35,7 @@ html = f'''<section class="ns-split" aria-label="Choose your field">
 <p class="ns-note">Free pilot for farms in Bayern. *Calculated for wheat, December 2022 prices.</p>
 </div></div>
 <span class="ns-or" aria-hidden="true">or</span>
-<div class="ns-panel ns-panel--med" style="background-image:url('{MD}')"><div class="ns-inner">
+<div class="ns-panel ns-panel--med">{bg(MD_SET, MD_H, False)}<div class="ns-inner">
 <span class="ns-tag">For medical-device makers</span>
 <h2>Direct molecular sensing for enabling digital health</h2>
 <p class="ns-lead">We build electrochemical biosensors that measure molecules in body fluids with high precision. Your device, with better data.</p>
