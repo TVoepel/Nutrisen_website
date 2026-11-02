@@ -89,7 +89,7 @@ def medical():
 # ================================================================ AGRICULTURE
 def agriculture():
     p = 'agriculture'; t = rd(p); calc = take_calc(t)
-    ben = [('saving fertilizers', 'UP TO 30% LESS, what could mean savings of up to 90€ per Ha.'), ('supporting yield', 'In some cases up to 10% higher yield is possible, depending on farm and season.'),
+    ben = [('saving fertilizers', 'ABOUT 15% LESS ON AVERAGE, UP TO 30%: savings of about 45€, up to 90€ per Ha.'), ('supporting yield', 'In some cases up to 10% higher yield is possible, depending on farm and season.'),
            ('being resilient', 'and cultivating now, the future of agriculture.')]
     stats = [('2 Million', 'TONS OF FERTILIZERS'), ('2 Billion €', 'IN FERTILIZER IMPORTS'), ('20 Million', 'TONS OF CO2')]
     body = hero(t, p, ('5f5c3656', 'pg-agri'), 'Agriculture', '%s <span>%s</span>' % (E('Real-time nutrient sensing'), E('for smart fertilization')),

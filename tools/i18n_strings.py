@@ -74,8 +74,8 @@ DE.update({
     'Real-time nutrient sensing for smart fertilization': 'Nährstoffmessung in Echtzeit für intelligentes Düngen',
     "Measure the nitrate in your plants' sap directly on the field and fertilize exactly what the crop needs.":
         'Messen Sie das Nitrat im Pflanzensaft direkt auf dem Feld und düngen Sie genau so viel, wie die Kultur braucht.',
-    'up to 30% less': 'bis zu 30 % weniger',
-    'fertilizer, saving up to 90€ per ha': 'Dünger, Einsparung bis zu 90 € pro ha',
+    'about 15% less': 'ca. 15 % weniger',
+    'fertilizer on average, up to 30% and 90€ per ha possible': 'Dünger im Durchschnitt, bis zu 30 % und 90 € pro ha möglich',
     'up to +10%': 'bis zu +10 %',
     'higher yield possible in some cases': 'Mehrertrag in einzelnen Fällen möglich',
     'Test your field for free': 'Feld kostenlos testen',
@@ -149,7 +149,7 @@ DE.update({
     'From Germany to every field.': 'Aus Deutschland auf jedes Feld.',
     'Boost your experience and GROW by': 'Verbessern Sie Ihren Anbau und WACHSEN Sie, indem Sie',
     'saving fertilizers': 'Dünger sparen',
-    'UP TO 30% LESS, what could mean savings of up to 90€ per Ha.': 'BIS ZU 30 % WENIGER, das können Einsparungen von bis zu 90 € pro Hektar bedeuten.',
+    'ABOUT 15% LESS ON AVERAGE, UP TO 30%: savings of about 45€, up to 90€ per Ha.': 'CA. 15 % WENIGER IM DURCHSCHNITT, BIS ZU 30 %: Einsparung von ca. 45 €, bis zu 90 € pro Hektar.',
     'supporting yield': 'den Ertrag unterstützen',
     'In some cases up to 10% higher yield is possible, depending on farm and season.': 'In einzelnen Fällen sind bis zu 10 % Mehrertrag möglich, abhängig von Betrieb und Saison.',
     'being resilient': 'widerstandsfähig werden',
@@ -203,10 +203,10 @@ DE.update({
         'Auch ohne Internet kann die Plattform anhand des Nährstoffstatus des Feldes die benötigte Düngermenge berechnen.',
     'No more, no less.': 'Nicht mehr, nicht weniger.',
     'A win-win situation': 'Eine Win-win-Situation',
-    'NutriSen sensors can help to reduce applied fertilizer by up to 30%. In some cases, up to 10% higher yield is possible.':
-        'NutriSen-Sensoren können helfen, den Düngereinsatz um bis zu 30 % zu senken. In einzelnen Fällen sind bis zu 10 % Mehrertrag möglich.',
-    'This could mean savings of up to 90€ per hectare*.':
-        'Das können Einsparungen von bis zu 90 € pro Hektar* bedeuten.',
+    'NutriSen sensors can help to reduce applied fertilizer by about 15% on average, and by up to 30%. In some cases, up to 10% higher yield is possible.':
+        'NutriSen-Sensoren können helfen, den Düngereinsatz im Durchschnitt um ca. 15 % und um bis zu 30 % zu senken. In einzelnen Fällen sind bis zu 10 % Mehrertrag möglich.',
+    'This could mean savings of about 45€ on average and up to 90€ per hectare*.':
+        'Das können Einsparungen von ca. 45 € im Durchschnitt und bis zu 90 € pro Hektar* bedeuten.',
     '*fertilizer prices 2025–2026, wheat farmers: 30€ per Ha for every 10% of fertilizer': '*Düngemittelpreise 2025–2026, Weizenanbau: 30 € pro Hektar je 10 % Dünger',
     "We've got your back": 'Wir stehen hinter Ihnen',
     'Power up the experience that you have, with the technology we can provide.':

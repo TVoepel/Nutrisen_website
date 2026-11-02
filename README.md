@@ -125,6 +125,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   About us and the two legal pages with these components. The texts and images are taken from the existing pages, so all
   translations keep working. The placeholder page `/the-npknowledge/` is removed (`tools/prune.py`).
 
+- **Average saving (2026-11-02):** besides the "up to" values, the home hero, the Agriculture page and the last step of
+  "How does it work" now state that fertilizer use drops by about 15% on average (about 45 EUR per ha at 30 EUR per ha for
+  every 10%). The 15% figure is the owner's statement; "up to 30%" and "up to 90 EUR per ha" stay as the upper bound.
+
 ## Refreshing the mirror
 
 ```
