@@ -43,7 +43,7 @@
 <span class="ns-tag">Für Landwirte &amp; Agrarberater</span>
 <h2>Nährstoffmessung in Echtzeit für intelligentes Düngen</h2>
 <p class="ns-lead">Messen Sie das Nitrat im Pflanzensaft direkt auf dem Feld und düngen Sie genau so viel, wie die Kultur braucht.</p>
-<ul class="ns-stats"><li><b>20 % weniger</b><span>Dünger im Durchschnitt, bis zu 80 € pro ha</span></li><li><b>bis zu +10 %</b><span>Mehrertrag in einzelnen Fällen möglich</span></li></ul>
+<ul class="ns-stats"><li><b>bis zu 30 % weniger</b><span>Dünger, Einsparung bis zu 90 € pro ha</span></li><li><b>bis zu +10 %</b><span>Mehrertrag in einzelnen Fällen möglich</span></li></ul>
 <div class="ns-cta"><a class="ns-btn" href="agriculture/test-your-field/">Feld kostenlos testen</a><a class="ns-more" href="agriculture/how-does-it-work/">So funktioniert es</a></div>
 <p class="ns-note">Kostenloses Pilotprojekt für Betriebe in Bayern. *Berechnet für Weizen, Düngemittelpreise 2025–2026.</p>
 </div></div>
@@ -61,12 +61,12 @@
 <div class="ns-calc-in"><h2 id="ns-calc-h">Was kann NutriSen auf Ihrem Betrieb einsparen?</h2><p>Stellen Sie den Regler auf Ihre Betriebsgröße.</p>
 <div class="ns-calc-row"><label for="ns-ha">Ihre Betriebsgröße</label><output id="ns-ha-out" for="ns-ha" aria-live="polite">100 ha</output></div>
 <input id="ns-ha" type="range" min="10" max="1000" step="10" value="100"><div class="ns-calc-scale" aria-hidden="true"><span>10 ha</span><span>1.000 ha</span></div></div>
-<div class="ns-calc-out"><div><b><em>bis zu</em> <span data-calc="save">8.000 €</span></b><span class="l">gesparte Düngerkosten pro Jahr, bis zu 80 € pro ha</span></div>
+<div class="ns-calc-out"><div><b><em>bis zu</em> <span data-calc="save">9.000 €</span></b><span class="l">mögliche Einsparung pro Jahr, bis zu 90 € pro ha, bei bis zu 30 % weniger Dünger</span></div>
 <a class="ns-calc-btn" href="agriculture/test-your-field/">Feld kostenlos testen</a>
-<small>Obergrenze für Weizen, berechnet mit Düngemittelpreisen von 2025–2026. Die tatsächliche Einsparung hängt von den aktuellen Preisen und vom Betrieb ab, siehe die <a href="agriculture/use-cases/">Praxisfälle</a>.</small>
+<small>Obergrenze auf Basis der Düngemittelpreise 2025–2026: 30 € pro ha je 10 % weniger Dünger. Die tatsächliche Einsparung hängt von den aktuellen Preisen und vom Betrieb ab, siehe die <a href="agriculture/use-cases/">Praxisfälle</a>.</small>
 <a class="ns-calc-more" href="agriculture/calculator/">Eigene Düngung im Detail vergleichen</a></div></div>
 <script>(function(){var r=document.getElementById('ns-ha'),sec=document.querySelector('.ns-calc');if(!r||!sec)return;
-var PER_HA=80, /* "up to" saving in EUR per ha: published figure for wheat at 2025-2026 fertilizer prices */
+var PER_HA=90, /* "up to" saving in EUR per ha: up to 30% less fertilizer at 30 EUR per ha for every 10% (2025-2026 prices, as in the practice cases) */
 L=document.documentElement.lang==='de'?'de-DE':'en-GB',f=new Intl.NumberFormat(L,{style:'currency',currency:'EUR',maximumFractionDigits:0}),n=new Intl.NumberFormat(L),
 o=document.getElementById('ns-ha-out'),s=sec.querySelector('[data-calc=save]'),b=sec.querySelector('.ns-calc-btn'),h=b.getAttribute('href');
 function u(){var v=+r.value;o.textContent=n.format(v)+' ha';s.textContent=f.format(v*PER_HA);b.href=h+'?ha='+v}

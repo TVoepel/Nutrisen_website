@@ -73,11 +73,11 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   Styles: `assets/usecases.css`; generator: `tools/add_usecases.py`.
 
 - **Savings calculator (2026-11-02):** a slider for farm size on the home page and the agriculture page shows the
-  possible fertilizer cost saving as an "up to" value (up to 80 EUR per ha, the published figure for wheat at
-  fertilizer prices of 2025-2026, with a note saying so) and sends the visitor to the free field test with the farm
-  size pre-filled. No extra revenue is shown. Statements about extra yield are worded cautiously throughout ("in some
-  cases", "in individual cases"). CSS and JS are inlined into the page. Sources: `assets/calc.css`, `assets/calc.js`;
-  generator: `tools/add_calculator.py`.
+  possible saving on fertilizer as an "up to" value: up to 90 EUR per ha with up to 30% less fertilizer, calculated
+  with 30 EUR per ha for every 10% of fertilizer (fertilizer prices of 2025-2026, as in the practice cases). It sends
+  the visitor to the free field test with the farm size pre-filled. No extra revenue is shown. Statements about
+  extra yield are worded cautiously throughout ("in some cases", "in individual cases"). CSS and JS are inlined into
+  the page. Sources: `assets/calc.css`, `assets/calc.js`; generator: `tools/add_calculator.py`.
 - **Speed pass (2026-11-02):** `tools/optimize.py` runs last. All photos and graphics are WebP (larger than 1920 px
   are scaled down), the home hero uses small responsive images, fonts are woff2 only with `font-display:swap` and
   the three most used faces are preloaded, HTML comments and dead scripts (emoji, Gutenberg i18n, old-IE banner)

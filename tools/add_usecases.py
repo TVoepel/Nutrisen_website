@@ -50,7 +50,7 @@ BODY = '''<div class="ns-uc">
 <ul class="ns-uc-kpis">
 <li><b>up to −30 %</b><span>fertilizer compared to the standard recommendation</span></li>
 <li><b>up to +14 %</b><span>extra yield in individual cases</span></li>
-<li><b>up to 90 €/ha</b><span>fertilizer costs saved</span></li>
+<li><b>up to 90 €/ha</b><span>savings on fertilizer costs</span></li>
 <li><b>up to +150 €/ha</b><span>extra revenue in individual cases</span></li>
 </ul></div></section>
 <div class="ns-uc-wrap"><div class="ns-uc-card">
