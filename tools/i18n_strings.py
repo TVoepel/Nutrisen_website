@@ -45,8 +45,8 @@ DESC_DE = {
         'Fragen Sie sich jedes Jahr, wann und wie viel Dünger Sie auf dem Feld ausbringen sollen?\nWir suchen Innovatoren, die eine neue Technologie kostenlos testen möchten.',
     'In the laboratory we developed the first enzymatic-based sensor for measuring plant nutrients, directly in the field.':
         'Im Labor haben wir den ersten enzymbasierten Sensor zur Messung von Pflanzennährstoffen direkt auf dem Feld entwickelt.',
-    'Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, or up to 14 % more yield.':
-        'Fünf Praxisfälle 2025/2026: bis zu 30 % weniger Dünger bei gleichem Ertrag oder bis zu 14 % Mehrertrag.',
+    'Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, in individual cases also a higher yield.':
+        'Fünf Praxisfälle 2025/2026: bis zu 30 % weniger Dünger bei gleichem Ertrag, in einzelnen Fällen auch mit höherem Ertrag.',
     'Compare your usual fertilization with NutriSen in three applications, with fertilizer price suggestions from official EU data.':
         'Vergleichen Sie Ihre betriebsübliche Düngung mit NutriSen in drei Gaben, mit Düngerpreis-Vorschlägen aus amtlichen EU-Daten.',
     'Company founded in 2023, with headquarters in Straubing.':
@@ -75,9 +75,9 @@ DE.update({
     "Measure the nitrate in your plants' sap directly on the field and fertilize exactly what the crop needs.":
         'Messen Sie das Nitrat im Pflanzensaft direkt auf dem Feld und düngen Sie genau so viel, wie die Kultur braucht.',
     '20% less': '20 % weniger',
-    'fertilizer on average, about 80€ per ha': 'Dünger im Durchschnitt, etwa 80 € pro ha',
+    'fertilizer on average, up to 80€ per ha': 'Dünger im Durchschnitt, bis zu 80 € pro ha',
     'up to +10%': 'bis zu +10 %',
-    'yield, about 240€ extra per ha': 'Ertrag, etwa 240 € Mehrerlös pro ha',
+    'higher yield possible in some cases': 'Mehrertrag in einzelnen Fällen möglich',
     'Test your field for free': 'Feld kostenlos testen',
     'See how it works': 'So funktioniert es',
     'Free pilot for farms in Bayern. *Calculated for wheat, December 2022 prices.':
@@ -149,9 +149,9 @@ DE.update({
     'From Germany to every field.': 'Aus Deutschland auf jedes Feld.',
     'Boost your experience and GROW by': 'Verbessern Sie Ihren Anbau und WACHSEN Sie, indem Sie',
     'saving fertilizers': 'Dünger sparen',
-    '20% LESS ON AVERAGE, what could mean 80€ per Ha.': 'IM DURCHSCHNITT 20 % WENIGER, das können 80 € pro Hektar bedeuten.',
-    'increasing yield': 'den Ertrag steigern',
-    'up to 10%, allowing extra revenue of 240€ per Ha.': 'um bis zu 10 %, das bedeutet bis zu 240 € Mehrerlös pro Hektar.',
+    '20% LESS ON AVERAGE, what could mean up to 80€ per Ha.': 'IM DURCHSCHNITT 20 % WENIGER, das können bis zu 80 € pro Hektar bedeuten.',
+    'supporting yield': 'den Ertrag unterstützen',
+    'In some cases up to 10% higher yield is possible, depending on farm and season.': 'In einzelnen Fällen sind bis zu 10 % Mehrertrag möglich, abhängig von Betrieb und Saison.',
     'being resilient': 'widerstandsfähig werden',
     'and cultivating now, the future of agriculture.': 'und schon heute die Zukunft der Landwirtschaft gestalten.',
     '*values calculated for wheat farmers, December 2022 prices.': '*Werte berechnet für Weizenanbau, Preise Dezember 2022.',
@@ -203,10 +203,10 @@ DE.update({
         'Auch ohne Internet kann die Plattform anhand des Nährstoffstatus des Feldes die benötigte Düngermenge berechnen.',
     'No more, no less.': 'Nicht mehr, nicht weniger.',
     'A win-win situation': 'Eine Win-win-Situation',
-    'In average, NutriSen sensors can reduce 20% of applied fertilizers and increase 10% the yield.':
-        'Im Durchschnitt können NutriSen-Sensoren den Düngereinsatz um 20 % senken und den Ertrag um 10 % steigern.',
-    'This could mean 80€ savings and an additional income of 240€ per hectar*!':
-        'Das kann 80 € Ersparnis und ein zusätzliches Einkommen von 240 € pro Hektar* bedeuten!',
+    'On average, NutriSen sensors can help to reduce applied fertilizer by up to 20%. In some cases, up to 10% higher yield is possible.':
+        'Im Durchschnitt können NutriSen-Sensoren helfen, den Düngereinsatz um bis zu 20 % zu senken. In einzelnen Fällen sind bis zu 10 % Mehrertrag möglich.',
+    'This could mean savings of up to 80€ per hectare*.':
+        'Das können Einsparungen von bis zu 80 € pro Hektar* bedeuten.',
     '*prices for wheat farmers, December 2022': '*Preise für Weizenanbau, Dezember 2022',
     "We've got your back": 'Wir stehen hinter Ihnen',
     'Power up the experience that you have, with the technology we can provide.':
@@ -266,9 +266,8 @@ DE.update({
     '1,000 ha': '1.000 ha',
     '€8,000': '8.000 €', '€24,000': '24.000 €',
     'up to': 'bis zu',
-    'fertilizer costs saved per year, about 80 € per ha': 'gesparte Düngerkosten pro Jahr, etwa 80 € pro ha',
-    'extra revenue per year, up to 240 € per ha': 'Mehrerlös pro Jahr, bis zu 240 € pro ha',
-    'Average values for wheat, December 2022 prices. Results vary by farm, see the': 'Durchschnittswerte für Weizen, Preise Dezember 2022. Die Ergebnisse variieren je nach Betrieb, siehe die',
+    'fertilizer costs saved per year, up to 80 € per ha': 'gesparte Düngerkosten pro Jahr, bis zu 80 € pro ha',
+    'Up-to value for wheat, calculated with fertilizer prices of December 2022. Actual savings depend on current prices and on the farm, see the': 'Obergrenze für Weizen, berechnet mit Düngemittelpreisen von Dezember 2022. Die tatsächliche Einsparung hängt von den aktuellen Preisen und vom Betrieb ab, siehe die',
     'practice cases': 'Praxisfälle',
     # --- use cases
     'Results from practice': 'Ergebnisse aus der Praxis',
@@ -277,11 +276,11 @@ DE.update({
     'up to −30 %': 'bis zu −30 %',
     'fertilizer compared to the standard recommendation': 'Dünger im Vergleich zur Standardempfehlung',
     'up to +14 %': 'bis zu +14 %',
-    'extra yield': 'Mehrertrag',
+    'extra yield in individual cases': 'Mehrertrag in einzelnen Fällen',
     'up to 90 €/ha': 'bis zu 90 €/ha',
     'fertilizer costs saved': 'Düngerkosten gespart',
     'up to +150 €/ha': 'bis zu +150 €/ha',
-    'extra revenue': 'Mehrerlös',
+    'extra revenue in individual cases': 'Mehrerlös in einzelnen Fällen',
     'Practice cases 2025/2026': 'Praxisfälle 2025/2026',
     'Farm · variety': 'Betrieb · Sorte',
     'Fertilizer amount compared to DBE': 'Düngermenge im Vergleich zur DBE',

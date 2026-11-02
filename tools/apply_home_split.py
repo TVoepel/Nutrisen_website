@@ -30,7 +30,7 @@ html = f'''<section class="ns-split" aria-label="Choose your field">
 <span class="ns-tag">For farmers &amp; agronomists</span>
 <h2>Real-time nutrient sensing for smart fertilization</h2>
 <p class="ns-lead">Measure the nitrate in your plants' sap directly on the field and fertilize exactly what the crop needs.</p>
-<ul class="ns-stats"><li><b>20% less</b><span>fertilizer on average, about 80&#8364; per ha</span></li><li><b>up to +10%</b><span>yield, about 240&#8364; extra per ha</span></li></ul>
+<ul class="ns-stats"><li><b>20% less</b><span>fertilizer on average, up to 80&#8364; per ha</span></li><li><b>up to +10%</b><span>higher yield possible in some cases</span></li></ul>
 <div class="ns-cta"><a class="ns-btn" href="agriculture/test-your-field/">Test your field for free</a><a class="ns-more" href="agriculture/how-does-it-work/">See how it works</a></div>
 <p class="ns-note">Free pilot for farms in Bayern. *Calculated for wheat, December 2022 prices.</p>
 </div></div>

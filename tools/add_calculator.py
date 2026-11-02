@@ -10,13 +10,13 @@ css = re.sub(r'/\*.*?\*/', '', css, flags=re.S); css = re.sub(r'\s*([{};:,])\s*'
 js = open(os.path.join(here, '..', 'assets', 'calc.js'), encoding='utf-8').read().strip()
 
 def section(prefix):
-    return f'''<section class="ns-calc" aria-labelledby="ns-calc-h" data-src="{prefix}assets/fertilizer-prices.json"><style>{css}</style><div class="ns-calc-card">
+    return f'''<section class="ns-calc" aria-labelledby="ns-calc-h"><style>{css}</style><div class="ns-calc-card">
 <div class="ns-calc-in"><h2 id="ns-calc-h">What could NutriSen save on your farm?</h2><p>Move the slider to your farm size.</p>
 <div class="ns-calc-row"><label for="ns-ha">Your farm size</label><output id="ns-ha-out" for="ns-ha" aria-live="polite">100 ha</output></div>
 <input id="ns-ha" type="range" min="10" max="1000" step="10" value="100"><div class="ns-calc-scale" aria-hidden="true"><span>10 ha</span><span>1,000 ha</span></div></div>
-<div class="ns-calc-out"><div><b><em>up to</em> <span data-calc="save">–</span></b><span class="l" data-calc="lbl">&nbsp;</span></div>
+<div class="ns-calc-out"><div><b><em>up to</em> <span data-calc="save">€8,000</span></b><span class="l">fertilizer costs saved per year, up to 80 € per ha</span></div>
 <a class="ns-calc-btn" href="{prefix}agriculture/test-your-field/">Test your field for free</a>
-<small><span data-calc="note"></span> <a href="{prefix}agriculture/use-cases/">practice cases</a>.</small>
+<small>Up-to value for wheat, calculated with fertilizer prices of December 2022. Actual savings depend on current prices and on the farm, see the <a href="{prefix}agriculture/use-cases/">practice cases</a>.</small>
 <a class="ns-calc-more" href="{prefix}agriculture/calculator/">Compare your own fertilization in detail</a></div></div>
 <script>{js}</script></section>
 '''

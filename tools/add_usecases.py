@@ -49,9 +49,9 @@ BODY = '''<div class="ns-uc">
 <h1>Practice cases 2025/2026: <span>less fertilizer, same or higher yield</span></h1>
 <ul class="ns-uc-kpis">
 <li><b>up to −30 %</b><span>fertilizer compared to the standard recommendation</span></li>
-<li><b>up to +14 %</b><span>extra yield</span></li>
+<li><b>up to +14 %</b><span>extra yield in individual cases</span></li>
 <li><b>up to 90 €/ha</b><span>fertilizer costs saved</span></li>
-<li><b>up to +150 €/ha</b><span>extra revenue</span></li>
+<li><b>up to +150 €/ha</b><span>extra revenue in individual cases</span></li>
 </ul></div></section>
 <div class="ns-uc-wrap"><div class="ns-uc-card">
 <table class="ns-uc-table"><caption>Practice cases 2025/2026</caption>
@@ -85,7 +85,7 @@ t = re.sub(r'(<div data-page-id="b10b79d3[^>]*><div><a href=")\./(")', r'\1../ho
 t = re.sub(r'(<div data-page-id="%s"[^>]*><div><a href=")[^"]*(")' % NEW_ID, r'\1./\2', t)
 t = re.sub(r'<title>[^<]*</title>', '<title>Use cases: less fertilizer, same or higher yield</title>', t, count=1)
 t = re.sub(r'(<meta\s+name="description" content=")[^"]*(")',
-           r'\1Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, or up to 14 % more yield.\2', t, count=1, flags=re.S)
+           r'\1Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, in individual cases also a higher yield.\2', t, count=1, flags=re.S)
 t = t.replace('</head>', '<link rel="stylesheet" href="../../assets/usecases.css">\n</head>', 1)
 os.makedirs(os.path.join(ROOT, NEW), exist_ok=True)
 open(os.path.join(ROOT, NEW, 'index.html'), 'w', encoding='utf-8').write(t)

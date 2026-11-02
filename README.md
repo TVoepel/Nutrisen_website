@@ -73,12 +73,11 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   Styles: `assets/usecases.css`; generator: `tools/add_usecases.py`.
 
 - **Savings calculator (2026-11-02):** a slider for farm size on the home page and the agriculture page shows the
-  expected fertilizer cost saving as an "up to" value and sends the visitor to the free field test with the farm size
-  pre-filled. The published figure of 80 EUR per ha refers to wheat at December 2022 prices; the calculator scales it
-  with the EU nitrogen price indicator of the Agri-food data portal (`assets/fertilizer-prices.json`, now vs. December
-  2022), so the result is based on current fertilizer prices, as the note under the result says. The estimate is
-  loaded at runtime, so the monthly price update changes it without a rebuild. No extra revenue is shown.
-  CSS and JS are inlined into the page. Sources: `assets/calc.css`, `assets/calc.js`; generator: `tools/add_calculator.py`.
+  possible fertilizer cost saving as an "up to" value (up to 80 EUR per ha, the published figure for wheat at December
+  2022 fertilizer prices, with a note saying so) and sends the visitor to the free field test with the farm size
+  pre-filled. No extra revenue is shown. Statements about extra yield are worded cautiously throughout ("in some cases",
+  "in individual cases"). CSS and JS are inlined into the page. Sources: `assets/calc.css`, `assets/calc.js`;
+  generator: `tools/add_calculator.py`.
 - **Speed pass (2026-11-02):** `tools/optimize.py` runs last. All photos and graphics are WebP (larger than 1920 px
   are scaled down), the home hero uses small responsive images, fonts are woff2 only with `font-display:swap` and
   the three most used faces are preloaded, HTML comments and dead scripts (emoji, Gutenberg i18n, old-IE banner)

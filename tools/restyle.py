@@ -89,7 +89,7 @@ def medical():
 # ================================================================ AGRICULTURE
 def agriculture():
     p = 'agriculture'; t = rd(p); calc = take_calc(t)
-    ben = [('saving fertilizers', '20% LESS ON AVERAGE, what could mean 80€ per Ha.'), ('increasing yield', 'up to 10%, allowing extra revenue of 240€ per Ha.'),
+    ben = [('saving fertilizers', '20% LESS ON AVERAGE, what could mean up to 80€ per Ha.'), ('supporting yield', 'In some cases up to 10% higher yield is possible, depending on farm and season.'),
            ('being resilient', 'and cultivating now, the future of agriculture.')]
     stats = [('2 Million', 'TONS OF FERTILIZERS'), ('2 Billion €', 'IN FERTILIZER IMPORTS'), ('20 Million', 'TONS OF CO2')]
     body = hero(t, p, ('5f5c3656', 'pg-agri'), 'Agriculture', '%s <span>%s</span>' % (E('Real-time nutrient sensing'), E('for smart fertilization')),
@@ -120,7 +120,7 @@ def how():
              ('cef63917', 'App screen: upgrade to premium', 'Empower your data', ['Satellite data is a beginning, but not enough.', S('Upgrade your account')]),
              ('eeb01f52', 'Wheat plant, plant juice and sensor', 'Check your plants', [S('With the help of satellite'), S('There you can collect')]),
              ('be72870c', 'App screen with the nitrate result', 'Time is gold', [S('At the very spot'), S('Even without internet'), 'No more, no less.']),
-             ('a3800af8', 'App screen: fertilizer amount per zone', 'A win-win situation', [S('In average, NutriSen sensors'), S('This could mean 80'), '*prices for wheat farmers, December 2022'])]
+             ('a3800af8', 'App screen: fertilizer amount per zone', 'A win-win situation', [S('On average, NutriSen sensors'), S('This could mean savings'), '*prices for wheat farmers, December 2022'])]
     lead = ('<p class="nb-lead">%s <strong>%s</strong> %s</p><p class="nb-lead">%s <strong>%s</strong> %s</p>' % (
         E('Our sensors measure the'), E('exact amount of nutrients'), E('your plants have in the moment of the measurement.'),
         E('Through data retrieved from satellite platforms, we understand'), E('the variability of your field'), E('and calculate the needs for each condition.')))
