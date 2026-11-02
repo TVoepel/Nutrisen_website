@@ -109,8 +109,8 @@ DE.update({
     'We are very proud for receiving the 3rd place at the Innovationspreis Moderne Landwirtschaft, directly by the hands of Nikola Steinbock from the Rentenbank!':
         'Wir sind sehr stolz, den 3. Platz beim Innovationspreis Moderne Landwirtschaft direkt aus den Händen von Nikola Steinbock von der Rentenbank entgegennehmen zu dürfen!',
     'Diversity is our super power': 'Vielfalt ist unsere Superkraft',
-    "Four nations united for one goal: NutriSen's complementary team combines co-inventors with business experts to put the best product in the farmers' hands.":
-        'Vier Nationen, ein Ziel: Das sich ergänzende Team von NutriSen vereint Miterfinder mit Wirtschaftsexperten, um den Landwirten das beste Produkt in die Hand zu geben.',
+    "Three nations united for one goal: NutriSen's complementary team combines co-inventors with business experts to put the best product in the farmers' hands.":
+        'Drei Nationen, ein Ziel: Das sich ergänzende Team von NutriSen vereint Miterfinder mit Wirtschaftsexperten, um den Landwirten das beste Produkt in die Hand zu geben.',
     'Father, husband and biochemistry fan, Tobias dedicates his mind to bring innovative technologies to the world. His biggest aim is to reduce as much agriculture-related GHG emissions as possible.':
         'Vater, Ehemann und Biochemie-Fan: Tobias setzt sich dafür ein, innovative Technologien in die Welt zu bringen. Sein größtes Ziel ist es, die landwirtschaftlichen Treibhausgasemissionen so stark wie möglich zu senken.',
     'A proud Brazilian, Débora combines science and entrepreneurship to deliver useful technologies to the market. Responsible leadership and collaboration are her trademarks.':

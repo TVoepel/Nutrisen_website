@@ -187,6 +187,8 @@ def home():
     aw = [('bde581b1', 'Award ceremony of the Plan B Pitch Competition', 'Plan B Competition, Straubing.', ['3rd Prize in the Plan B Pitch Competition 2022!', S('Side-by-Side with start-ups')], ''),
           ('601ec95f', 'Logo of the Bio-Security competition', 'Bio-Security, Bönen.', [S('Since 2007'), S('In 2022, we secured')], ' contain'),
           ('945aded1', 'Logo of the Innovationspreis Moderne Landwirtschaft', 'Forum Moderne Landwirtschaft, Berlin.', ['What a night in Berlin!', S('We are very proud')], ' contain')]
+    # Team cards. To add a person later: add a tuple (photo id from the mirror, name, role, bio text, link key) and the matching
+    # bio translation in tools/i18n_strings.py.
     team = [('b76c62ba', 'Tobias Vöpel', 'co-CEO', S('Father, husband'), 'linkedin.com/in/tobias'), ('ffefe5f4', 'Alaa Oughli', 'CTO', S('Leading scientist'), 'alaa-oughli'), ('48bc2463', 'Nicolas Plumeré', 'CSO', S("Nicolas's vision"), 'NicolasPlumere')]
     hrefs = re.findall(r'href="((?:https://(?:de\.|www\.)?linkedin\.com/in/[^"]+|https://twitter\.com/[^"]+|mailto:[^"]+))"', t)
     def link_for(key):
@@ -203,7 +205,7 @@ def home():
             IMG(t, iid, name, '(max-width:860px) 90vw, 260px'), E(name), E(role), E(bio), A(ln), soc, A(mail_for(name)), E('E-mail'))
     body = (sec('<h2 class="nb-h2 nb-center">%s</h2><div class="nb-grid" style="margin-top:28px">%s</div>' % (E('People are excited about us'), awards)) +
             sec('<h2 class="nb-h2">%s</h2><p class="nb-sub">%s</p><div class="nb-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%%,240px),1fr))">%s</div>' % (
-                E('Diversity is our super power'), E(S('Four nations united')), members), 'nb-section--white'))
+                E('Diversity is our super power'), E(S('Three nations united')), members), 'nb-section--white'))
     s, e = region(t)
     t = t[:at] + '<div class="nb">' + body + '</div>\n' + t[e:]
     wr(p, t.replace('</head>', '<link rel="stylesheet" href="assets/brand.css">\n</head>', 1))
