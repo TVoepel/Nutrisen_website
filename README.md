@@ -165,6 +165,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
     paragraph) instead of collapsed, since readers skip collapsed content. Checked with Mozilla Readability: 89 to 100% of the text of every page
     is extracted, the rest are buttons. Safari's own Reader could not be tested here.
 
+- **Cache busting (2026-11-03):** `tools/cachebust.py` (last step) adds `?v=<hash>` to every `assets/*.css` and `assets/*.js` reference. The hosting caches
+  these files for a long time (GitHub Pages 10 minutes, the `.htaccess` for IONOS one month), so without it visitors can keep seeing an old style
+  sheet after an update. Run it again after every change to a CSS or JS file in `assets/`. The home buttons no longer move on hover either.
+
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
   rebuilds the content of the home page (awards and team), Medical, Agriculture, How does it work, Test your field,
@@ -202,6 +206,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `seo.py`, `semantic.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `seo.py`, `semantic.py`, `cachebust.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
 `usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`. `i18n.py` refuses to run twice on the same files.

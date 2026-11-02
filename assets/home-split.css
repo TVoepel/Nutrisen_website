@@ -20,9 +20,9 @@
 .ns-stats span{display:block;margin-top:4px;font-size:13px;line-height:1.35;color:rgba(255,255,255,.85)}
 .ns-cta{display:flex;gap:14px 20px;flex-wrap:wrap;align-items:center}
 .ns-btn{display:inline-block;padding:15px 26px;border-radius:12px;font-weight:600;font-size:17px;text-decoration:none!important;
-  color:#fff!important;background:var(--ns-green);box-shadow:0 8px 24px rgba(6,178,98,.45);transition:transform .2s,box-shadow .2s,background .2s}
+  color:#fff!important;background:var(--ns-green);box-shadow:0 8px 24px rgba(6,178,98,.45);transition:box-shadow .2s}
 .ns-panel--med .ns-btn{background:var(--ns-blue);box-shadow:0 8px 24px rgba(11,78,162,.55)}
-.ns-btn:hover,.ns-btn:focus-visible{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.ns-btn:hover,.ns-btn:focus-visible{box-shadow:0 12px 30px rgba(0,0,0,.4)}
 .ns-btn:focus-visible,.ns-more:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .ns-more{color:#fff!important;font-size:15px;font-weight:500;text-decoration:underline!important;text-underline-offset:4px}
 .ns-note{margin:16px 0 0;font-size:12px;color:rgba(255,255,255,.7)}
