@@ -111,7 +111,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   - The disclaimer text on the page (market data source, no liability) was provided by the site owner. The
     paragraph about Eurostat was added to cover the second source.
 
-- **Blog (2026-11-01):** `/blog/` (German: `/de/blog/`) with three articles, each 3 to 5 minutes of reading time, in English
+- **Blog (2026-11-01):** `/blog/` (German: `/de/blog/`) with four articles, each 3 to 5 minutes of reading time, in English
   and German and linked in the main menu: "Nutrient prices: why the EU reports them and how to use them" and "JUBIL®: where
   the stem-juice nitrate test comes from and why it works" (links to the ARVALIS page `arvalis.fr/jubil-en-detail`). The
   texts are in `tools/blog_content.py` (both languages, with their sources); `tools/add_blog.py` builds the pages and
@@ -123,6 +123,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   BBCH codes for winter wheat and compares how German practice (fertiliser ordinance requirement values, three doses, the TLL
   nitrate quick test) and French practice (bilan prévisionnel, ARVALIS timing advice, JUBIL®) tie nitrogen to growth stages. Sources are
   listed under the article. Posts can now carry their own `date` and `date_txt` in `tools/blog_content.py`.
+
+- **Short article on the DWD Bright Sky API (2026-11-02):** `/blog/dwd-bright-sky-api-farmers/` (German: `/de/blog/...`), 3 minutes. Explains
+  the free, open-source JSON API for DWD open weather data (no API key, DWD terms of use apply), what it returns, five uses on a farm
+  and its limits (nearest station, spare-time service, DWD source note). The example call in the article was tested live.
 
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
