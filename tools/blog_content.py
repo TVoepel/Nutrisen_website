@@ -141,6 +141,76 @@ POSTS = [
                                            'Justes E., Mary B., Meynard J.-M., Machet J.-M., Thelier-Huché L. (1994): Determination of a critical nitrogen dilution curve for winter wheat crops. Annals of Botany 74: 397–407')),
   ],
  },
+ {
+  'key': 'post_bbch', 'slug': 'bbch-winter-wheat-germany-france',
+  'date': '2026-11-02', 'date_txt': T('2 November 2026', '2. November 2026'),
+  'tag': T('Plant nutrition', 'Pflanzenernährung'),
+  'title': T('Winter wheat, BBCH and nitrogen: how Germany and France time their fertilisation',
+             'Winterweizen, BBCH und Stickstoff: Wie Deutschland und Frankreich ihre Düngung takten'),
+  'excerpt': T('Wheat takes up nitrogen by growth stage, not by calendar date. How the BBCH scale works, how German and French practice split the nitrogen, and where JUBIL® fits in.',
+               'Weizen nimmt Stickstoff nach Entwicklungsstadium auf, nicht nach Kalender. Wie die BBCH-Skala funktioniert, wie deutsche und französische Praxis den Stickstoff aufteilen und wo JUBIL® hineinpasst.'),
+  'lead': T('Ask a German and a French wheat grower when to apply the last nitrogen and neither will name a date. Both will name a growth stage. The BBCH scale is the common language behind that answer, and comparing the two countries shows how much room there is for measuring what the plant really needs.',
+            'Fragt man einen deutschen und einen französischen Weizenanbauer, wann die letzte Stickstoffgabe fällig ist, nennt keiner ein Datum. Beide nennen ein Entwicklungsstadium. Die BBCH-Skala ist die gemeinsame Sprache hinter dieser Antwort, und der Vergleich beider Länder zeigt, wie viel Spielraum es gibt, genau zu messen, was die Pflanze wirklich braucht.'),
+  'blocks': [
+   ('h2', T('The BBCH scale in one minute', 'Die BBCH-Skala in einer Minute')),
+   ('p', T('BBCH is a uniform decimal code for the growth stages of crops and weeds, named after the institutions that created it: the German Federal Biological Research Centre, the Federal Plant Variety Office and the chemical industry. For cereals, these are the codes that matter for nitrogen.',
+           'BBCH ist ein einheitlicher dezimaler Code für die Entwicklungsstadien von Kulturpflanzen und Unkräutern, benannt nach den Einrichtungen, die ihn geschaffen haben: Biologische Bundesanstalt, Bundessortenamt und Chemische Industrie. Für Getreide sind diese Codes für den Stickstoff wichtig.')),
+   ('ol', [
+     T('BBCH 21 to 29, tillering: from the first tiller to the maximum number of tillers.', 'BBCH 21 bis 29, Bestockung: vom ersten Bestockungstrieb bis zur maximalen Triebzahl.'),
+     T('BBCH 30 to 32, start of stem elongation: 30 is the beginning, 31 the first node at least 1 cm above the tillering node, 32 the second node at least 2 cm above the first.', 'BBCH 30 bis 32, Beginn des Schossens: 30 ist der Beginn, 31 der erste Knoten mindestens 1 cm über dem Bestockungsknoten, 32 der zweite Knoten mindestens 2 cm über dem ersten.'),
+     T('BBCH 37 and 39, flag leaf: 37 is the flag leaf just visible and still rolled, 39 the flag leaf fully unrolled with the ligule just visible.', 'BBCH 37 und 39, Fahnenblatt: 37 ist das Fahnenblatt gerade sichtbar und noch eingerollt, 39 das Fahnenblatt voll entfaltet, das Blatthäutchen gerade sichtbar.'),
+     T('BBCH 49 to 59, ear emergence: from the first awns visible (49) and the beginning of heading (51) to the end of heading (59).', 'BBCH 49 bis 59, Ährenschieben: von den ersten sichtbaren Grannen (49) und dem Beginn des Ährenschiebens (51) bis zu dessen Ende (59).'),
+   ]),
+   ('h2', T('Why stages beat the calendar', 'Warum Stadien besser sind als der Kalender')),
+   ('p', T('Wheat does not take up nitrogen evenly. ARVALIS describes how, between the stage ear at 1 cm and flowering, the crop grows from about 1 tonne to 10 to 15 tonnes of dry matter per hectare and absorbs roughly 150 kg of nitrogen per hectare or more.',
+           'Weizen nimmt Stickstoff nicht gleichmäßig auf. ARVALIS beschreibt, dass der Bestand zwischen dem Stadium „Ähre 1 cm“ und der Blüte von etwa 1 Tonne auf 10 bis 15 Tonnen Trockenmasse pro Hektar wächst und dabei rund 150 kg Stickstoff pro Hektar oder mehr aufnimmt.')),
+   ('h2', T('Germany: a legal ceiling and three doses', 'Deutschland: eine gesetzliche Obergrenze und drei Gaben')),
+   ('p', T('In Germany the starting point is the fertiliser ordinance. Its annex 4 sets the nitrogen requirement value for winter wheat at a yield level of 80 dt per hectare: 230 kg N per hectare for quality groups A and B, 210 for C and 260 for E. The requirement must be determined for each field before substantial amounts are applied, and the sum of all doses must not exceed it. The last dose therefore has an upper limit, as the Thuringian agricultural office TLL puts it: the requirement minus what has already been applied.',
+           'In Deutschland ist die Düngeverordnung der Ausgangspunkt. Ihre Anlage 4 legt den Stickstoffbedarfswert für Winterweizen bei einem Ertragsniveau von 80 dt pro Hektar fest: 230 kg N pro Hektar für die Qualitätsgruppen A und B, 210 für C und 260 für E. Der Bedarf muss für jeden Schlag ermittelt werden, bevor wesentliche Mengen ausgebracht werden, und die Summe aller Gaben darf ihn nicht überschreiten. Die letzte Gabe hat deshalb eine Obergrenze, wie das Thüringer Landesamt TLL es formuliert: den Bedarf abzüglich der bisherigen Düngung.')),
+   ('p', T('The usual pattern is three doses. The first goes on at the start of vegetation, with the mineral nitrogen in the soil (Nmin) taken into account. The second, the stem-elongation dose, has its optimum in the middle of stem elongation, BBCH 31 to 37, and TLL caps it at 60 kg N per hectare, or 75 at very high yields. The third dose, for the ear, is given from BBCH 37 to the beginning of heading at BBCH 51. Early doses raise the yield more, later ones raise the protein content.',
+           'Üblich sind drei Gaben. Die erste erfolgt zu Vegetationsbeginn, unter Berücksichtigung des mineralischen Stickstoffs im Boden (Nmin). Die zweite, die Schossergabe, hat ihr Optimum in der Mitte des Schossens, BBCH 31 bis 37, und wird laut TLL auf 60 kg N pro Hektar begrenzt, bei sehr hohen Erträgen auf 75. Die dritte Gabe, für die Ähre, erfolgt ab BBCH 37 bis zum Beginn des Ährenschiebens bei BBCH 51. Frühe Gaben erhöhen eher den Ertrag, spätere mehr den Proteingehalt.')),
+   ('p', T('A late dose does not always pay. TLL points out that drought, a low yield potential or a large nitrogen supply from the soil can reduce its effect or remove it completely, and that only about half of the nitrogen of the last dose leaves the field with the grain.',
+           'Eine Spätgabe zahlt sich nicht immer aus. Die TLL weist darauf hin, dass Trockenheit, ein geringes Ertragspotenzial oder ein hohes Stickstoffangebot aus dem Boden ihre Wirkung mindern oder ganz ausbleiben lassen können, und dass nur etwa die Hälfte des Stickstoffs der letzten Gabe mit dem Korn abgefahren wird.')),
+   ('p', T('Germany also has its own plant-sap test. A TLL guideline from March 2021 describes a nitrate quick test for winter cereals: sap is pressed from stem pieces taken about 1 cm above the ground and read on a test strip. The colour value from 5 to 0 translates into a dose. For the stem-elongation dose, tested between BBCH 30 and 37, it ranges from none at colour value 5 to 60 to 75 kg N per hectare at 0. The ear dose is tested between BBCH 37 and 55.',
+           'Deutschland hat außerdem einen eigenen Pflanzensafttest. Eine Leitlinie der TLL vom März 2021 beschreibt einen Nitrat-Schnelltest für Wintergetreide: Aus Halmstücken, die etwa 1 cm über dem Boden entnommen werden, wird Saft gepresst und auf einem Teststäbchen abgelesen. Der Farbwert von 5 bis 0 wird in eine Gabe übersetzt. Für die Schossergabe, getestet zwischen BBCH 30 und 37, reicht sie von keiner Gabe bei Farbwert 5 bis zu 60 bis 75 kg N pro Hektar bei 0. Die Ährengabe wird zwischen BBCH 37 und 55 getestet.')),
+   ('h2', T('France: a budget first, then the plant decides', 'Frankreich: erst die Bilanz, dann entscheidet die Pflanze')),
+   ('p', T('French practice starts with a nitrogen budget, the bilan prévisionnel, which gives a total dose X. JUBIL® then splits it and lets the plant decide the end. X minus 40 units of nitrogen go on in two doses, at full tillering and at the stage ear at 1 cm, which roughly marks BBCH 30. Nitrate in the stem-base juice is measured at one node (BBCH 31), if needed at two nodes (BBCH 32) and possibly when the last leaf is visible, around BBCH 37. Only if the nitrate content is at or below the threshold does a third dose of 40 to 80 kg N per hectare follow.',
+           'Die französische Praxis beginnt mit einer Stickstoffbilanz, dem bilan prévisionnel, die eine Gesamtmenge X ergibt. JUBIL® teilt sie dann auf und lässt die Pflanze über das Ende entscheiden. X minus 40 Einheiten Stickstoff werden in zwei Gaben ausgebracht, zu Vollbestockung und im Stadium „Ähre 1 cm“, das ungefähr BBCH 30 entspricht. Der Nitratgehalt im Saft der Stängelbasis wird im Stadium „1 Knoten“ (BBCH 31) gemessen, bei Bedarf bei „2 Knoten“ (BBCH 32) und gegebenenfalls bei sichtbarem letztem Blatt, um BBCH 37. Nur wenn der Nitratgehalt auf oder unter dem Schwellenwert liegt, folgt eine dritte Gabe von 40 bis 80 kg N pro Hektar.')),
+   ('p', T('ARVALIS timing advice follows the same stages. For 2026 it advised delaying the first dose until early stem elongation or ear at 1 cm, depending on the region, and skipping the tillering dose when residual soil nitrogen is high. The stage ear at 1 cm is only a guide for the second dose: soil supply or rain can move it.',
+           'Die Terminempfehlungen von ARVALIS folgen denselben Stadien. Für 2026 riet ARVALIS, die erste Gabe je nach Region bis zum frühen Schossen oder zu „Ähre 1 cm“ zu verschieben und die Bestockungsgabe bei hohem Reststickstoff ausfallen zu lassen. Das Stadium „Ähre 1 cm“ ist für die zweite Gabe nur ein Anhaltspunkt: Bodenangebot oder Regen können sie verschieben.')),
+   ('p', T('The last dose stays important. In May 2025, ARVALIS advisers recommended keeping it clearly, between the flag leaf and the swelling of the ear, because ear fertility is a key yield component and wheat keeps absorbing nitrogen after the flag leaf appears.',
+           'Die letzte Gabe bleibt wichtig. Im Mai 2025 empfahlen ARVALIS-Berater klar, sie beizubehalten, zwischen Fahnenblatt und Ährenanschwellen, weil die Ährenfruchtbarkeit eine wichtige Ertragskomponente ist und Weizen auch nach dem Erscheinen des Fahnenblatts weiter Stickstoff aufnimmt.')),
+   ('h2', T('Side by side', 'Im direkten Vergleich')),
+   ('olb', [
+     T('Same stages. Both countries place the second dose in stem elongation, around BBCH 30 to 37, and the last dose around the flag leaf and the ear.',
+       'Gleiche Stadien. Beide Länder legen die zweite Gabe ins Schossen, um BBCH 30 bis 37, und die letzte Gabe um Fahnenblatt und Ähre.'),
+     T('Same measurement. Both read nitrate with a test strip in juice pressed from the stem base.',
+       'Gleiche Messung. Beide lesen Nitrat mit einem Teststreifen im Saft ab, der aus der Stängelbasis gepresst wird.'),
+     T('Different anchor. In Germany the legal requirement value is a ceiling for all doses, and the test steers within it, never beyond it. In France the budget dose X is the reference, and JUBIL® builds in a saving of 40 units where the plant allows it.',
+       'Anderer Anker. In Deutschland ist der gesetzliche Bedarfswert eine Obergrenze für alle Gaben, und der Test steuert innerhalb davon, nie darüber hinaus. In Frankreich ist die Bilanzmenge X der Bezug, und JUBIL® baut eine Einsparung von 40 Einheiten ein, wo die Pflanze es erlaubt.'),
+     T('Different question. The German tables give a dose for every colour value of the strip. JUBIL® first asks whether a third dose is needed at all, and only then how much.',
+       'Andere Frage. Die deutschen Tabellen nennen für jeden Farbwert des Stäbchens eine Gabe. JUBIL® fragt zuerst, ob überhaupt eine dritte Gabe nötig ist, und erst dann, wie viel.'),
+   ]),
+   ('h2', T('What this means for measuring in the field', 'Was das für das Messen auf dem Feld bedeutet')),
+   ('p', T('Both examples follow the same logic: a plant measurement is only useful if the stage is known. Thresholds depend on stage, density, soil and variety, so the same nitrate reading can mean different things at BBCH 32 and at BBCH 39. NutriSen starts here. Our biosensor determines the nitrate concentration in plant juice directly in the field, and the platform uses satellite data to find representative measuring spots.',
+           'Beide Beispiele folgen derselben Logik: Eine Pflanzenmessung ist nur nützlich, wenn das Stadium bekannt ist. Die Schwellenwerte hängen von Stadium, Dichte, Boden und Sorte ab, derselbe Nitratwert kann deshalb bei BBCH 32 und bei BBCH 39 Unterschiedliches bedeuten. Hier setzt NutriSen an. Unser Biosensor bestimmt die Nitratkonzentration im Pflanzensaft direkt auf dem Feld, und die Plattform nutzt Satellitendaten, um repräsentative Messstellen zu finden.')),
+   ('cta', {'h': T('See what your own field needs', 'Finden Sie heraus, was Ihr Feld braucht'),
+            'p': T('We are looking for partner farms in Bayern and test the nitrate status of your plants for free.',
+                   'Wir suchen Partnerbetriebe in Bayern und messen den Nitratstatus Ihrer Pflanzen kostenlos.'),
+            'btn': T('Test your field for free', 'Feld kostenlos testen'), 'href': '@test'}),
+   ('note', T('This article is an independent explanation based on public documents of German and French agricultural services and ARVALIS. It is not a fertilisation recommendation. Legal limits and advisory figures change, so check the current rules and advice for your region and field.',
+              'Dieser Artikel ist eine unabhängige Erläuterung auf Grundlage öffentlicher Unterlagen deutscher und französischer Fachstellen und von ARVALIS. Er ist keine Düngeempfehlung. Rechtliche Grenzen und Beratungswerte ändern sich, prüfen Sie deshalb die aktuellen Vorgaben und Empfehlungen für Ihre Region und Ihr Feld.')),
+  ],
+  'sources': [
+   ('https://en.wikipedia.org/wiki/Cereal_growth_staging_scales', T('Cereal growth staging scales: BBCH and Zadoks codes (Wikipedia)', 'Cereal growth staging scales: BBCH- und Zadoks-Codes (Wikipedia, englisch)')),
+   ('https://www.gesetze-im-internet.de/d_v_2017/anlage_4.html', T('Düngeverordnung, Annex 4: nitrogen requirement values (in German)', 'Düngeverordnung, Anlage 4: Stickstoffbedarfswerte')),
+   ('https://www.tll.de/www/daten/pflanzenproduktion/duengung/nschnelltest.pdf', T('TLL Thüringen (March 2021): Nitrat-Schnelltest bei Wintergetreide (in German)', 'TLL Thüringen (März 2021): Nitrat-Schnelltest bei Wintergetreide')),
+   ('https://www.arvalis.fr/jubil-en-detail', T('ARVALIS: Jubil® en détail (in French)', 'ARVALIS: Jubil® en détail (auf Französisch)')),
+   ('https://www.terre-net.fr/arvalis/amp/article/146064/stade-epi-1-cm-du-ble-un-marqueur-determinant-a-savoir-reperer', T('ARVALIS on Terre-net: Stade épi 1 cm du blé (in French)', 'ARVALIS bei Terre-net: Stade épi 1 cm du blé (auf Französisch)')),
+   ('https://www.reussir.fr/grandes-cultures/azote-sur-ble-quand-realiser-le-premier-apport-en-2026', T('Réussir Grandes cultures (7 February 2026): Azote sur blé, quand réaliser le premier apport en 2026 (in French)', 'Réussir Grandes cultures (7. Februar 2026): Azote sur blé, quand réaliser le premier apport en 2026 (auf Französisch)')),
+   ('https://www.pleinchamp.com/actualite/bles-ne-pas-solder-l-azote-trop-tot-pour-soutenir-le-potentiel-de-rendement', T('ARVALIS on Pleinchamp (13 May 2025): Blés, ne pas solder l’azote trop tôt (in French)', 'ARVALIS bei Pleinchamp (13. Mai 2025): Blés, ne pas solder l’azote trop tôt (auf Französisch)')),
+  ],
+ },
 ]
 
 import re as _re
@@ -162,6 +232,8 @@ def de_pairs():
     def add(x): d[x['en']] = x['de']
     for k in ('title', 'eyebrow', 'lead', 'read', 'back', 'desc'): add(BLOG[k])
     add(BLOG['sources']); add(DATE_TXT)
+    for p in POSTS:
+        if 'date_txt' in p: add(p['date_txt'])
     for p in POSTS: d['%d min read' % minutes(p)] = '%d %s' % (minutes(p), BLOG['min']['de'])
     for p in POSTS:
         for k in ('tag', 'title', 'excerpt', 'lead'): add(p[k])

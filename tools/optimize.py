@@ -46,7 +46,7 @@ def cleanup(t):
     # only when <meta name="ns-analytics" content="on"> is present; then it loads after the page load, when the browser is idle.
     key = "sel.src = '//cdn.pagepulse.info/js/22728.js';document.head.appendChild(sel);"
     t = t.replace(key, "sel.src = '//cdn.pagepulse.info/js/22728.js';if(document.querySelector('meta[name=ns-analytics][content=on]'))addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){document.head.appendChild(sel)})});")
-    t = re.sub(r'(<meta charset="[^"]*"\s*/?>)', r'\1<meta name="ns-analytics" content="off">', t, count=1) if 'ns-analytics' not in t else t
+    t = re.sub(r'(<meta charset="[^"]*"\s*/?>)', r'\1<meta name="ns-analytics" content="off">', t, count=1) if 'name="ns-analytics"' not in t else t
     return t.replace('background-attachment:fixed', 'background-attachment:scroll')
 
 # ---------------------------------------------------------------- 2. fonts: woff2 only, swap, dedupe, preload

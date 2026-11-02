@@ -70,7 +70,7 @@ def write(rel_dir, text):
     d = os.path.join(ROOT, rel_dir); os.makedirs(d, exist_ok=True); open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(text)
 def meta(post):
     return ('<p class="ns-blog-meta"><time datetime="%s">%s</time><span aria-hidden="true">·</span><span>%d min read</span></p>'
-            % (BC.DATE, E(BC.DATE_TXT['en']), BC.minutes(post)))
+            % (post.get('date', BC.DATE), E(post.get('date_txt', BC.DATE_TXT)['en']), BC.minutes(post)))
 
 # index
 cards = ''.join('<article class="ns-blog-card"><p class="ns-blog-tag">%s</p><h2><a href="%s/">%s</a></h2><p class="ns-blog-ex">%s</p>%s<a class="ns-blog-more" href="%s/">%s</a></article>'

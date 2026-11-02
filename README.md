@@ -111,13 +111,18 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   - The disclaimer text on the page (market data source, no liability) was provided by the site owner. The
     paragraph about Eurostat was added to cover the second source.
 
-- **Blog (2026-11-01):** `/blog/` (German: `/de/blog/`) with two articles, each 3 to 5 minutes of reading time, in English
+- **Blog (2026-11-01):** `/blog/` (German: `/de/blog/`) with three articles, each 3 to 5 minutes of reading time, in English
   and German and linked in the main menu: "Nutrient prices: why the EU reports them and how to use them" and "JUBIL®: where
   the stem-juice nitrate test comes from and why it works" (links to the ARVALIS page `arvalis.fr/jubil-en-detail`). The
   texts are in `tools/blog_content.py` (both languages, with their sources); `tools/add_blog.py` builds the pages and
   `assets/blog.css` styles them. Every statement is taken from the sources listed under each article. The reading time
   is computed from the word count at 200 words per minute. To add an article, add an entry to `POSTS` and register its
   key and slug in `tools/i18n.py`.
+
+- **Article on BBCH stages, Germany vs France (2026-11-02):** `/blog/bbch-winter-wheat-germany-france/` (German: `/de/blog/...`). Explains the
+  BBCH codes for winter wheat and compares how German practice (fertiliser ordinance requirement values, three doses, the TLL
+  nitrate quick test) and French practice (bilan prévisionnel, ARVALIS timing advice, JUBIL®) tie nitrogen to growth stages. Sources are
+  listed under the article. Posts can now carry their own `date` and `date_txt` in `tools/blog_content.py`.
 
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`

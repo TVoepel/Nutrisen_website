@@ -43,6 +43,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/agriculture/use-cases/"/>
   </url>
   <url>
+    <loc>https://www.nutrisen.eu/blog/bbch-winter-wheat-germany-france/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/blog/bbch-winter-wheat-germany-france/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/blog/bbch-winter-wheat-germany-france/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/blog/bbch-winter-wheat-germany-france/"/>
+  </url>
+  <url>
     <loc>https://www.nutrisen.eu/blog/</loc>
     <lastmod>2026-11-02</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/blog/"/>
@@ -104,6 +111,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/agriculture/use-cases/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/agriculture/use-cases/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/agriculture/use-cases/"/>
+  </url>
+  <url>
+    <loc>https://www.nutrisen.eu/de/blog/bbch-winter-wheat-germany-france/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/blog/bbch-winter-wheat-germany-france/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/blog/bbch-winter-wheat-germany-france/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/blog/bbch-winter-wheat-germany-france/"/>
   </url>
   <url>
     <loc>https://www.nutrisen.eu/de/blog/</loc>
