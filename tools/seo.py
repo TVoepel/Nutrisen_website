@@ -10,6 +10,7 @@ robots.txt. Safe to re-run: every tag it writes is replaced, never duplicated.
 import glob, html, json, os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import blog_content as BC
+import facts_content as FC
 from datetime import date
 
 ROOT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else '.')
@@ -18,12 +19,23 @@ OG = {'en': 'assets/og-en.jpg', 'de': 'assets/og-de.jpg'}
 OG_ALT = {'en': 'NutriSen: nitrate in the plant sap, measured directly in the field',
           'de': 'NutriSen: Nitrat im Pflanzensaft, direkt auf dem Feld gemessen'}
 LOCALE = {'en': 'en_US', 'de': 'de_DE'}
+ORG_ID = BASE + '/#organization'
+ORG_MIN = {'@type': 'Organization', '@id': ORG_ID, 'name': 'NutriSen GmbH', 'url': BASE + '/', 'logo': BASE + '/assets/nutrisen-logo.webp'}
+def person(name, title, same):
+    return {'@type': 'Person', 'name': name, 'jobTitle': title, 'sameAs': [same], 'worksFor': {'@id': ORG_ID}}
 ORG = {
-    '@type': 'Organization', '@id': BASE + '/#organization', 'name': 'NutriSen GmbH', 'alternateName': 'NutriSen',
+    '@type': 'Organization', '@id': ORG_ID, 'name': 'NutriSen GmbH', 'alternateName': 'NutriSen',
+    'description': 'NutriSen develops electrochemical biosensors. In agriculture, a biosensor measures nitrate in plant juice directly in the field so that farmers can fertilise by need. The same platform is being developed for medical devices.',
     'url': BASE + '/', 'logo': BASE + '/assets/nutrisen-logo.webp', 'email': 'info@nutrisen.eu',
-    'telephone': '+4923113707127', 'foundingDate': '2023',
+    'telephone': '+4923113707127', 'foundingDate': '2023', 'legalName': 'NutriSen GmbH',
+    'identifier': {'@type': 'PropertyValue', 'name': 'Handelsregister', 'value': 'HRB 13438, Amtsgericht Straubing'},
     'address': {'@type': 'PostalAddress', 'streetAddress': 'Europaring 4', 'postalCode': '94315',
                 'addressLocality': 'Straubing', 'addressCountry': 'DE'},
+    'knowsAbout': ['nitrate sensing in plant juice', 'fertilisation', 'electrochemical biosensors', 'digital health biosensors'],
+    'member': [person('Tobias Vöpel', 'co-CEO', 'https://www.linkedin.com/in/tobias-v%C3%B6pel-6b159756'),
+               person('Alaa Oughli', 'CTO', 'https://www.linkedin.com/in/alaa-oughli/'),
+               person('Nicolas Plumeré', 'CSO', 'https://twitter.com/NicolasPlumere')],
+    'award': ['3rd place Innovationspreis Moderne Landwirtschaft', '2nd place Bio-Security Bönen 2022', '3rd prize Plan B Pitch Competition 2022'],
 }
 NOSITEMAP = {'impressum', 'datenschutzerklarung', 'legal-notice', 'privacy-policy'}
 
@@ -49,6 +61,7 @@ T = {
        'How the BBCH scale guides nitrogen in winter wheat, how Germany and France split the doses, and where the JUBIL® stem-juice nitrate test fits in.'),
   'blog/dwd-bright-sky-api-farmers': ('DWD Bright Sky API: free weather data for farmers | NutriSen',
        'Bright Sky offers the open weather data of the German weather service as a free API. How farmers can use it for spraying, spreading and crop monitoring.'),
+  'nutrisen-at-a-glance': ('NutriSen at a glance: facts, team and products', None),
   'legal-notice': ('NutriSen GmbH Legal Notice',
        'Legal notice (courtesy translation) of NutriSen GmbH, Europaring 4, 94315 Straubing, Germany. The German Impressum is binding.'),
   'privacy-policy': ('Privacy Policy | NutriSen',
@@ -74,6 +87,7 @@ T = {
        'Wie die BBCH-Skala die Stickstoffdüngung bei Winterweizen lenkt, wie Deutschland und Frankreich die Gaben aufteilen und wo der JUBIL®-Nitrattest passt.'),
   'blog/dwd-bright-sky-api-farmers': ('DWD Bright Sky API: Wetterdaten für Landwirte | NutriSen',
        'Bright Sky bietet die offenen Wetterdaten des Deutschen Wetterdienstes als kostenlose API. Wie Landwirte sie für Pflanzenschutz, Düngung und Bestand nutzen.'),
+  'nutrisen-at-a-glance': ('NutriSen auf einen Blick: Fakten, Team, Produkte', None),
   'impressum': ('NutriSen GmbH Impressum',
        'Impressum der NutriSen GmbH, Europaring 4, 94315 Straubing: Verantwortliche, Kontakt, Geschäftsführung und Registerdaten.'),
   'datenschutzerklarung': ('Datenschutzerklärung | NutriSen',
@@ -84,13 +98,14 @@ CRUMB = {  # last or intermediate crumb name by English key
  'en': {'medical': 'Medical', 'agriculture': 'Agriculture', 'agriculture/how-does-it-work': 'How it works',
         'agriculture/test-your-field': 'Test your field', 'agriculture/use-cases': 'Practice cases',
         'agriculture/calculator': 'Fertilizer calculator', 'agriculture/from-lab-to-field': 'About us', 'blog': 'Blog',
-        'legal-notice': 'Legal notice', 'privacy-policy': 'Privacy policy', '': 'Home'},
+        'legal-notice': 'Legal notice', 'privacy-policy': 'Privacy policy', 'nutrisen-at-a-glance': 'At a glance', '': 'Home'},
  'de': {'medical': 'Medizin', 'agriculture': 'Landwirtschaft', 'agriculture/how-does-it-work': 'So funktioniert es',
         'agriculture/test-your-field': 'Feld testen', 'agriculture/use-cases': 'Praxisfälle',
         'agriculture/calculator': 'Düngerechner', 'agriculture/from-lab-to-field': 'Über uns', 'blog': 'Blog',
-        'impressum': 'Impressum', 'datenschutzerklarung': 'Datenschutzerklärung', '': 'Start'},
+        'impressum': 'Impressum', 'datenschutzerklarung': 'Datenschutzerklärung', 'nutrisen-at-a-glance': 'Auf einen Blick', '': 'Start'},
 }
 
+INFO = []
 def rd(p): return open(p, encoding='utf-8').read()
 def esc(s): return html.escape(s, quote=True)
 def jd(o): return json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
@@ -159,13 +174,19 @@ def process(f, d):
         graph.append({'@type': 'BlogPosting', 'headline': h1, 'description': desc, 'inLanguage': lang,
                       'datePublished': re.search(r'datetime="([\d-]+)"', t).group(1) if re.search(r'datetime="([\d-]+)"', t) else '2026-11-01',
                       'image': img, 'mainEntityOfPage': page_url, 'author': {'@id': BASE + '/#organization'},
-                      'publisher': ORG})
+                      'publisher': ORG_MIN})
         graph[-1]['dateModified'] = graph[-1]['datePublished']
     if post:
         bp = next((x for x in BC.POSTS if x['slug'] == key.split('/', 1)[1]), None)
         if bp and bp.get('faq'):
             graph.append({'@type': 'FAQPage', 'inLanguage': lang, 'mainEntity': [
                 {'@type': 'Question', 'name': q[lang], 'acceptedAnswer': {'@type': 'Answer', 'text': a[lang]}} for q, a in bp['faq']]})
+    if key == FC.FACTS['slug']:
+        graph.append(ORG)
+        graph.append({'@type': 'AboutPage', 'name': h1, 'description': desc, 'url': page_url, 'inLanguage': lang,
+                      'mainEntity': {'@id': ORG_ID}})
+        graph.append({'@type': 'FAQPage', 'inLanguage': lang, 'mainEntity': [
+            {'@type': 'Question', 'name': q[lang], 'acceptedAnswer': {'@type': 'Answer', 'text': a[lang]}} for q, a in FC.FACTS['faq']]})
     if key == 'agriculture/calculator':
         graph.append({'@type': 'WebApplication', 'name': h1, 'description': desc, 'url': page_url, 'inLanguage': lang,
                       'applicationCategory': 'BusinessApplication', 'operatingSystem': 'Any',
@@ -206,6 +227,7 @@ def process(f, d):
     # the comment markers are only for idempotency; drop them from the output
     t = t.replace('<!--seo-->', '').replace('<!--/seo-->', '')
     open(f, 'w', encoding='utf-8').write(t)
+    INFO.append((key, lang, title.split(' | ')[0], desc, page_url))
     return page_url
 
 def lastmod(f):
@@ -234,9 +256,35 @@ def sitemap(done):
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
            + '\n'.join(rows) + '\n</urlset>\n')
     open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf-8').write(xml)
+    ai = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot',
+          'Google-Extended', 'Applebot-Extended', 'CCBot']
     open(os.path.join(ROOT, 'robots.txt'), 'w', encoding='utf-8').write(
-        'User-agent: *\nAllow: /\nDisallow: /tools/\n\nSitemap: %s/sitemap.xml\n' % BASE)
+        'User-agent: *\nAllow: /\nDisallow: /tools/\n\n# AI crawlers and assistants are welcome to read the public pages\n'
+        + ''.join('User-agent: %s\nAllow: /\n\n' % a for a in ai) + 'Sitemap: %s/sitemap.xml\n' % BASE)
+    llms(done)
     return len(rows)
+
+def llms(done):
+    """llms.txt (https://llmstxt.org): a short, plain description of the site for AI assistants."""
+    info = {(k, l): (t, d, u) for k, l, t, d, u in INFO if k not in NOSITEMAP}
+    def line(k, l='en'):
+        t, d, u = info[(k, l)]
+        return '- [%s](%s): %s' % (t, u, ' '.join(d.split()))
+    groups = [('Company', ['nutrisen-at-a-glance', 'agriculture/from-lab-to-field']),
+              ('Agriculture', ['agriculture', 'agriculture/how-does-it-work', 'agriculture/use-cases', 'agriculture/calculator', 'agriculture/test-your-field']),
+              ('Medical', ['medical']),
+              ('Articles', ['blog'] + [p['key'] and 'blog/' + p['slug'] for p in BC.POSTS])]
+    out = ['# NutriSen', '',
+           '> NutriSen GmbH, based in Straubing, Germany, develops electrochemical biosensors. In agriculture, a biosensor that measures nitrate '
+           'in plant juice directly in the field and a fertilisation platform help farmers fertilise by need. The same biosensor platform is '
+           'being developed for medical devices. The website is available in English and German.', '']
+    for g, keys in groups:
+        out += ['## ' + g] + [line(k) for k in keys if (k, 'en') in info] + ['']
+    out += ['## Deutsch (German versions)'] + [line(k, 'de') for k in
+            ['nutrisen-at-a-glance', 'agriculture', 'agriculture/how-does-it-work', 'agriculture/use-cases', 'agriculture/calculator',
+             'agriculture/test-your-field', 'medical', 'blog'] if (k, 'de') in info] + ['']
+    out += ['## Contact', '- info@nutrisen.eu, +49 231 13707127, Europaring 4, 94315 Straubing, Germany', '']
+    open(os.path.join(ROOT, 'llms.txt'), 'w', encoding='utf-8').write('\n'.join(out))
 
 def main():
     done = []

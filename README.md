@@ -136,6 +136,17 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   agreement No 790155, 1 June 2018 to 30 November 2019) and links the CORDIS record `https://cordis.europa.eu/project/id/790155`.
   The CORDIS page lists the call as ERC-2017-PoC. The booking calendar button is still a mailto link until a NutriSen booking URL exists.
 
+- **Visibility in AI assistants (2026-11-02):**
+  - New page `/nutrisen-at-a-glance/` (German: `/de/nutrisen-at-a-glance/`, menu item "At a glance" / "Auf einen Blick"): a definition list of
+    key facts (company, founded, headquarters, register, managing directors, team, contact, agriculture, medical, research origin, awards),
+    a four-question FAQ and links to the main pages. Texts in `tools/facts_content.py`, built by `tools/add_blog.py`. All facts come from this
+    website (Impressum, About us, Medical, Agriculture) and the CORDIS record. The founding year 2023 comes from the original Impressum
+    description; check it, as the awards have no exact dates on the site either.
+  - `llms.txt` (written by `tools/seo.py`): short description of the company and the key pages, English and German.
+  - `robots.txt` names the common AI crawlers explicitly (all allowed). Remove an entry to block that crawler.
+  - Structured data: the Organization block now has the legal name, register number, team members with job titles and profile links, awards
+    and topics. The page "At a glance" carries `AboutPage` and `FAQPage` data. Blog posts use a slim publisher block.
+
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
   rebuilds the content of the home page (awards and team), Medical, Agriculture, How does it work, Test your field,

@@ -1,0 +1,37 @@
+# NutriSen
+
+> NutriSen GmbH, based in Straubing, Germany, develops electrochemical biosensors. In agriculture, a biosensor that measures nitrate in plant juice directly in the field and a fertilisation platform help farmers fertilise by need. The same biosensor platform is being developed for medical devices. The website is available in English and German.
+
+## Company
+- [NutriSen at a glance: facts, team and products](https://www.nutrisen.eu/nutrisen-at-a-glance/): Key facts about NutriSen GmbH: nitrate biosensor for farmers, medical biosensor platform, team, research funding, awards and contact.
+- [About NutriSen: from the lab to the field](https://www.nutrisen.eu/agriculture/from-lab-to-field/): In the laboratory we developed the first enzymatic-based sensor for measuring plant nutrients, directly in the field.
+
+## Agriculture
+- [Fertilize by need: nitrate sensing for farmers](https://www.nutrisen.eu/agriculture/): Real-time nutrient sensing for smart fertilization: up to 30% less fertilizer and savings of up to 90 EUR per ha are possible. Calculate your own savings.
+- [How it works: nitrate test strips for your field](https://www.nutrisen.eu/agriculture/how-does-it-work/): We developed the first biosensor test strips that can precisely measure the amount of nitrate, phosphate and potassium in plants, directly on the field.
+- [Practice cases 2025/2026: less fertilizer](https://www.nutrisen.eu/agriculture/use-cases/): Five practice cases 2025/2026: up to 30 % less fertilizer at the same yield, in individual cases also a higher yield.
+- [NutriSen fertilizer calculator: compare 3 applications](https://www.nutrisen.eu/agriculture/calculator/): Compare your usual fertilization with NutriSen in three applications, with fertilizer price suggestions from official EU data.
+- [Free nitrate test for your field in Bayern](https://www.nutrisen.eu/agriculture/test-your-field/): Do you wonder every year when and how much fertilizer to apply to the field? We are looking for innovators who want to test a new technology for free.
+
+## Medical
+- [Biosensors for digital health](https://www.nutrisen.eu/medical/): Biosensors for lactate, creatinine and more: direct molecular sensing for medical-device makers and digital health. Get in touch with NutriSen.
+
+## Articles
+- [Blog: fertilizer prices, plant nutrition, nitrate](https://www.nutrisen.eu/blog/): Articles about fertiliser prices, plant nutrition and nitrogen management from NutriSen.
+- [Nutrient prices: why the EU reports them](https://www.nutrisen.eu/blog/nutrient-prices-eu-reporting/): Fertiliser prices swing with gas, trade and politics. Why the EU tracks them, what the numbers really mean, and how to use them for your own planning.
+- [JUBIL® stem-juice nitrate test explained](https://www.nutrisen.eu/blog/jubil-nitrate-method/): Where the JUBIL® stem-juice nitrate test comes from, how it steers the last nitrogen application in winter wheat, and why it works.
+- [Wheat nitrogen by BBCH stage: Germany vs France](https://www.nutrisen.eu/blog/bbch-winter-wheat-germany-france/): How the BBCH scale guides nitrogen in winter wheat, how Germany and France split the doses, and where the JUBIL® stem-juice nitrate test fits in.
+- [DWD Bright Sky API: free weather data for farmers](https://www.nutrisen.eu/blog/dwd-bright-sky-api-farmers/): Bright Sky offers the open weather data of the German weather service as a free API. How farmers can use it for spraying, spreading and crop monitoring.
+
+## Deutsch (German versions)
+- [NutriSen auf einen Blick: Fakten, Team, Produkte](https://www.nutrisen.eu/de/nutrisen-at-a-glance/): Die wichtigsten Fakten zur NutriSen GmbH: Nitrat-Biosensor für Landwirte, medizinische Biosensor-Plattform, Team, Forschungsförderung, Auszeichnungen und Kontakt.
+- [Düngen nach Bedarf: Nitratmessung für Landwirte](https://www.nutrisen.eu/de/agriculture/): Nährstoffmessung in Echtzeit für intelligentes Düngen: bis zu 30 % weniger Dünger und Einsparungen von bis zu 90 € pro ha sind möglich. Jetzt selbst berechnen.
+- [So funktioniert es: Nitrat-Teststreifen fürs Feld](https://www.nutrisen.eu/de/agriculture/how-does-it-work/): Wir haben die ersten Biosensor-Teststreifen entwickelt, die die Menge an Nitrat, Phosphat und Kalium in Pflanzen direkt auf dem Feld präzise messen.
+- [Praxisfälle 2025/2026: weniger Dünger](https://www.nutrisen.eu/de/agriculture/use-cases/): Fünf Praxisfälle 2025/2026: bis zu 30 % weniger Dünger bei gleichem Ertrag, in einzelnen Fällen auch mit höherem Ertrag.
+- [NutriSen Düngerechner: Vergleich von 3 Gaben](https://www.nutrisen.eu/de/agriculture/calculator/): Vergleichen Sie Ihre betriebsübliche Düngung mit NutriSen in drei Gaben, mit Düngerpreis-Vorschlägen aus amtlichen EU-Daten.
+- [Kostenloser Nitrattest für Ihr Feld in Bayern](https://www.nutrisen.eu/de/agriculture/test-your-field/): Fragen Sie sich jedes Jahr, wann und wie viel Dünger Sie auf dem Feld ausbringen sollen? Wir suchen Innovatoren, die eine neue Technologie kostenlos testen möchten.
+- [Biosensoren für digitale Gesundheit](https://www.nutrisen.eu/de/medical/): Biosensoren für Laktat, Kreatinin und mehr: direkte Molekülmessung für Hersteller von Medizinprodukten und die digitale Gesundheit. Jetzt Kontakt aufnehmen.
+- [Blog: Düngerpreise, Pflanzenernährung, Nitrat](https://www.nutrisen.eu/de/blog/): Artikel von NutriSen über Düngerpreise, Pflanzenernährung und Stickstoffmanagement.
+
+## Contact
+- info@nutrisen.eu, +49 231 13707127, Europaring 4, 94315 Straubing, Germany

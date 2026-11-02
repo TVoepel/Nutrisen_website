@@ -17,16 +17,16 @@ if 'class="ns-lang"' in open(os.path.join(ROOT, 'index.html'), encoding='utf-8')
     sys.exit('already applied')
 
 SRC = {'home': '', 'medical': 'medical', 'agri': 'agriculture', 'how': 'agriculture/how-does-it-work',
-       'test': 'agriculture/test-your-field', 'cases': 'agriculture/use-cases', 'calc': 'agriculture/calculator', 'blog': 'blog', 'post_prices': 'blog/nutrient-prices-eu-reporting', 'post_jubil': 'blog/jubil-nitrate-method', 'post_bbch': 'blog/bbch-winter-wheat-germany-france', 'post_brightsky': 'blog/dwd-bright-sky-api-farmers', 'lab': 'agriculture/from-lab-to-field',
+       'test': 'agriculture/test-your-field', 'cases': 'agriculture/use-cases', 'calc': 'agriculture/calculator', 'blog': 'blog', 'post_prices': 'blog/nutrient-prices-eu-reporting', 'post_jubil': 'blog/jubil-nitrate-method', 'post_bbch': 'blog/bbch-winter-wheat-germany-france', 'post_brightsky': 'blog/dwd-bright-sky-api-farmers', 'lab': 'agriculture/from-lab-to-field', 'facts': 'nutrisen-at-a-glance',
        'legal': 'impressum', 'privacy': 'datenschutzerklarung'}
 SRC_REV = {v: k for k, v in SRC.items()}
 LANGPATH = {
     ('en', 'home'): '', ('en', 'medical'): 'medical', ('en', 'agri'): 'agriculture',
     ('en', 'how'): 'agriculture/how-does-it-work', ('en', 'test'): 'agriculture/test-your-field',
-    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'cases'): 'agriculture/use-cases', ('en', 'calc'): 'agriculture/calculator', ('en', 'blog'): 'blog', ('en', 'post_prices'): 'blog/nutrient-prices-eu-reporting', ('en', 'post_jubil'): 'blog/jubil-nitrate-method', ('en', 'post_bbch'): 'blog/bbch-winter-wheat-germany-france', ('en', 'post_brightsky'): 'blog/dwd-bright-sky-api-farmers', ('en', 'legal'): 'legal-notice', ('en', 'privacy'): 'privacy-policy',
+    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'cases'): 'agriculture/use-cases', ('en', 'calc'): 'agriculture/calculator', ('en', 'blog'): 'blog', ('en', 'post_prices'): 'blog/nutrient-prices-eu-reporting', ('en', 'post_jubil'): 'blog/jubil-nitrate-method', ('en', 'post_bbch'): 'blog/bbch-winter-wheat-germany-france', ('en', 'post_brightsky'): 'blog/dwd-bright-sky-api-farmers', ('en', 'facts'): 'nutrisen-at-a-glance', ('en', 'legal'): 'legal-notice', ('en', 'privacy'): 'privacy-policy',
     ('de', 'home'): 'de', ('de', 'medical'): 'de/medical', ('de', 'agri'): 'de/agriculture',
     ('de', 'how'): 'de/agriculture/how-does-it-work', ('de', 'test'): 'de/agriculture/test-your-field',
-    ('de', 'lab'): 'de/agriculture/from-lab-to-field', ('de', 'cases'): 'de/agriculture/use-cases', ('de', 'calc'): 'de/agriculture/calculator', ('de', 'blog'): 'de/blog', ('de', 'post_prices'): 'de/blog/nutrient-prices-eu-reporting', ('de', 'post_jubil'): 'de/blog/jubil-nitrate-method', ('de', 'post_bbch'): 'de/blog/bbch-winter-wheat-germany-france', ('de', 'post_brightsky'): 'de/blog/dwd-bright-sky-api-farmers', ('de', 'legal'): 'impressum', ('de', 'privacy'): 'datenschutzerklarung',
+    ('de', 'lab'): 'de/agriculture/from-lab-to-field', ('de', 'cases'): 'de/agriculture/use-cases', ('de', 'calc'): 'de/agriculture/calculator', ('de', 'blog'): 'de/blog', ('de', 'post_prices'): 'de/blog/nutrient-prices-eu-reporting', ('de', 'post_jubil'): 'de/blog/jubil-nitrate-method', ('de', 'post_bbch'): 'de/blog/bbch-winter-wheat-germany-france', ('de', 'post_brightsky'): 'de/blog/dwd-bright-sky-api-farmers', ('de', 'facts'): 'de/nutrisen-at-a-glance', ('de', 'legal'): 'impressum', ('de', 'privacy'): 'datenschutzerklarung',
 }
 def lp(lang, key):  # pages without a German version link to the English page
     return LANGPATH.get((lang, key)) if (lang, key) in LANGPATH else LANGPATH[('en', key)]

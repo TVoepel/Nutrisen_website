@@ -169,6 +169,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/medical/"/>
   </url>
   <url>
+    <loc>https://www.nutrisen.eu/de/nutrisen-at-a-glance/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/nutrisen-at-a-glance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/nutrisen-at-a-glance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/nutrisen-at-a-glance/"/>
+  </url>
+  <url>
     <loc>https://www.nutrisen.eu/</loc>
     <lastmod>2026-11-02</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/"/>
@@ -181,5 +188,12 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/medical/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/medical/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/medical/"/>
+  </url>
+  <url>
+    <loc>https://www.nutrisen.eu/nutrisen-at-a-glance/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/nutrisen-at-a-glance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/nutrisen-at-a-glance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/nutrisen-at-a-glance/"/>
   </url>
 </urlset>

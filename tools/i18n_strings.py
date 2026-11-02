@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 """Translation tables for tools/i18n.py. Keys are the visible English (or German) text, HTML-unescaped."""
 import blog_content as BC
+import facts_content as FC
 
 # ---------------------------------------------------------------- navigation / footer (all pages)
 NAV_DE = {
     'Overview': 'Übersicht',
+    'At a glance': 'Auf einen Blick',
     'Agriculture': 'Landwirtschaft',
     'Medical': 'Medizin',
     'How does it work': 'So funktioniert es',
@@ -355,6 +357,10 @@ DE.update(BC.de_pairs())
 TITLE_DE.update({'blog': 'Blog', **{p['key']: p['title']['de'] for p in BC.POSTS}})
 DESC_DE[BC.BLOG['desc']['en']] = BC.BLOG['desc']['de']
 DESC_DE.update({p['excerpt']['en']: p['excerpt']['de'] for p in BC.POSTS})
+# ---------------------------------------------------------------- page "NutriSen at a glance" (tools/facts_content.py)
+DE.update(FC.de_pairs())
+TITLE_DE['facts'] = FC.FACTS['title']['de']
+DESC_DE[FC.FACTS['desc']['en']] = FC.FACTS['desc']['de']
 KEEP.update({'Jubil® en détail', 'Blog', '·', 'NutriSen blog'})
 KEEP_LEGAL.add('Blog')
 

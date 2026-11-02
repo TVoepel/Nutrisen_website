@@ -49,3 +49,9 @@
 .ns-blog-faq details[open] summary::after{content:"\2212"}
 .ns-blog-faq summary:focus-visible{outline:2px solid #0b4ea2;outline-offset:2px;border-radius:12px}
 .ns-blog-faq details p{margin:0;padding:0 16px 16px;font-size:16px;line-height:1.65}
+
+.ns-facts{margin:0 0 1.6em;padding:0;display:block;border-top:1px solid #dfe3ea}
+.ns-facts>div{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:6px 24px;padding:14px 0;border-bottom:1px solid #dfe3ea}
+.ns-facts dt{margin:0;font-weight:700;font-size:15px;color:var(--navy)}
+.ns-facts dd{margin:0;font-size:16px;line-height:1.6;color:var(--ink)}
+@media(max-width:620px){.ns-facts>div{grid-template-columns:1fr;gap:2px}}

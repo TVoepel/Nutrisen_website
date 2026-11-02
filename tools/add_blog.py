@@ -5,24 +5,27 @@ Usage: python3 tools/add_blog.py <site root>"""
 import os, re, sys, html, posixpath
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import blog_content as BC
+import facts_content as FC
 ROOT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else '.')
 if os.path.exists(os.path.join(ROOT, 'blog', 'index.html')): sys.exit('already applied')
 PAGES = ['', 'medical', 'agriculture', 'agriculture/how-does-it-work', 'agriculture/use-cases', 'agriculture/calculator',
          'agriculture/test-your-field', 'agriculture/from-lab-to-field', 'impressum', 'datenschutzerklarung']
 MED, NEW = 'f3e12237-6aaa-44c9-90b4-bbb05118cc8a', 'e91b6c4d-52a7-4f0e-b3d8-7c1a9f2e4b66'
+FACT = 'b7d2f4a1-3c68-4e19-a5d0-9e8f1c2b7a43'   # nav item "At a glance"
 ITEM = r'<div data-page-id="%s"[^>]*>' % MED + r'<div><a href="[^"]*" data-navigation-anchor="true"><span>Medical </span></a></div></div>'
 WRAP = '<div class="navigation-menu-item-wrapper">'
-def new_item(m_open, page_dir):
-    href = posixpath.relpath('blog', page_dir or '.') + '/'
-    return m_open.replace(MED, NEW).replace(' navigation-selected', '') + '<div><a href="%s" data-navigation-anchor="true"><span>Blog </span></a></div></div>' % href
+def new_item(m_open, page_dir, pid, slug, label):
+    href = posixpath.relpath(slug, page_dir or '.') + '/'
+    return m_open.replace(MED, pid).replace(' navigation-selected', '') + '<div><a href="%s" data-navigation-anchor="true"><span>%s </span></a></div></div>' % (href, label)
+def both(op, d): return new_item(op, d, NEW, 'blog', 'Blog'), new_item(op, d, FACT, FC.FACTS['slug'], FC.FACTS['nav']['en'])
 def add_nav(t, d):
     def wrapped(m):
-        item = m.group(2); op = re.match(r'<div data-page-id="[^"]*"[^>]*>', item).group(0)
-        return m.group(1) + item + '</div>' + WRAP + new_item(op, d) + '</div>'
+        item = m.group(2); op = re.match(r'<div data-page-id="[^"]*"[^>]*>', item).group(0); b, f = both(op, d)
+        return m.group(1) + item + '</div>' + WRAP + b + '</div>' + WRAP + f + '</div>'
     t = re.sub('(%s)(%s)</div>' % (re.escape(WRAP), ITEM), wrapped, t)
     def plain(m):
-        op = re.match(r'<div data-page-id="[^"]*"[^>]*>', m.group(0)).group(0)
-        return m.group(0) + new_item(op, d)
+        op = re.match(r'<div data-page-id="[^"]*"[^>]*>', m.group(0)).group(0); b, f = both(op, d)
+        return m.group(0) + b + f
     return re.sub('(?<!%s)%s' % (re.escape(WRAP), ITEM), plain, t)
 texts = {}
 for p in PAGES:
@@ -52,14 +55,15 @@ def rebase(t, s, d):
     return CSSURL.sub(lambda m: 'url(' + m.group(1) + ref(m.group(2), s, d) + m.group(1) + ')', t)
 
 E = lambda x: html.escape(x, quote=False)
-def build(body, rel_dir, title, desc):
+def build(body, rel_dir, title, desc, sel=None):
+    sel = sel or NEW
     t = rebase(texts['medical'], 'medical', rel_dir)
     start = t.find('<!-- /wp:go-x/section -->') + len('<!-- /wp:go-x/section -->')
     end = max(m.start() for m in re.finditer(r'<!-- wp:go-x/section ', t[:t.find('data-zone-type="footer"')]))
     assert 'data-zone-type="content"' in t[start:end] and start < end
     t = t[:start] + '\n' + body + '\n' + t[end:]
     t = re.sub(r'(<div data-page-id="[^"]*"[^>]*class="[^"]*?) navigation-selected', r'\1', t)
-    t = re.sub(r'(<div data-page-id="%s"[^>]*class="[^"]*?)"' % NEW, r'\1 navigation-selected"', t)
+    t = re.sub(r'(<div data-page-id="%s"[^>]*class="[^"]*?)"' % sel, r'\1 navigation-selected"', t)
     t = re.sub(r'<title>[^<]*</title>', '<title>%s</title>' % E(title), t, count=1)
     meta = '<meta name="description" content="%s">' % html.escape(desc, quote=True)
     t = re.sub(r'<meta\s+name="description"[^>]*>', meta, t, count=1, flags=re.S) if re.search(r'<meta\s+name="description"', t) else t.replace('</head>', meta + '\n</head>', 1)
@@ -106,4 +110,15 @@ for p in BC.POSTS:
             '<div class="ns-blog-wrap narrow"><article class="ns-blog-article">%s%s</article></div></div>') % (
             E(BC.BLOG['back']['en']), E(p['tag']['en']), E(p['title']['en']), meta(p), ''.join(body), faq + src)
     write(d, build(page, d, p['title']['en'], p['excerpt']['en']))
+# facts page: "NutriSen at a glance" (key facts, FAQ, links)
+FP = FC.FACTS; fd = FP['slug']
+rows = ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (E(l['en']), E(v['en'])) for l, v in FP['rows'])
+fq = '<section class="ns-blog-faq"><h2>%s</h2>%s</section>' % (E(BC.BLOG['faq']['en']), ''.join(
+    '<details><summary>%s</summary><p>%s</p></details>' % (E(q['en']), E(a['en'])) for q, a in FP['faq']))
+more = '<section class="ns-blog-src"><h2>%s</h2><ul>%s</ul></section>' % (E(FP['h_more']['en']), ''.join(
+    '<li><a href="%s/">%s</a></li>' % (posixpath.relpath(tgt, fd), E(l['en'])) for l, tgt in FP['links']))
+fpage = ('<div class="ns-blog"><header class="ns-blog-hero"><div class="ns-blog-wrap narrow"><p class="ns-blog-eyebrow">%s</p><h1>%s</h1><p class="ns-blog-lead">%s</p></div></header>'
+         '<div class="ns-blog-wrap narrow"><article class="ns-blog-article"><h2>%s</h2><dl class="ns-facts">%s</dl>%s%s</article></div></div>') % (
+         E(FP['eyebrow']['en']), E(FP['title']['en']), E(FP['lead']['en']), E(FP['h_facts']['en']), rows, fq, more)
+write(fd, build(fpage, fd, FP['title']['en'], FP['desc']['en'], FACT))
 print('added blog with', len(BC.POSTS), 'articles')
