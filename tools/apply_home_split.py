@@ -14,7 +14,7 @@ b = max(s for s in starts if s < t.find('People are excited'))
 assert t.find('Real-time nutrient sensing') > a and t.find('Direct molecular sensing') < b, 'unexpected layout'
 AG = 'wp-content/uploads/go-x/u/6a085a64-991b-4982-8977-a632194db683/image.jpg'
 MD = 'wp-content/uploads/go-x/u/e4fbeee7-9d69-4d62-8d2d-2e68bdb021aa/image.jpg'
-BOOK = '//outlook.office365.com/owa/calendar/Meetingswithpartners@livesen.eu/bookings/'
+BOOK = 'mailto:info@nutrisen.eu?subject=NutriSen%20Medical'
 def variants(src, name):
     im = Image.open(os.path.join(root, src)).convert('RGB'); os.makedirs(os.path.join(root, 'assets'), exist_ok=True)
     for w in (960, 1600):
@@ -40,7 +40,7 @@ html = f'''<section class="ns-split" aria-label="Choose your field">
 <h2>Direct molecular sensing for enabling digital health</h2>
 <p class="ns-lead">We build electrochemical biosensors that measure molecules in body fluids with high precision. Your device, with better data.</p>
 <ul class="ns-stats"><li><b>Lactate</b><span>ready to be deployed (TRL 5)</span></li><li><b>Creatinine</b><span>experimental PoC (TRL 3)</span></li></ul>
-<div class="ns-cta"><a class="ns-btn" href="{BOOK}" target="_blank" rel="noopener">Schedule a meeting</a><a class="ns-more" href="medical/">Explore the platform</a></div>
+<div class="ns-cta"><a class="ns-btn" href="{BOOK}">Get in touch</a><a class="ns-more" href="medical/">Explore the platform</a></div>
 </div></div>
 </section>
 <div class="ns-trust"><b>Award-winning team:</b> 3rd place Innovationspreis Moderne Landwirtschaft &middot; 2nd place Bio-Security B&#246;nen &middot; 3rd prize Plan B Pitch Competition 2022</div>

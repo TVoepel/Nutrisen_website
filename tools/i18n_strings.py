@@ -91,7 +91,7 @@ DE.update({
     'Creatinine': 'Kreatinin',
     'experimental PoC (TRL 3)': 'experimentelles Proof of Concept (TRL 3)',
     'Lactate': 'Laktat',
-    'Schedule a meeting': 'Termin vereinbaren',
+    'Get in touch': 'Kontakt aufnehmen',
     'Explore the platform': 'Plattform entdecken',
     'Award-winning team:': 'Ausgezeichnetes Team:',
     '3rd place Innovationspreis Moderne Landwirtschaft · 2nd place Bio-Security Bönen · 3rd prize Plan B Pitch Competition 2022':

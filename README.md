@@ -55,7 +55,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 - **Home hero (2026-11-01):** the two stacked banners are replaced by a full-screen audience split. Farmers get
   "Test your field for free" with the 20% fertilizer saving and up to 10% yield figures from the agriculture page.
-  Medical-device makers get "Schedule a meeting" with the lactate and creatinine readiness levels. A strip of
+  Medical-device makers get "Get in touch" (mailto info@nutrisen.eu, the old Outlook booking calendar of livesen.eu was removed) with the lactate and creatinine readiness levels. A strip of
   awards sits underneath. Styles are in `assets/home-split.css`; `tools/apply_home_split.py` applies the change
   and is safe to re-run after a refresh.
 
@@ -147,7 +147,6 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
     `https://www.nutrisen.eu/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
   - Host name: `www.nutrisen.eu` is the canonical one (the live site redirects `nutrisen.eu` to it). Set up the same 301 redirect
     at IONOS, plus http to https.
-  - The meeting booking link on the home and Medical pages still points to the calendar of `livesen.eu`.
 
 ## Refreshing the mirror
 

@@ -11,7 +11,7 @@ import i18n_strings as T
 ROOT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else '.')
 E = lambda x: html.escape(x, quote=False)
 A = lambda x: html.escape(x, quote=True)
-BOOK = '//outlook.office365.com/owa/calendar/Meetingswithpartners@livesen.eu/bookings/'
+BOOK = 'mailto:info@nutrisen.eu?subject=NutriSen%20Medical'
 
 def rd(p): return open(os.path.join(ROOT, p, 'index.html'), encoding='utf-8').read()
 def wr(p, t): open(os.path.join(ROOT, p, 'index.html'), 'w', encoding='utf-8').write(t)
@@ -75,7 +75,7 @@ def medical():
              ('Innovate. Really.', 'The combination of tools is the secret for exceptional results.')]
     mols = [('Lactate', 'READY TO BE DEPLOYED', '(TRL 5)', 5), ('Creatinine', 'EXPERIMENTAL PoC', '(TRL 3)', 3), ('Cholesterol', 'CONCEPTUAL PHASE', '(TRL 2)', 2)]
     body = hero(t, p, ('e4fbeee7', 'pg-medical'), 'Medical', E('Biosensors for boosting digital health'),
-                '<p class="nb-lead">%s</p>' % E('A sensor platform for every medical device.'), btn(BOOK, 'Schedule a meeting', ext=True))
+                '<p class="nb-lead">%s</p>' % E('A sensor platform for every medical device.'), btn(BOOK, 'Get in touch'))
     body += sec('<h2 class="nb-h2">%s</h2><div class="nb-grid">%s</div>' % (E('Advance digitalization with better DATA'),
         ''.join('<div class="nb-card nb-card--accent"><h3>%s</h3><p>%s</p></div>' % (E(a), E(b)) for a, b in cards)))
     body += sec('<h2 class="nb-h2">%s</h2><div class="nb-grid" style="margin-top:28px">%s</div>' % (E('Overview of molecules in the pipeline'),
@@ -83,7 +83,7 @@ def medical():
     body += sec('<div class="nb-split"><div class="nb-media">%s</div><div><h2 class="nb-h2">%s</h2><p>%s</p><p>%s</p><p>%s</p><div class="nb-actions">%s</div></div></div>' % (
         IMG(t, '57d7a0fb', 'Proprietary biosensor plus your medical device', '(max-width:860px) 90vw, 480px'),
         E('We are all about R&D'), E('We build electrochemical biosensors to measure molecules in body fluids with high precision.'),
-        E(S('If your medical device targets')), E("Let's see what we can revolutionize together."), btn(BOOK, 'Schedule a meeting', 'nb-btn--blue', True)))
+        E(S('If your medical device targets')), E("Let's see what we can revolutionize together."), btn(BOOK, 'Get in touch', 'nb-btn--blue')))
     wr(p, put(t, p, body))
 
 # ================================================================ AGRICULTURE
