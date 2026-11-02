@@ -19,6 +19,7 @@ BLOG = {
     'desc': T('Articles about fertiliser prices, plant nutrition and nitrogen management from NutriSen.',
               'Artikel von NutriSen über Düngerpreise, Pflanzenernährung und Stickstoffmanagement.'),
     'sources': T('Sources', 'Quellen'),
+    'faq': T('Frequently asked questions', 'Häufige Fragen'),
 }
 
 POSTS = [
@@ -67,6 +68,17 @@ POSTS = [
             'btn': T('Open the calculator', 'Zum Rechner'), 'href': '@calc'}),
    ('note', T('Market data: European Commission (Agri-food data portal) and Eurostat. No liability is accepted for the up-to-date accuracy of this data or for decisions resulting from it.',
               'Marktdaten: Europäische Kommission (Agri-Food-Datenportal) und Eurostat. Für die tagesaktuelle Richtigkeit dieser Daten oder daraus resultierende Entscheidungen wird keine Haftung übernommen.')),
+  ],
+  'faq': [
+   (T('Why does the EU collect fertiliser prices?', 'Warum erhebt die EU Düngerpreise?'),
+    T('To spot market shocks early, to base support measures on numbers and to make prices comparable across Member States. The Commission runs a Fertilisers Market Observatory for this, and Regulation (EU) 2022/2379 set harmonised statistical rules.',
+      'Um Marktschocks früh zu erkennen, Hilfsmaßnahmen auf Zahlen zu stützen und Preise zwischen den Mitgliedstaaten vergleichbar zu machen. Die Kommission betreibt dafür eine Beobachtungsstelle für den Düngemittelmarkt, und die Verordnung (EU) 2022/2379 hat einheitliche statistische Regeln gesetzt.')),
+   (T('Which EU price source should I use, Eurostat or the Agri-food data portal?', 'Welche EU-Preisquelle sollte ich nutzen, Eurostat oder das Agri-Food-Datenportal?'),
+    T('Use the Agri-food data portal for the monthly EU-level trend of nitrogen, phosphorus and potash. Use Eurostat when you need annual prices per Member State for individual products, per tonne of nutrient, and keep in mind that the dataset is provisional.',
+      'Nutzen Sie das Agri-Food-Datenportal für den monatlichen Trend von Stickstoff, Phosphor und Kali auf EU-Ebene. Nutzen Sie Eurostat, wenn Sie jährliche Preise je Mitgliedstaat für einzelne Produkte je Tonne Nährstoff brauchen, und bedenken Sie, dass der Datensatz vorläufig ist.')),
+   (T('Can I rely on EU prices for my own purchase decision?', 'Kann ich mich bei meiner Kaufentscheidung auf EU-Preise verlassen?'),
+    T('Use them for direction only. Official prices are annual or aggregated averages and will not match your dealer’s offer, which depends on region, quantity, delivery date and timing. Your own invoice remains the best price there is.',
+      'Nutzen Sie sie nur als Richtung. Amtliche Preise sind Jahres- oder Durchschnittswerte und stimmen nicht mit dem Angebot Ihres Händlers überein, das von Region, Menge, Liefertermin und Zeitpunkt abhängt. Ihre eigene Rechnung bleibt der beste Preis, den es gibt.')),
   ],
   'sources': [
    ('https://agriculture.ec.europa.eu/common-agricultural-policy/agri-food-supply-chain/ensuring-availability-and-affordability-fertilisers_en',
@@ -133,6 +145,17 @@ POSTS = [
             'btn': T('Test your field for free', 'Feld kostenlos testen'), 'href': '@test'}),
    ('note', T('This article is an independent explanation based on ARVALIS’s public documentation. JUBIL® is an ARVALIS tool.',
               'Dieser Artikel ist eine unabhängige Erläuterung auf Grundlage der öffentlichen Dokumentation von ARVALIS. JUBIL® ist ein Werkzeug von ARVALIS.')),
+  ],
+  'faq': [
+   (T('What does JUBIL® stand for?', 'Wofür steht JUBIL®?'),
+    T('The name combines JUs de base de tige, the stem-base juice, and BILan prévisionnel, the forecast nitrogen budget. The system was designed by INRA, today INRAE, together with ITCF and evaluated in the experimental network of ARVALIS.',
+      'Der Name verbindet JUs de base de tige, den Saft der Stängelbasis, und BILan prévisionnel, die Stickstoffbilanz. Das System wurde vom INRA, heute INRAE, gemeinsam mit dem ITCF entwickelt und im Versuchsnetz von ARVALIS bewertet.')),
+   (T('When is nitrate measured and what happens next?', 'Wann wird Nitrat gemessen und was folgt daraus?'),
+    T('At the one-node stage and, depending on the result, at two nodes and possibly when the last leaf is visible. A further 40 to 80 kg N per hectare follows only if the nitrate content is at or below the intervention threshold. After a third application, measuring stops.',
+      'Im Stadium „1 Knoten“ und je nach Ergebnis bei „2 Knoten“ und gegebenenfalls bei sichtbarem letztem Blatt. Weitere 40 bis 80 kg N pro Hektar folgen nur, wenn der Nitratgehalt auf oder unter dem Eingriffsschwellenwert liegt. Nach einer dritten Gabe werden die Messungen beendet.')),
+   (T('Does the threshold depend on the fertiliser or the variety?', 'Hängt der Schwellenwert vom Dünger oder von der Sorte ab?'),
+    T('Not on the fertiliser form: trials in 1994 and 1995 showed it does not need to change for ammonium nitrate, nitrogen solution or urea. Varieties do differ, which led to four variety groups. Thresholds also depend on growth stage, crop density and soil.',
+      'Nicht von der Düngerform: Versuche 1994 und 1995 zeigten, dass er für Ammonsalpeter, Stickstofflösung oder Harnstoff nicht angepasst werden muss. Sorten unterscheiden sich jedoch, was zu vier Sortengruppen führte. Die Schwellenwerte hängen außerdem von Entwicklungsstadium, Bestandesdichte und Boden ab.')),
   ],
   'sources': [
    ('https://www.arvalis.fr/jubil-en-detail', T('ARVALIS: Jubil® en détail (in French)', 'ARVALIS: Jubil® en détail (auf Französisch)')),
@@ -201,6 +224,17 @@ POSTS = [
    ('note', T('This article is an independent explanation based on public documents of German and French agricultural services and ARVALIS. It is not a fertilisation recommendation. Legal limits and advisory figures change, so check the current rules and advice for your region and field.',
               'Dieser Artikel ist eine unabhängige Erläuterung auf Grundlage öffentlicher Unterlagen deutscher und französischer Fachstellen und von ARVALIS. Er ist keine Düngeempfehlung. Rechtliche Grenzen und Beratungswerte ändern sich, prüfen Sie deshalb die aktuellen Vorgaben und Empfehlungen für Ihre Region und Ihr Feld.')),
   ],
+  'faq': [
+   (T('What does BBCH mean and which codes matter for nitrogen in winter wheat?', 'Was bedeutet BBCH und welche Codes sind für Stickstoff bei Winterweizen wichtig?'),
+    T('BBCH is a uniform decimal code for crop growth stages, named after the institutions that created it. For nitrogen, tillering (BBCH 21 to 29), stem elongation (30 to 32), the flag leaf (37 and 39) and ear emergence (49 to 59) matter most.',
+      'BBCH ist ein einheitlicher dezimaler Code für die Entwicklungsstadien von Kulturpflanzen, benannt nach den Einrichtungen, die ihn geschaffen haben. Für den Stickstoff sind Bestockung (BBCH 21 bis 29), Schossen (30 bis 32), Fahnenblatt (37 und 39) und Ährenschieben (49 bis 59) am wichtigsten.')),
+   (T('How many nitrogen doses does winter wheat usually get in Germany?', 'Wie viele Stickstoffgaben bekommt Winterweizen in Deutschland üblicherweise?'),
+    T('Three: the first at the start of vegetation, the stem-elongation dose around BBCH 31 to 37 and the ear dose from BBCH 37 to the beginning of heading at BBCH 51. Together they must not exceed the requirement determined under the fertiliser ordinance.',
+      'Drei: die erste zu Vegetationsbeginn, die Schossergabe um BBCH 31 bis 37 und die Ährengabe von BBCH 37 bis zum Beginn des Ährenschiebens bei BBCH 51. Zusammen dürfen sie den nach der Düngeverordnung ermittelten Bedarf nicht überschreiten.')),
+   (T('How does JUBIL® differ from the German nitrate quick test?', 'Wie unterscheidet sich JUBIL® vom deutschen Nitrat-Schnelltest?'),
+    T('Both read nitrate in juice pressed from the stem base. JUBIL® starts from a budget dose, builds in a saving of 40 units and first asks whether a third dose is needed at all. The German tables give a dose for every colour value of the strip, within the legal requirement.',
+      'Beide lesen Nitrat im Saft ab, der aus der Stängelbasis gepresst wird. JUBIL® geht von einer Bilanzmenge aus, baut eine Einsparung von 40 Einheiten ein und fragt zuerst, ob überhaupt eine dritte Gabe nötig ist. Die deutschen Tabellen nennen für jeden Farbwert des Stäbchens eine Gabe, innerhalb des gesetzlichen Bedarfs.')),
+  ],
   'sources': [
    ('https://en.wikipedia.org/wiki/Cereal_growth_staging_scales', T('Cereal growth staging scales: BBCH and Zadoks codes (Wikipedia)', 'Cereal growth staging scales: BBCH- und Zadoks-Codes (Wikipedia, englisch)')),
    ('https://www.gesetze-im-internet.de/d_v_2017/anlage_4.html', T('Düngeverordnung, Annex 4: nitrogen requirement values (in German)', 'Düngeverordnung, Anlage 4: Stickstoffbedarfswerte')),
@@ -258,6 +292,17 @@ POSTS = [
    ('note', T('This article describes public services of third parties and is not an agronomic recommendation. NutriSen is not affiliated with Bright Sky or the DWD.',
               'Dieser Artikel beschreibt öffentliche Dienste Dritter und ist keine fachliche Empfehlung. NutriSen steht in keiner Verbindung zu Bright Sky oder zum DWD.')),
   ],
+  'faq': [
+   (T('Is Bright Sky free and do I need an API key?', 'Ist Bright Sky kostenlos und brauche ich einen API-Schlüssel?'),
+    T('It is free to use for all purposes and needs no API key. Because it only offers another way to reach DWD data, the DWD terms of use apply to everything you retrieve.',
+      'Es ist für alle Zwecke kostenlos nutzbar und braucht keinen API-Schlüssel. Weil es nur einen weiteren Zugang zu DWD-Daten bietet, gelten für alles, was Sie abrufen, die Nutzungsbedingungen des DWD.')),
+   (T('Which weather data does Bright Sky provide for my field?', 'Welche Wetterdaten liefert Bright Sky für mein Feld?'),
+    T('Hourly values from the nearest DWD stations, such as temperature, precipitation, wind speed and gusts, humidity, cloud cover and sunshine, plus forecasts with precipitation probability, weather radar, solar radiation and warnings for your municipality.',
+      'Stündliche Werte der nächstgelegenen DWD-Stationen, etwa Temperatur, Niederschlag, Windgeschwindigkeit und Böen, Luftfeuchte, Bewölkung und Sonnenschein, dazu Vorhersagen mit Niederschlagswahrscheinlichkeit, Wetterradar, Solarstrahlung und Warnungen für Ihre Gemeinde.')),
+   (T('How accurate is it for my own field?', 'Wie genau ist es für mein eigenes Feld?'),
+    T('It reports the nearest DWD station, not your field. In our test call near Straubing the station was about 6.5 km away. Local showers, wind and frost pockets can differ, so treat the values as a guide and check the distance in the answer.',
+      'Es nennt die nächstgelegene DWD-Station, nicht Ihr Feld. Bei unserem Testaufruf bei Straubing war die Station etwa 6,5 km entfernt. Lokale Schauer, Wind und Frostlöcher können abweichen, nehmen Sie die Werte also als Anhaltspunkt und prüfen Sie die Entfernung in der Antwort.')),
+  ],
   'sources': [
    ('https://brightsky.dev/', T('Bright Sky: free JSON API for DWD open weather data', 'Bright Sky: kostenlose JSON-API für offene DWD-Wetterdaten (englisch)')),
    ('https://github.com/jdemaeyer/brightsky', T('Bright Sky on GitHub (open source)', 'Bright Sky auf GitHub (Open Source, englisch)')),
@@ -287,6 +332,7 @@ def de_pairs():
     def add(x): d[x['en']] = x['de']
     for k in ('title', 'eyebrow', 'lead', 'read', 'back', 'desc'): add(BLOG[k])
     add(BLOG['sources']); add(DATE_TXT)
+    add(BLOG['faq'])
     for p in POSTS:
         if 'date_txt' in p: add(p['date_txt'])
     for p in POSTS: d['%d min read' % minutes(p)] = '%d %s' % (minutes(p), BLOG['min']['de'])
@@ -304,4 +350,5 @@ def de_pairs():
                 for k in ('h', 'p', 'btn'): add(v[k])
             elif kind == 'link': add(v['label'])
         for _, label in p['sources']: add(label)
+        for q, ans in p.get('faq', []): add(q); add(ans)
     return d

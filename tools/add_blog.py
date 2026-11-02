@@ -98,8 +98,12 @@ for p in BC.POSTS:
             body.append('<aside class="ns-blog-cta"><h2>%s</h2><p>%s</p><a class="ns-blog-btn" href="%s">%s</a></aside>' % (E(v['h']['en']), E(v['p']['en']), href, E(v['btn']['en'])))
     src = '<section class="ns-blog-src"><h2>%s</h2><ul>%s</ul></section>' % (E(BC.BLOG['sources']['en']), ''.join(
         '<li><a href="%s" target="_blank" rel="noopener">%s</a></li>' % (h, E(l['en'])) for h, l in p['sources']))
+    faq = ''
+    if p.get('faq'):
+        faq = '<section class="ns-blog-faq"><h2>%s</h2>%s</section>' % (E(BC.BLOG['faq']['en']), ''.join(
+            '<details><summary>%s</summary><p>%s</p></details>' % (E(q['en']), E(a['en'])) for q, a in p['faq']))
     page = ('<div class="ns-blog"><header class="ns-blog-hero"><div class="ns-blog-wrap narrow"><a class="ns-blog-back" href="../">%s</a><p class="ns-blog-tag">%s</p><h1>%s</h1>%s</div></header>'
             '<div class="ns-blog-wrap narrow"><article class="ns-blog-article">%s%s</article></div></div>') % (
-            E(BC.BLOG['back']['en']), E(p['tag']['en']), E(p['title']['en']), meta(p), ''.join(body), src)
+            E(BC.BLOG['back']['en']), E(p['tag']['en']), E(p['title']['en']), meta(p), ''.join(body), faq + src)
     write(d, build(page, d, p['title']['en'], p['excerpt']['en']))
 print('added blog with', len(BC.POSTS), 'articles')

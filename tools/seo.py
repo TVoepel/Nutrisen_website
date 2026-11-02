@@ -8,6 +8,8 @@ info@livesen.eu, empty fields, broken logo path) is removed. Then writes sitemap
 robots.txt. Safe to re-run: every tag it writes is replaced, never duplicated.
 """
 import glob, html, json, os, re, subprocess, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import blog_content as BC
 from datetime import date
 
 ROOT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else '.')
@@ -159,6 +161,11 @@ def process(f, d):
                       'image': img, 'mainEntityOfPage': page_url, 'author': {'@id': BASE + '/#organization'},
                       'publisher': ORG})
         graph[-1]['dateModified'] = graph[-1]['datePublished']
+    if post:
+        bp = next((x for x in BC.POSTS if x['slug'] == key.split('/', 1)[1]), None)
+        if bp and bp.get('faq'):
+            graph.append({'@type': 'FAQPage', 'inLanguage': lang, 'mainEntity': [
+                {'@type': 'Question', 'name': q[lang], 'acceptedAnswer': {'@type': 'Answer', 'text': a[lang]}} for q, a in bp['faq']]})
     if key == 'agriculture/calculator':
         graph.append({'@type': 'WebApplication', 'name': h1, 'description': desc, 'url': page_url, 'inLanguage': lang,
                       'applicationCategory': 'BusinessApplication', 'operatingSystem': 'Any',
@@ -185,7 +192,7 @@ def process(f, d):
         ('name', 'twitter:description', desc),
         ('name', 'twitter:image', img),
     ]
-    if post: og.append(('property', 'article:published_time', graph[-1]['datePublished']))
+    if post: og.append(('property', 'article:published_time', next(g for g in graph if g['@type'] == 'BlogPosting')['datePublished']))
     block = '<!--seo-->' + ''.join('<meta %s="%s" content="%s">' % (a, b, esc(c)) for a, b, c in og)
     block += '<script type="application/ld+json">%s</script><!--/seo-->\n' % jd(ld)
     # canonical: exactly one absolute (added by i18n); make sure it points at this page

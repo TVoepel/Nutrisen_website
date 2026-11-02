@@ -128,6 +128,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   the free, open-source JSON API for DWD open weather data (no API key, DWD terms of use apply), what it returns, five uses on a farm
   and its limits (nearest station, spare-time service, DWD source note). The example call in the article was tested live.
 
+- **FAQ in every article (2026-11-02):** each blog post ends with three questions and answers (`faq` list per post in `tools/blog_content.py`,
+  English and German). Rendered as native `<details>` elements, so no JavaScript, and added to the page as `FAQPage` structured data by
+  `tools/seo.py`. The answers only restate what the article says. The FAQ is not counted in the reading time.
+
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
   rebuilds the content of the home page (awards and team), Medical, Agriculture, How does it work, Test your field,
