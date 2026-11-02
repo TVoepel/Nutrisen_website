@@ -45,7 +45,7 @@
 <p class="ns-lead">Messen Sie das Nitrat im Pflanzensaft direkt auf dem Feld und düngen Sie genau so viel, wie die Kultur braucht.</p>
 <ul class="ns-stats"><li><b>20 % weniger</b><span>Dünger im Durchschnitt, bis zu 80 € pro ha</span></li><li><b>bis zu +10 %</b><span>Mehrertrag in einzelnen Fällen möglich</span></li></ul>
 <div class="ns-cta"><a class="ns-btn" href="agriculture/test-your-field/">Feld kostenlos testen</a><a class="ns-more" href="agriculture/how-does-it-work/">So funktioniert es</a></div>
-<p class="ns-note">Kostenloses Pilotprojekt für Betriebe in Bayern. *Berechnet für Weizen, Preise Dezember 2022.</p>
+<p class="ns-note">Kostenloses Pilotprojekt für Betriebe in Bayern. *Berechnet für Weizen, Düngemittelpreise 2025–2026.</p>
 </div></div>
 <span class="ns-or" aria-hidden="true">oder</span>
 <div class="ns-panel ns-panel--med"><img class="ns-bg" src="../assets/hero-med-960.webp" srcset="../assets/hero-med-960.webp 960w,../assets/hero-med-1600.webp 1600w" sizes="(max-width:860px) 100vw,50vw" width="1600" height="900" alt="" decoding="async" loading="lazy"><div class="ns-inner">
@@ -63,10 +63,10 @@
 <input id="ns-ha" type="range" min="10" max="1000" step="10" value="100"><div class="ns-calc-scale" aria-hidden="true"><span>10 ha</span><span>1.000 ha</span></div></div>
 <div class="ns-calc-out"><div><b><em>bis zu</em> <span data-calc="save">8.000 €</span></b><span class="l">gesparte Düngerkosten pro Jahr, bis zu 80 € pro ha</span></div>
 <a class="ns-calc-btn" href="agriculture/test-your-field/">Feld kostenlos testen</a>
-<small>Obergrenze für Weizen, berechnet mit Düngemittelpreisen von Dezember 2022. Die tatsächliche Einsparung hängt von den aktuellen Preisen und vom Betrieb ab, siehe die <a href="agriculture/use-cases/">Praxisfälle</a>.</small>
+<small>Obergrenze für Weizen, berechnet mit Düngemittelpreisen von 2025–2026. Die tatsächliche Einsparung hängt von den aktuellen Preisen und vom Betrieb ab, siehe die <a href="agriculture/use-cases/">Praxisfälle</a>.</small>
 <a class="ns-calc-more" href="agriculture/calculator/">Eigene Düngung im Detail vergleichen</a></div></div>
 <script>(function(){var r=document.getElementById('ns-ha'),sec=document.querySelector('.ns-calc');if(!r||!sec)return;
-var PER_HA=80, /* "up to" saving in EUR per ha: published figure for wheat at December 2022 fertilizer prices */
+var PER_HA=80, /* "up to" saving in EUR per ha: published figure for wheat at 2025-2026 fertilizer prices */
 L=document.documentElement.lang==='de'?'de-DE':'en-GB',f=new Intl.NumberFormat(L,{style:'currency',currency:'EUR',maximumFractionDigits:0}),n=new Intl.NumberFormat(L),
 o=document.getElementById('ns-ha-out'),s=sec.querySelector('[data-calc=save]'),b=sec.querySelector('.ns-calc-btn'),h=b.getAttribute('href');
 function u(){var v=+r.value;o.textContent=n.format(v)+' ha';s.textContent=f.format(v*PER_HA);b.href=h+'?ha='+v}

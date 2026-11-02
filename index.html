@@ -45,7 +45,7 @@
 <p class="ns-lead">Measure the nitrate in your plants' sap directly on the field and fertilize exactly what the crop needs.</p>
 <ul class="ns-stats"><li><b>20% less</b><span>fertilizer on average, up to 80&#8364; per ha</span></li><li><b>up to +10%</b><span>higher yield possible in some cases</span></li></ul>
 <div class="ns-cta"><a class="ns-btn" href="agriculture/test-your-field/">Test your field for free</a><a class="ns-more" href="agriculture/how-does-it-work/">See how it works</a></div>
-<p class="ns-note">Free pilot for farms in Bayern. *Calculated for wheat, December 2022 prices.</p>
+<p class="ns-note">Free pilot for farms in Bayern. *Calculated for wheat, fertilizer prices 2025–2026.</p>
 </div></div>
 <span class="ns-or" aria-hidden="true">or</span>
 <div class="ns-panel ns-panel--med"><img class="ns-bg" src="assets/hero-med-960.webp" srcset="assets/hero-med-960.webp 960w,assets/hero-med-1600.webp 1600w" sizes="(max-width:860px) 100vw,50vw" width="1600" height="900" alt="" decoding="async" loading="lazy"><div class="ns-inner">
@@ -63,10 +63,10 @@
 <input id="ns-ha" type="range" min="10" max="1000" step="10" value="100"><div class="ns-calc-scale" aria-hidden="true"><span>10 ha</span><span>1,000 ha</span></div></div>
 <div class="ns-calc-out"><div><b><em>up to</em> <span data-calc="save">€8,000</span></b><span class="l">fertilizer costs saved per year, up to 80 € per ha</span></div>
 <a class="ns-calc-btn" href="agriculture/test-your-field/">Test your field for free</a>
-<small>Up-to value for wheat, calculated with fertilizer prices of December 2022. Actual savings depend on current prices and on the farm, see the <a href="agriculture/use-cases/">practice cases</a>.</small>
+<small>Up-to value for wheat, calculated with fertilizer prices of 2025–2026. Actual savings depend on current prices and on the farm, see the <a href="agriculture/use-cases/">practice cases</a>.</small>
 <a class="ns-calc-more" href="agriculture/calculator/">Compare your own fertilization in detail</a></div></div>
 <script>(function(){var r=document.getElementById('ns-ha'),sec=document.querySelector('.ns-calc');if(!r||!sec)return;
-var PER_HA=80, /* "up to" saving in EUR per ha: published figure for wheat at December 2022 fertilizer prices */
+var PER_HA=80, /* "up to" saving in EUR per ha: published figure for wheat at 2025-2026 fertilizer prices */
 L=document.documentElement.lang==='de'?'de-DE':'en-GB',f=new Intl.NumberFormat(L,{style:'currency',currency:'EUR',maximumFractionDigits:0}),n=new Intl.NumberFormat(L),
 o=document.getElementById('ns-ha-out'),s=sec.querySelector('[data-calc=save]'),b=sec.querySelector('.ns-calc-btn'),h=b.getAttribute('href');
 function u(){var v=+r.value;o.textContent=n.format(v)+' ha';s.textContent=f.format(v*PER_HA);b.href=h+'?ha='+v}

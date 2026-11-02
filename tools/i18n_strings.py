@@ -80,8 +80,8 @@ DE.update({
     'higher yield possible in some cases': 'Mehrertrag in einzelnen Fällen möglich',
     'Test your field for free': 'Feld kostenlos testen',
     'See how it works': 'So funktioniert es',
-    'Free pilot for farms in Bayern. *Calculated for wheat, December 2022 prices.':
-        'Kostenloses Pilotprojekt für Betriebe in Bayern. *Berechnet für Weizen, Preise Dezember 2022.',
+    'Free pilot for farms in Bayern. *Calculated for wheat, fertilizer prices 2025–2026.':
+        'Kostenloses Pilotprojekt für Betriebe in Bayern. *Berechnet für Weizen, Düngemittelpreise 2025–2026.',
     'or': 'oder',
     'For medical-device makers': 'Für Medizinprodukte-Hersteller',
     'Direct molecular sensing for enabling digital health': 'Direkte Molekülmessung für die digitale Gesundheit',
@@ -154,7 +154,7 @@ DE.update({
     'In some cases up to 10% higher yield is possible, depending on farm and season.': 'In einzelnen Fällen sind bis zu 10 % Mehrertrag möglich, abhängig von Betrieb und Saison.',
     'being resilient': 'widerstandsfähig werden',
     'and cultivating now, the future of agriculture.': 'und schon heute die Zukunft der Landwirtschaft gestalten.',
-    '*values calculated for wheat farmers, December 2022 prices.': '*Werte berechnet für Weizenanbau, Preise Dezember 2022.',
+    '*values calculated for wheat farmers, fertilizer prices 2025–2026.': '*Werte berechnet für Weizenanbau, Düngemittelpreise 2025–2026.',
     'Per year, we aim to save for Europe': 'Pro Jahr wollen wir für Europa einsparen',
     '2 Million': '2 Millionen',
     'TONS OF FERTILIZERS': 'TONNEN DÜNGEMITTEL',
@@ -207,7 +207,7 @@ DE.update({
         'Im Durchschnitt können NutriSen-Sensoren helfen, den Düngereinsatz um bis zu 20 % zu senken. In einzelnen Fällen sind bis zu 10 % Mehrertrag möglich.',
     'This could mean savings of up to 80€ per hectare*.':
         'Das können Einsparungen von bis zu 80 € pro Hektar* bedeuten.',
-    '*prices for wheat farmers, December 2022': '*Preise für Weizenanbau, Dezember 2022',
+    '*fertilizer prices 2025–2026, wheat farmers': '*Düngemittelpreise 2025–2026, Weizenanbau',
     "We've got your back": 'Wir stehen hinter Ihnen',
     'Power up the experience that you have, with the technology we can provide.':
         'Ergänzen Sie Ihre Erfahrung mit der Technologie, die wir Ihnen bieten.',
@@ -267,7 +267,7 @@ DE.update({
     '€8,000': '8.000 €', '€24,000': '24.000 €',
     'up to': 'bis zu',
     'fertilizer costs saved per year, up to 80 € per ha': 'gesparte Düngerkosten pro Jahr, bis zu 80 € pro ha',
-    'Up-to value for wheat, calculated with fertilizer prices of December 2022. Actual savings depend on current prices and on the farm, see the': 'Obergrenze für Weizen, berechnet mit Düngemittelpreisen von Dezember 2022. Die tatsächliche Einsparung hängt von den aktuellen Preisen und vom Betrieb ab, siehe die',
+    'Up-to value for wheat, calculated with fertilizer prices of 2025–2026. Actual savings depend on current prices and on the farm, see the': 'Obergrenze für Weizen, berechnet mit Düngemittelpreisen von 2025–2026. Die tatsächliche Einsparung hängt von den aktuellen Preisen und vom Betrieb ab, siehe die',
     'practice cases': 'Praxisfälle',
     # --- use cases
     'Results from practice': 'Ergebnisse aus der Praxis',
@@ -343,7 +343,7 @@ EN_LEGAL = {
     'Diese Webseite verwendet Webanalytics. Dabei werden keine personenbezogenen Daten verwendet oder Cookies verwendet. Besucher werden z.B. über die IP-Adresse und Browserkennungen eindeutig identifiziert werden. Dabei werden die IP-Adresse und Browserkennung anonymisiert gespeichert, damit keine Rückschlüsse auf die einzelnen Besucher mehr gezogen werden können.':
         'This website uses web analytics. No personal data or cookies are used in the process. Visitors may be uniquely identified, for example, via their IP address and browser identifiers. The IP address and browser identifier are stored in anonymized form so that no conclusions can be drawn about individual visitors.',
 }
-KEEP_LEGAL = {'Use cases', 'Calculator', 'NutriSen GmbH', 'Europaring 4', '94315 Straubing', 'Email: debora.moretti@nutrisen.eu',
+KEEP_LEGAL = {'Use cases', 'Calculator', 'NutriSen GmbH', 'Europaring 4', '94315 Straubing', 'Email: info@nutrisen.eu',
               'Tobias Vöpel & Alaa A. Oughli', 'HRB 13438', 'How does it work', 'Test your field',
               '© Copyright. All rights reserved.'}
 
