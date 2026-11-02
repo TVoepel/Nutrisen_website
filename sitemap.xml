@@ -78,6 +78,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/blog/nutrient-prices-eu-reporting/"/>
   </url>
   <url>
+    <loc>https://www.nutrisen.eu/blog/oxygen-scavenger-science-advances/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/blog/oxygen-scavenger-science-advances/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/blog/oxygen-scavenger-science-advances/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/blog/oxygen-scavenger-science-advances/"/>
+  </url>
+  <url>
     <loc>https://www.nutrisen.eu/de/agriculture/calculator/</loc>
     <lastmod>2026-11-02</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/agriculture/calculator/"/>
@@ -153,6 +160,13 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/blog/nutrient-prices-eu-reporting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/blog/nutrient-prices-eu-reporting/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/blog/nutrient-prices-eu-reporting/"/>
+  </url>
+  <url>
+    <loc>https://www.nutrisen.eu/de/blog/oxygen-scavenger-science-advances/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.nutrisen.eu/de/blog/oxygen-scavenger-science-advances/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nutrisen.eu/blog/oxygen-scavenger-science-advances/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nutrisen.eu/blog/oxygen-scavenger-science-advances/"/>
   </url>
   <url>
     <loc>https://www.nutrisen.eu/de/</loc>

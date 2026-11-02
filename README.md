@@ -111,7 +111,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   - The disclaimer text on the page (market data source, no liability) was provided by the site owner. The
     paragraph about Eurostat was added to cover the second source.
 
-- **Blog (2026-11-01):** `/blog/` (German: `/de/blog/`) with four articles, each 3 to 5 minutes of reading time, in English
+- **Blog (2026-11-01):** `/blog/` (German: `/de/blog/`) with five articles, each 3 to 5 minutes of reading time, in English
   and German and linked in the main menu: "Nutrient prices: why the EU reports them and how to use them" and "JUBIL®: where
   the stem-juice nitrate test comes from and why it works" (links to the ARVALIS page `arvalis.fr/jubil-en-detail`). The
   texts are in `tools/blog_content.py` (both languages, with their sources); `tools/add_blog.py` builds the pages and
@@ -146,6 +146,11 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   - `robots.txt` names the common AI crawlers explicitly (all allowed). Remove an entry to block that crawler.
   - Structured data: the Organization block now has the legal name, register number, team members with job titles and profile links, awards
     and topics. The page "At a glance" carries `AboutPage` and `FAQPage` data. Blog posts use a slim publisher block.
+
+- **Article on the Science Advances paper (2026-11-02):** `/blog/oxygen-scavenger-science-advances/` (German: `/de/blog/...`), 3 minutes, with FAQ. Summarises
+  "A universal oxygen scavenger for oxidase-based biosensors" (Science Advances 11(37): eadw6133, 12 September 2025, DOI 10.1126/sciadv.adw6133) from the
+  Crossref abstract, links the DOI and carries the paper as `citation` in the structured data. Authors Tobias Vöpel, Alaa A. Oughli and Nicolas Plumeré are
+  part of the NutriSen team. Only statements of the abstract are used; the numbers (below 50% without, 99% with the scavenger) are the authors'.
 
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`

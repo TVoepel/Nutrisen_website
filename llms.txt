@@ -22,6 +22,7 @@
 - [JUBIL® stem-juice nitrate test explained](https://www.nutrisen.eu/blog/jubil-nitrate-method/): Where the JUBIL® stem-juice nitrate test comes from, how it steers the last nitrogen application in winter wheat, and why it works.
 - [Wheat nitrogen by BBCH stage: Germany vs France](https://www.nutrisen.eu/blog/bbch-winter-wheat-germany-france/): How the BBCH scale guides nitrogen in winter wheat, how Germany and France split the doses, and where the JUBIL® stem-juice nitrate test fits in.
 - [DWD Bright Sky API: free weather data for farmers](https://www.nutrisen.eu/blog/dwd-bright-sky-api-farmers/): Bright Sky offers the open weather data of the German weather service as a free API. How farmers can use it for spraying, spreading and crop monitoring.
+- [Science Advances: oxygen scavenger for biosensors](https://www.nutrisen.eu/blog/oxygen-scavenger-science-advances/): New paper in Science Advances: an enzymatic oxygen scavenger lifts the accuracy of oxidase-based biosensors for glucose, lactate and creatinine to 99%.
 
 ## Deutsch (German versions)
 - [NutriSen auf einen Blick: Fakten, Team, Produkte](https://www.nutrisen.eu/de/nutrisen-at-a-glance/): Die wichtigsten Fakten zur NutriSen GmbH: Nitrat-Biosensor für Landwirte, medizinische Biosensor-Plattform, Team, Forschungsförderung, Auszeichnungen und Kontakt.

@@ -84,7 +84,7 @@ index = ('<div class="ns-blog"><header class="ns-blog-hero"><div class="ns-blog-
 write('blog', build(index, 'blog', 'Blog', BC.BLOG['desc']['en']))
 
 # articles
-TARGET = {'@calc': 'agriculture/calculator', '@test': 'agriculture/test-your-field'}
+TARGET = {'@calc': 'agriculture/calculator', '@test': 'agriculture/test-your-field', '@medical': 'medical'}
 for p in BC.POSTS:
     d = 'blog/' + p['slug']; body = ['<p class="ns-blog-intro">%s</p>' % E(p['lead']['en'])]
     for blk in p['blocks']:

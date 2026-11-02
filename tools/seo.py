@@ -62,6 +62,8 @@ T = {
   'blog/dwd-bright-sky-api-farmers': ('DWD Bright Sky API: free weather data for farmers | NutriSen',
        'Bright Sky offers the open weather data of the German weather service as a free API. How farmers can use it for spraying, spreading and crop monitoring.'),
   'nutrisen-at-a-glance': ('NutriSen at a glance: facts, team and products', None),
+  'blog/oxygen-scavenger-science-advances': ('Science Advances: oxygen scavenger for biosensors | NutriSen',
+       'New paper in Science Advances: an enzymatic oxygen scavenger lifts the accuracy of oxidase-based biosensors for glucose, lactate and creatinine to 99%.'),
   'legal-notice': ('NutriSen GmbH Legal Notice',
        'Legal notice (courtesy translation) of NutriSen GmbH, Europaring 4, 94315 Straubing, Germany. The German Impressum is binding.'),
   'privacy-policy': ('Privacy Policy | NutriSen',
@@ -88,6 +90,8 @@ T = {
   'blog/dwd-bright-sky-api-farmers': ('DWD Bright Sky API: Wetterdaten für Landwirte | NutriSen',
        'Bright Sky bietet die offenen Wetterdaten des Deutschen Wetterdienstes als kostenlose API. Wie Landwirte sie für Pflanzenschutz, Düngung und Bestand nutzen.'),
   'nutrisen-at-a-glance': ('NutriSen auf einen Blick: Fakten, Team, Produkte', None),
+  'blog/oxygen-scavenger-science-advances': ('Science Advances: Sauerstofffänger für Biosensoren | NutriSen',
+       'Neues Paper in Science Advances: Ein enzymatischer Sauerstofffänger hebt die Genauigkeit Oxidase-basierter Biosensoren für Glukose, Laktat und Kreatinin auf 99 %.'),
   'impressum': ('NutriSen GmbH Impressum',
        'Impressum der NutriSen GmbH, Europaring 4, 94315 Straubing: Verantwortliche, Kontakt, Geschäftsführung und Registerdaten.'),
   'datenschutzerklarung': ('Datenschutzerklärung | NutriSen',
@@ -176,6 +180,11 @@ def process(f, d):
                       'image': img, 'mainEntityOfPage': page_url, 'author': {'@id': BASE + '/#organization'},
                       'publisher': ORG_MIN})
         graph[-1]['dateModified'] = graph[-1]['datePublished']
+        cp = next((x for x in BC.POSTS if x['slug'] == key.split('/', 1)[1]), {}).get('citation')
+        if cp:
+            graph[-1]['citation'] = {'@type': 'ScholarlyArticle', 'name': cp['name'], 'sameAs': 'https://doi.org/' + cp['doi'], 'datePublished': cp['date'],
+                                     'isPartOf': {'@type': 'PublicationIssue', 'issueNumber': cp['issue'], 'isPartOf': {
+                                         '@type': 'PublicationVolume', 'volumeNumber': cp['volume'], 'isPartOf': {'@type': 'Periodical', 'name': cp['journal']}}}}
     if post:
         bp = next((x for x in BC.POSTS if x['slug'] == key.split('/', 1)[1]), None)
         if bp and bp.get('faq'):
