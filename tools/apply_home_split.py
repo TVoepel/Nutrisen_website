@@ -28,7 +28,7 @@ def bg(sset, h, first):
 html = f'''<section class="ns-split" aria-label="Choose your field">
 <div class="ns-panel ns-panel--ag">{bg(AG_SET, AG_H, True)}<div class="ns-inner">
 <span class="ns-tag">For farmers &amp; agronomists</span>
-<h2>Real-time nutrient sensing for smart fertilization</h2>
+<h1>Real-time nutrient sensing for smart fertilization</h1>
 <p class="ns-lead">Measure the nitrate in your plants' sap directly on the field and fertilize exactly what the crop needs.</p>
 <ul class="ns-stats"><li><b>about 15% less</b><span>fertilizer on average, up to 30% and 90&#8364; per ha possible</span></li><li><b>up to +10%</b><span>higher yield possible in some cases</span></li></ul>
 <div class="ns-cta"><a class="ns-btn" href="agriculture/test-your-field/">Test your field for free</a><a class="ns-more" href="agriculture/how-does-it-work/">See how it works</a></div>

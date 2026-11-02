@@ -11,7 +11,7 @@
 .ns-inner{width:100%;max-width:560px;padding:56px clamp(24px,4vw,64px) clamp(40px,6vw,72px);margin:0 auto}
 .ns-tag{display:inline-block;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
   padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px)}
-.ns-panel h2{margin:18px 0 12px;font-size:clamp(28px,3.2vw,44px);line-height:1.12;font-weight:700;color:#fff}
+.ns-panel h1,.ns-panel h2{margin:18px 0 12px;font-size:clamp(28px,3.2vw,44px);line-height:1.12;font-weight:700;color:#fff}
 .ns-lead{margin:0 0 20px;font-size:17px;line-height:1.55;color:rgba(255,255,255,.9)}
 .ns-stats{list-style:none;margin:0 0 26px;padding:0;display:flex;gap:12px;flex-wrap:wrap}
 .ns-stats li{flex:1 1 140px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22)}

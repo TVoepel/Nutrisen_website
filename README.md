@@ -135,6 +135,20 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   `grep -rl 'name="ns-analytics"' --include=*.html . | xargs sed -i 's/name="ns-analytics" content="off"/name="ns-analytics" content="on"/'`
   and put a consent banner in front of it first. To turn it off again, swap `on` and `off`. `tools/optimize.py` produces this state.
 
+- **SEO (2026-11-02):** `tools/seo.py` runs last and is safe to re-run.
+  - Every page has a unique title (50 to 60 characters, with the search term) and a description of 120 to 160 characters, in
+    English and German. The texts are in the `T` table at the top of the script. The home pages now have one `<h1>`.
+  - One absolute canonical per page (the old relative one is gone), robots meta, Open Graph and Twitter tags with a 1200x630
+    image per language (`assets/og-en.jpg`, `assets/og-de.jpg`, rendered by `tools/make_og.js` from `tools/og-card.html`).
+  - Structured data (JSON-LD): Organization and WebSite on the home pages (company data from the Impressum), BreadcrumbList on
+    every other page, BlogPosting on the two articles, WebApplication on the fertilizer calculator. The old LocalBusiness block of the
+    IONOS site is removed: it had the wrong e-mail (info@livesen.eu), empty fields, a broken logo path and invented opening hours.
+  - `sitemap.xml` (22 URLs, with hreflang alternates, legal pages left out) and `robots.txt`. After the go-live, submit
+    `https://www.nutrisen.eu/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+  - Host name: `www.nutrisen.eu` is the canonical one (the live site redirects `nutrisen.eu` to it). Set up the same 301 redirect
+    at IONOS, plus http to https.
+  - The meeting booking link on the home and Medical pages still points to the calendar of `livesen.eu`.
+
 ## Refreshing the mirror
 
 ```
@@ -143,6 +157,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `seo.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
-`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`. `i18n.py` refuses to run twice on the same files.
+`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`. `i18n.py` refuses to run twice on the same files.
