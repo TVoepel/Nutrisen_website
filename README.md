@@ -134,7 +134,8 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 - **LiveSEN funding note (2026-11-02):** the 2018 card on the About page names the funding (ERC Proof of Concept, Horizon 2020, grant
   agreement No 790155, 1 June 2018 to 30 November 2019) and links the CORDIS record `https://cordis.europa.eu/project/id/790155`.
-  The CORDIS page lists the call as ERC-2017-PoC. The booking calendar button is still a mailto link until a NutriSen booking URL exists.
+  The CORDIS page lists the call as ERC-2017-PoC. The 2017 card links REDOX SHIELDS the same way (ERC Starting Grant ERC-2016-STG, grant agreement No 715900,
+  1 March 2017 to 31 August 2022, host TUM, `https://cordis.europa.eu/project/id/715900`). The page "At a glance" names both grant agreement numbers. The booking calendar button is still a mailto link until a NutriSen booking URL exists.
 
 - **Visibility in AI assistants (2026-11-02):**
   - New page `/nutrisen-at-a-glance/` (German: `/de/nutrisen-at-a-glance/`, menu item "At a glance" / "Auf einen Blick"): a definition list of
