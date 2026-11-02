@@ -151,7 +151,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 - **Article on the Science Advances paper (2026-11-02):** `/blog/oxygen-scavenger-science-advances/` (German: `/de/blog/...`), 3 minutes, with FAQ. Summarises
   "A universal oxygen scavenger for oxidase-based biosensors" (Science Advances 11(37): eadw6133, 12 September 2025, DOI 10.1126/sciadv.adw6133) from the
   Crossref abstract, links the DOI and carries the paper as `citation` in the structured data. Authors Tobias Vöpel, Alaa A. Oughli and Nicolas Plumeré are
-  part of the NutriSen team. Only statements of the abstract are used; the numbers (below 50% without, 99% with the scavenger) are the authors'.
+  part of the NutriSen team. Only statements of the abstract, the author affiliations and facts from this website are used; the numbers (below 50% without, 99% with the scavenger) are the authors'. Nothing is added on top.
 
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
