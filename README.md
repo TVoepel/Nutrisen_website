@@ -126,7 +126,9 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 - **Short article on the DWD Bright Sky API (2026-11-02):** `/blog/dwd-bright-sky-api-farmers/` (German: `/de/blog/...`), 3 minutes. Explains
   the free, open-source JSON API for DWD open weather data (no API key, DWD terms of use apply), what it returns, five uses on a farm
-  and its limits (nearest station, spare-time service, DWD source note). The example call in the article was tested live.
+  and its limits (nearest station, spare-time service, DWD source note). The example call in the article was tested live. Every use in the article
+  has a reference (QS and TOPPS drift guidance, Yara newsletter and TLL for urea timing, CERES wheat model for temperature sums, DWD warning criteria); uses without a
+  reference were removed. The origin of the name BBCH is referenced to the EPPO Reporting Service 2016/204.
 
 - **FAQ in every article (2026-11-02):** each blog post ends with three questions and answers (`faq` list per post in `tools/blog_content.py`,
   English and German). Rendered as native `<details>` elements, so no JavaScript, and added to the page as `FAQPage` structured data by
