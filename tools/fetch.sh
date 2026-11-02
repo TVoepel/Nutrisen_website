@@ -3,7 +3,7 @@
 # Usage: tools/fetch.sh <workdir>   (then: python3 tools/build.py <workdir> <outdir>)
 set -euo pipefail
 W=${1:?workdir}; mkdir -p "$W/raw" "$W/pages"
-PAGES=("" medical agriculture agriculture/how-does-it-work agriculture/test-your-field agriculture/from-lab-to-field the-npknowledge impressum datenschutzerklarung)
+PAGES=("" medical agriculture agriculture/how-does-it-work agriculture/test-your-field agriculture/from-lab-to-field impressum datenschutzerklarung)
 URLS=(); for p in "${PAGES[@]}"; do URLS+=("https://www.nutrisen.eu/$p${p:+/}"); done
 URLS+=(https://www.nutrisen.eu/wp-includes/js/wp-emoji-release.min.js https://www.nutrisen.eu/wp-includes/js/wp-emoji-loader.min.js
        https://www.nutrisen.eu/wp-content/plugins/gutenberg/build/styles/block-library/common.min.css

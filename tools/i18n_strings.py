@@ -355,3 +355,26 @@ DESC_DE[BC.BLOG['desc']['en']] = BC.BLOG['desc']['de']
 DESC_DE.update({p['excerpt']['en']: p['excerpt']['de'] for p in BC.POSTS})
 KEEP.update({'Jubil® en détail', 'Blog', '·', 'NutriSen blog'})
 KEEP_LEGAL.add('Blog')
+
+# ---------------------------------------------------------------- corporate-design pass (tools/restyle.py): new strings
+DE.update({
+    'About us': 'Über uns', 'E-mail': 'E-Mail',
+    'Proprietary biosensor plus your medical device': 'Eigener Biosensor plus Ihr Medizinprodukt',
+    'Proprietary biosensor test strip': 'Eigener Biosensor-Teststreifen',
+    'Satellite data': 'Satellitendaten', 'Fertilization platform': 'Düngeplattform',
+    'App screen: registration complete': 'App-Ansicht: Registrierung abgeschlossen',
+    'Satellite map of a field in the app': 'Satellitenkarte eines Feldes in der App',
+    'App screen: upgrade to premium': 'App-Ansicht: Upgrade auf Premium',
+    'Wheat plant, plant juice and sensor': 'Weizenpflanze, Pflanzensaft und Sensor',
+    'App screen with the nitrate result': 'App-Ansicht mit dem Nitratergebnis',
+    'App screen: fertilizer amount per zone': 'App-Ansicht: Düngermenge je Zone',
+    'The NutriSen team': 'Das NutriSen-Team',
+    'Researchers working in the lab': 'Forscher bei der Laborarbeit',
+    'Handheld sensor device in a field': 'Handgerät mit Sensor auf dem Feld',
+    'Multisensory test strips': 'Multisensor-Teststreifen',
+    'Hand in a blue glove holding a wheat plant': 'Hand im blauen Handschuh mit einer Weizenpflanze',
+    'Award ceremony of the Plan B Pitch Competition': 'Preisverleihung beim Plan B Pitch Competition',
+    'Logo of the Bio-Security competition': 'Logo des Bio-Security-Wettbewerbs',
+    'Logo of the Innovationspreis Moderne Landwirtschaft': 'Logo des Innovationspreises Moderne Landwirtschaft',
+})
+KEEP.update({'NutriSen', 'LinkedIn', 'Twitter'})

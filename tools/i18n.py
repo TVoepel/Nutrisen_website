@@ -18,18 +18,17 @@ if 'class="ns-lang"' in open(os.path.join(ROOT, 'index.html'), encoding='utf-8')
 
 SRC = {'home': '', 'medical': 'medical', 'agri': 'agriculture', 'how': 'agriculture/how-does-it-work',
        'test': 'agriculture/test-your-field', 'cases': 'agriculture/use-cases', 'calc': 'agriculture/calculator', 'blog': 'blog', 'post_prices': 'blog/nutrient-prices-eu-reporting', 'post_jubil': 'blog/jubil-nitrate-method', 'lab': 'agriculture/from-lab-to-field',
-       'npk': 'the-npknowledge', 'legal': 'impressum', 'privacy': 'datenschutzerklarung'}
+       'legal': 'impressum', 'privacy': 'datenschutzerklarung'}
 SRC_REV = {v: k for k, v in SRC.items()}
 LANGPATH = {
     ('en', 'home'): '', ('en', 'medical'): 'medical', ('en', 'agri'): 'agriculture',
     ('en', 'how'): 'agriculture/how-does-it-work', ('en', 'test'): 'agriculture/test-your-field',
-    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'cases'): 'agriculture/use-cases', ('en', 'calc'): 'agriculture/calculator', ('en', 'blog'): 'blog', ('en', 'post_prices'): 'blog/nutrient-prices-eu-reporting', ('en', 'post_jubil'): 'blog/jubil-nitrate-method', ('en', 'npk'): 'the-npknowledge',
-    ('en', 'legal'): 'legal-notice', ('en', 'privacy'): 'privacy-policy',
+    ('en', 'lab'): 'agriculture/from-lab-to-field', ('en', 'cases'): 'agriculture/use-cases', ('en', 'calc'): 'agriculture/calculator', ('en', 'blog'): 'blog', ('en', 'post_prices'): 'blog/nutrient-prices-eu-reporting', ('en', 'post_jubil'): 'blog/jubil-nitrate-method', ('en', 'legal'): 'legal-notice', ('en', 'privacy'): 'privacy-policy',
     ('de', 'home'): 'de', ('de', 'medical'): 'de/medical', ('de', 'agri'): 'de/agriculture',
     ('de', 'how'): 'de/agriculture/how-does-it-work', ('de', 'test'): 'de/agriculture/test-your-field',
     ('de', 'lab'): 'de/agriculture/from-lab-to-field', ('de', 'cases'): 'de/agriculture/use-cases', ('de', 'calc'): 'de/agriculture/calculator', ('de', 'blog'): 'de/blog', ('de', 'post_prices'): 'de/blog/nutrient-prices-eu-reporting', ('de', 'post_jubil'): 'de/blog/jubil-nitrate-method', ('de', 'legal'): 'impressum', ('de', 'privacy'): 'datenschutzerklarung',
 }
-def lp(lang, key):  # npk has no German version: link to the English page
+def lp(lang, key):  # pages without a German version link to the English page
     return LANGPATH.get((lang, key)) if (lang, key) in LANGPATH else LANGPATH[('en', key)]
 
 def read(path): return open(os.path.join(ROOT, path, 'index.html'), encoding='utf-8').read()
@@ -90,7 +89,7 @@ def translate(text, table, keep, label, report=True):
         return m.group(1) + html.escape(table[k], quote=True) + m.group(3) if k in table else m.group(0)
     for i in range(0, len(parts), 2):
         parts[i] = re.sub(r'>([^<>]+)<', seg, parts[i])
-        parts[i] = re.sub(r'(\b(?:data-label|aria-label)=")([^"]*)(")', attr, parts[i])
+        parts[i] = re.sub(r'(\b(?:data-label|aria-label|alt)=")([^"]*)(")', attr, parts[i])
     return ''.join(parts)
 
 def set_title(text, title):
@@ -141,7 +140,7 @@ for key, p in SRC.items():
         t = translate(t, T.EN_LEGAL, T.KEEP_LEGAL, 'en-legal:' + key)
         t = set_title(t, T.TITLE_EN_LEGAL[key])
         note = T.LEGAL_NOTE_EN if key == 'legal' else T.LEGAL_NOTE_EN_PRIVACY
-        t = t.replace('</h2></div>', '</h2><p class="ns-legal-note">%s</p></div>' % html.escape(note), 1)
+        t = t.replace('<!--ns-legal-note-->', '<p class="nb-legal-note">%s</p>' % html.escape(note), 1)
         t = decorate(t, key, 'en', LANGPATH[('en', key)])
         write(LANGPATH[('en', key)], t)
         continue

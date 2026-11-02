@@ -7,7 +7,7 @@ ROOT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else '.')
 NEW = 'agriculture/calculator'
 if os.path.exists(os.path.join(ROOT, NEW, 'index.html')): sys.exit('already applied')
 PAGES = ['', 'medical', 'agriculture', 'agriculture/how-does-it-work', 'agriculture/use-cases', 'agriculture/test-your-field',
-         'agriculture/from-lab-to-field', 'the-npknowledge', 'impressum', 'datenschutzerklarung']
+         'agriculture/from-lab-to-field', 'impressum', 'datenschutzerklarung']
 TEST_ID = 'd315b558-9278-46a3-a2c5-8ad72f69d387'; NEW_ID = 'c7d2f1a8-3b5e-4c90-8e41-6a9b0d2e5f17'
 item = re.compile(r'(<div data-page-id="%s"[^>]*>)<div><a href="[^"]*" data-navigation-anchor="true"><span>Test your field </span></a></div></div>' % TEST_ID)
 def add_nav(t, d):

@@ -25,7 +25,7 @@ print('assets copied:', len(assets))
 
 # ---- 2. pages
 slugs = ['', 'medical', 'agriculture', 'agriculture/how-does-it-work', 'agriculture/test-your-field',
-         'agriculture/from-lab-to-field', 'the-npknowledge', 'impressum', 'datenschutzerklarung']
+         'agriculture/from-lab-to-field', 'impressum', 'datenschutzerklarung']
 page_dirs = {('/' + s + '/') if s else '/': os.path.join(OUT, s) if s else OUT for s in slugs}
 
 HOST = re.compile(r'^(?:https?:)?//(?:www\.)?nutrisen\.eu')

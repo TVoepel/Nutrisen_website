@@ -30,11 +30,10 @@ relative, so the site works from a sub-path as well as from a domain root.
 | `/agriculture/how-does-it-work/` | How does the premium service of NutriSen work | Six-step process |
 | `/agriculture/test-your-field/` | Test for free the nitrate concentrations of your field | Contact form |
 | `/agriculture/from-lab-to-field/` | About us | Timeline 2017 to EXIST transfer. **Not linked from any menu.** |
-| `/the-npknowledge/` | The NPKnowledge | **Not linked from any menu and still contains placeholder text.** |
 | `/impressum/` | NutriSen GmbH Impressum | German legal notice |
 | `/datenschutzerklarung/` | Datenschutzerklärung | German privacy policy |
 
-The two unlinked pages are still publicly reachable on the live site because they are listed in the sitemap.
+The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed from this copy.
 
 ## What was changed for the static mirror
 
@@ -67,7 +66,6 @@ The two unlinked pages are still publicly reachable on the live site because the
   All translations are in `tools/i18n_strings.py`; `tools/i18n.py` generates the pages.
   Two wording bugs were fixed on the way: the contact form button read "Seed" (now "Send" / "Absenden"), and the
   English contact page said "Telefon:" (now "Phone:"). The typo "Haftungsauschluss" in the German legal notice is fixed.
-- `/the-npknowledge/` is still English only and unlinked, because it contains placeholder text.
 
 - **Practice cases page (2026-11-01):** `/agriculture/use-cases/` (German: `/de/agriculture/use-cases/`) shows five
   farm results from 2025/2026 (fertilizer vs. the standard recommendation, yield, economic result) with a bar chart,
@@ -120,6 +118,12 @@ The two unlinked pages are still publicly reachable on the live site because the
   is computed from the word count at 200 words per minute. To add an article, add an entry to `POSTS` and register its
   key and slug in `tools/i18n.py`.
 
+- **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
+  green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
+  rebuilds the content of the home page (awards and team), Medical, Agriculture, How does it work, Test your field,
+  About us and the two legal pages with these components. The texts and images are taken from the existing pages, so all
+  translations keep working. The placeholder page `/the-npknowledge/` is removed (`tools/prune.py`).
+
 ## Refreshing the mirror
 
 ```
@@ -128,6 +132,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
-`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`. `i18n.py` refuses to run twice on the same files.
+`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`. `i18n.py` refuses to run twice on the same files.

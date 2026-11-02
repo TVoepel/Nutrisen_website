@@ -8,7 +8,7 @@ import blog_content as BC
 ROOT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else '.')
 if os.path.exists(os.path.join(ROOT, 'blog', 'index.html')): sys.exit('already applied')
 PAGES = ['', 'medical', 'agriculture', 'agriculture/how-does-it-work', 'agriculture/use-cases', 'agriculture/calculator',
-         'agriculture/test-your-field', 'agriculture/from-lab-to-field', 'the-npknowledge', 'impressum', 'datenschutzerklarung']
+         'agriculture/test-your-field', 'agriculture/from-lab-to-field', 'impressum', 'datenschutzerklarung']
 MED, NEW = 'f3e12237-6aaa-44c9-90b4-bbb05118cc8a', 'e91b6c4d-52a7-4f0e-b3d8-7c1a9f2e4b66'
 ITEM = r'<div data-page-id="%s"[^>]*>' % MED + r'<div><a href="[^"]*" data-navigation-anchor="true"><span>Medical </span></a></div></div>'
 WRAP = '<div class="navigation-menu-item-wrapper">'
