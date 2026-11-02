@@ -42,8 +42,11 @@ def cleanup(t):
         c = re.sub(r'/\*.*?\*/', '', m.group(2), flags=re.S); c = re.sub(r'\s+', ' ', c)
         return m.group(1) + re.sub(r' ?([{};]) ?', r'\1', c).strip() + m.group(3)
     t = re.sub(r'(<style[^>]*>)(.*?)(</style>)', mini, t, flags=re.S)
-    # the site's own analytics (cdn.pagepulse.info) is kept, but only requested after load, when the browser is idle
-    t = t.replace('document.head.appendChild(sel);', "addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){document.head.appendChild(sel)})});")
+    # the site's own analytics (cdn.pagepulse.info) is switched OFF by default (GDPR, no consent banner). The code stays and runs
+    # only when <meta name="ns-analytics" content="on"> is present; then it loads after the page load, when the browser is idle.
+    key = "sel.src = '//cdn.pagepulse.info/js/22728.js';document.head.appendChild(sel);"
+    t = t.replace(key, "sel.src = '//cdn.pagepulse.info/js/22728.js';if(document.querySelector('meta[name=ns-analytics][content=on]'))addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){document.head.appendChild(sel)})});")
+    t = re.sub(r'(<meta charset="[^"]*"\s*/?>)', r'\1<meta name="ns-analytics" content="off">', t, count=1) if 'ns-analytics' not in t else t
     return t.replace('background-attachment:fixed', 'background-attachment:scroll')
 
 # ---------------------------------------------------------------- 2. fonts: woff2 only, swap, dedupe, preload

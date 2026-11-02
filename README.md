@@ -82,7 +82,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   are scaled down), the home hero uses small responsive images, fonts are woff2 only with `font-display:swap` and
   the three most used faces are preloaded, HTML comments and dead scripts (emoji, Gutenberg i18n, old-IE banner)
   are gone, inline CSS is minified, images below the fold are lazy, `background-attachment:fixed` is removed, and
-  the site's analytics script (cdn.pagepulse.info) is requested only after the page has loaded. `.htaccess` (Apache,
+  the site's analytics script (cdn.pagepulse.info) is switched off (see "Analytics switch" below). `.htaccess` (Apache,
   IONOS) and `_headers` (Netlify/Cloudflare style) add compression and one-year caching for assets.
 
   | Page transfer (gzip, scrolled to the end) | Before | After |
@@ -128,6 +128,12 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 - **Average saving (2026-11-02):** besides the "up to" values, the home hero, the Agriculture page and the last step of
   "How does it work" now state that fertilizer use drops by about 15% on average (about 45 EUR per ha at 30 EUR per ha for
   every 10%). The 15% figure is the owner's statement; "up to 30%" and "up to 90 EUR per ha" stay as the upper bound.
+
+- **Analytics switch (2026-11-02):** the original site's analytics script (cdn.pagepulse.info) is OFF, because the site has no
+  consent banner (GDPR). The code stays in every page and only runs when the page has `<meta name="ns-analytics" content="on">`
+  (default `off`, set right after `<meta charset>`). To turn it back on for all pages, run in the repository root:
+  `grep -rl 'name="ns-analytics"' --include=*.html . | xargs sed -i 's/name="ns-analytics" content="off"/name="ns-analytics" content="on"/'`
+  and put a consent banner in front of it first. To turn it off again, swap `on` and `off`. `tools/optimize.py` produces this state.
 
 ## Refreshing the mirror
 
