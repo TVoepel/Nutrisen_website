@@ -3,6 +3,7 @@
   "K": {
    "avg_ref_year": 357.8,
    "change_pct": 1.4,
+   "dec2022": 833.0,
    "month": 9,
    "price": 363.0,
    "year": 2026
@@ -10,6 +11,7 @@
   "N": {
    "avg_ref_year": 380.4,
    "change_pct": 23.3,
+   "dec2022": 667.0,
    "month": 9,
    "price": 469.0,
    "year": 2026
@@ -17,6 +19,7 @@
   "P": {
    "avg_ref_year": 594.5,
    "change_pct": 24.8,
+   "dec2022": 780.0,
    "month": 9,
    "price": 742.0,
    "year": 2026
@@ -767,5 +770,5 @@
   "AM203132": "Potassium chloride (KCl) 55-65% - prilled",
   "AM203133": "Potassium sulphate (K2SO4) 45-55% - all forms"
  },
- "retrieved": "2026-11-01"
+ "retrieved": "2026-11-02"
 }

@@ -187,8 +187,7 @@ def home():
     aw = [('bde581b1', 'Award ceremony of the Plan B Pitch Competition', 'Plan B Competition, Straubing.', ['3rd Prize in the Plan B Pitch Competition 2022!', S('Side-by-Side with start-ups')], ''),
           ('601ec95f', 'Logo of the Bio-Security competition', 'Bio-Security, Bönen.', [S('Since 2007'), S('In 2022, we secured')], ' contain'),
           ('945aded1', 'Logo of the Innovationspreis Moderne Landwirtschaft', 'Forum Moderne Landwirtschaft, Berlin.', ['What a night in Berlin!', S('We are very proud')], ' contain')]
-    team = [('b76c62ba', 'Tobias Vöpel', 'co-CEO', S('Father, husband'), 'linkedin.com/in/tobias'), ('7c2f52b6', 'Débora Moretti', 'co-CEO', S('A proud Brazilian'), 'deborammoretti'),
-            ('ffefe5f4', 'Alaa Oughli', 'CTO', S('Leading scientist'), 'alaa-oughli'), ('48bc2463', 'Nicolas Plumeré', 'CSO', S("Nicolas's vision"), 'NicolasPlumere')]
+    team = [('b76c62ba', 'Tobias Vöpel', 'co-CEO', S('Father, husband'), 'linkedin.com/in/tobias'), ('ffefe5f4', 'Alaa Oughli', 'CTO', S('Leading scientist'), 'alaa-oughli'), ('48bc2463', 'Nicolas Plumeré', 'CSO', S("Nicolas's vision"), 'NicolasPlumere')]
     hrefs = re.findall(r'href="((?:https://(?:de\.|www\.)?linkedin\.com/in/[^"]+|https://twitter\.com/[^"]+|mailto:[^"]+))"', t)
     def link_for(key):
         return next(h for h in hrefs if key in h) if key != 'linkedin.com/in/tobias' else next(h for h in hrefs if 'tobias-v' in h)

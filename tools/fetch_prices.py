@@ -76,7 +76,8 @@ for key, prefix in (('N', 'N '), ('P', 'P '), ('K', 'K ')):
     s = sorted(((r['year'], MONTHS.index(r['month']) + 1, r['price']) for r in rows if r['product'].startswith(prefix)))
     y, m, p = s[-1]
     ref = [x[2] for x in s if x[0] == int(year)]
-    agri[key] = {'year': y, 'month': m, 'price': p, 'avg_ref_year': round(sum(ref) / len(ref), 1) if len(ref) == 12 else None,
+    dec22 = next((x[2] for x in s if x[0] == 2022 and x[1] == 12), None)   # basis of the "80 EUR per ha" figure (wheat, December 2022 prices)
+    agri[key] = {'year': y, 'month': m, 'price': p, 'dec2022': dec22, 'avg_ref_year': round(sum(ref) / len(ref), 1) if len(ref) == 12 else None,
                  'change_pct': round((p / (sum(ref) / len(ref)) - 1) * 100, 1) if len(ref) == 12 else None}
 out = {
     'retrieved': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d'),
