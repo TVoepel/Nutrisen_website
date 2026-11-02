@@ -132,6 +132,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   English and German). Rendered as native `<details>` elements, so no JavaScript, and added to the page as `FAQPage` structured data by
   `tools/seo.py`. The answers only restate what the article says. The FAQ is not counted in the reading time.
 
+- **LiveSEN funding note (2026-11-02):** the 2018 card on the About page names the funding (ERC Proof of Concept, Horizon 2020, grant
+  agreement No 790155, 1 June 2018 to 30 November 2019) and links the CORDIS record `https://cordis.europa.eu/project/id/790155`.
+  The CORDIS page lists the call as ERC-2017-PoC. The booking calendar button is still a mailto link until a NutriSen booking URL exists.
+
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
   rebuilds the content of the home page (awards and team), Medical, Agriculture, How does it work, Test your field,

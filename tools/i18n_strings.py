@@ -237,6 +237,9 @@ DE.update({
         'Also mussten wir einen Weg finden, das Enzym zu schützen, ohne die Messung zu beeinträchtigen – das war zuvor noch nie gelungen.',
     'And we nailed it, supported by the Redox Shields Project.': 'Und wir haben es geschafft, unterstützt durch das Projekt Redox Shields.',
     'Learn more': 'Mehr erfahren',
+    'Funded by the European Research Council (ERC) under Horizon 2020, grant agreement No 790155.':
+        'Gefördert vom Europäischen Forschungsrat (ERC) im Programm Horizont 2020, Finanzhilfevereinbarung Nr. 790155.',
+    'View LiveSEN on CORDIS': 'LiveSEN bei CORDIS ansehen',
     'As part of the ERC Proof-of-Concept Grant LiveSen, our group was able to put all necessary parts into a small electrochemical biosensor. Now farmers are able to measure nitrate in their plants directly on the field!':
         'Im Rahmen des ERC Proof-of-Concept Grants LiveSen konnte unsere Gruppe alle notwendigen Komponenten in einem kleinen elektrochemischen Biosensor vereinen. Nun können Landwirte das Nitrat in ihren Pflanzen direkt auf dem Feld messen!',
     'The EU-funded eCONFIDENCE project aimed to explore potential commercial applications of a multisensory test strip, as well as the oxygen binders needed for it, patented under the European Research Council Starting Grant "REDOX SHIELDS". Such multi-analyte test strips can be used to calibrate the millions of data points generated every day by wearable technologies, improving the accuracy of non-invasive sensors in Big Data applications for health and fitness. We continued to improve the biosensor, also for health applications!':

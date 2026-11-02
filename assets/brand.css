@@ -91,6 +91,8 @@
 .nb-year{display:inline-block;margin:0 0 12px;padding:5px 16px;border-radius:99px;background:var(--navy);color:#fff;font-size:16px;font-weight:600}
 .nb-tl-item h2{margin:0 0 .5em;font-size:clamp(24px,2.8vw,32px);line-height:1.2;font-weight:700;color:var(--gdk)}
 .nb-tl-item p{margin:0 0 1em;color:#363c48}
+.nb-tl-item .nb-funding{font-size:14px;line-height:1.55;color:#5a6272}
+.nb-tl-item .nb-funding a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:2px}
 .nb-tl-item .nb-credit{font-size:13px;color:#6a7080}
 .nb-tl-media img{display:block;width:100%;border-radius:14px;aspect-ratio:1/1;object-fit:cover}
 

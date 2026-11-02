@@ -155,7 +155,11 @@ def about():
              ('2021', 'EXIST Research Transfer', [S('After publishing outstanding'), S('Within EXIST')], 'a9d2abf3', 'Hand in a blue glove holding a wheat plant', links[3])]
     out = ''
     for y, title, paras, iid, alt, href in items:
-        ps = ''.join('<p>%s</p>' % E(x) for x in paras if x) + ('<p class="nb-credit">%s</p>' % E('Foto: Food Hub NRW') if y == '2018' else '')
+        ps = ''.join('<p>%s</p>' % E(x) for x in paras if x)
+        if y == '2018':   # EU funding note with the CORDIS record of the project (grant agreement 790155, ERC-2017-PoC, H2020)
+            ps += '<p class="nb-funding">%s <a href="https://cordis.europa.eu/project/id/790155" target="_blank" rel="noopener">%s</a></p>' % (
+                E('Funded by the European Research Council (ERC) under Horizon 2020, grant agreement No 790155.'), E('View LiveSEN on CORDIS'))
+            ps += '<p class="nb-credit">%s</p>' % E('Foto: Food Hub NRW')
         out += '<article class="nb-tl-item"><div><span class="nb-year">%s</span><h2>%s</h2>%s<a class="nb-btn nb-btn--blue" href="%s" target="_blank" rel="noopener">%s</a></div><div class="nb-tl-media">%s</div></article>' % (
             y, E(title), ps, A(href), E('Learn more'), IMG(t, iid, alt, '(max-width:860px) 90vw, 440px'))
     body = hero(t, p, None, 'NutriSen', E('About us'), sm=True) + sec('<div class="nb-tl" style="margin-top:calc(-1 * clamp(28px,4vw,48px));position:relative">%s</div>' % out, 'nb-section--tl')
