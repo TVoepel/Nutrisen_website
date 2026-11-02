@@ -208,7 +208,7 @@ def home():
         ln = link_for(key); soc = 'Twitter' if 'twitter.com' in ln else 'LinkedIn'
         members += '<div class="nb-card nb-team">%s<div class="nb-team-body"><h3>%s</h3><p class="nb-role">%s</p><p>%s</p><div class="nb-chips"><a class="nb-chip" href="%s" target="_blank" rel="noopener">%s</a><a class="nb-chip" href="%s">%s</a></div></div></div>' % (
             IMG(t, iid, name, '(max-width:860px) 90vw, 260px'), E(name), E(role), E(bio), A(ln), soc, A(mail_for(name)), E('E-mail'))
-    body = (sec('<h2 class="nb-h2 nb-center">%s</h2><div class="nb-grid" style="margin-top:28px">%s</div>' % (E('People are excited about us'), awards)) +
+    body = (sec('<h2 class="nb-h2 nb-center">%s</h2><div class="nb-grid" style="margin-top:28px">%s</div>' % (E('People are excited about us'), awards), 'nb-section--white') +
             sec('<h2 class="nb-h2">%s</h2><p class="nb-sub">%s</p><div class="nb-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%%,240px),1fr))">%s</div>' % (
                 E('Diversity is our super power'), E(S('Three nations united')), members), 'nb-section--white'))
     s, e = region(t)

@@ -155,6 +155,16 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   Crossref abstract, links the DOI and carries the paper as `citation` in the structured data. Authors Tobias Vöpel, Alaa A. Oughli and Nicolas Plumeré are
   part of the NutriSen team. Only statements of the abstract, the author affiliations and facts from this website are used; the numbers (below 50% without, 99% with the scavenger) are the authors'. Nothing is added on top.
 
+- **Safari feedback (2026-11-02):**
+  - Home hero: the panels no longer grow on hover. Both panels share one row grid (CSS subgrid), so tag, headline, text, figures and buttons
+    start at the same height on both sides. Browsers without subgrid keep the old bottom-aligned layout.
+  - No grey behind the achievements and the team: the home sections are white, cards in white sections are white with a thin border, and the
+    savings band on the home page is white (`body.home .ns-calc` in `assets/brand.css`).
+  - Reader mode: `tools/semantic.py` (last step) wraps the page content in `<main id="main"><article>` and turns the content `<header>` blocks
+    into `<div>`s, because readers drop `<header>` blocks and look for one main article. FAQ answers are now always visible (headline plus
+    paragraph) instead of collapsed, since readers skip collapsed content. Checked with Mozilla Readability: 89 to 100% of the text of every page
+    is extracted, the rest are buttons. Safari's own Reader could not be tested here.
+
 - **Corporate design on all pages (2026-11-02):** `assets/brand.css` holds the shared components (navy to blue hero bands,
   green call-to-action bands, white cards with soft shadows, Poppins, green and blue buttons). `tools/restyle.py`
   rebuilds the content of the home page (awards and team), Medical, Agriculture, How does it work, Test your field,
@@ -192,6 +202,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `seo.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `seo.py`, `semantic.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
 `usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`. `i18n.py` refuses to run twice on the same files.

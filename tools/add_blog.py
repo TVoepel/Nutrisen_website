@@ -105,7 +105,7 @@ for p in BC.POSTS:
     faq = ''
     if p.get('faq'):
         faq = '<section class="ns-blog-faq"><h2>%s</h2>%s</section>' % (E(BC.BLOG['faq']['en']), ''.join(
-            '<details><summary>%s</summary><p>%s</p></details>' % (E(q['en']), E(a['en'])) for q, a in p['faq']))
+            '<div class="ns-blog-q"><h3>%s</h3><p>%s</p></div>' % (E(q['en']), E(a['en'])) for q, a in p['faq']))
     page = ('<div class="ns-blog"><header class="ns-blog-hero"><div class="ns-blog-wrap narrow"><a class="ns-blog-back" href="../">%s</a><p class="ns-blog-tag">%s</p><h1>%s</h1>%s</div></header>'
             '<div class="ns-blog-wrap narrow"><article class="ns-blog-article">%s%s</article></div></div>') % (
             E(BC.BLOG['back']['en']), E(p['tag']['en']), E(p['title']['en']), meta(p), ''.join(body), faq + src)
@@ -114,7 +114,7 @@ for p in BC.POSTS:
 FP = FC.FACTS; fd = FP['slug']
 rows = ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (E(l['en']), E(v['en'])) for l, v in FP['rows'])
 fq = '<section class="ns-blog-faq"><h2>%s</h2>%s</section>' % (E(BC.BLOG['faq']['en']), ''.join(
-    '<details><summary>%s</summary><p>%s</p></details>' % (E(q['en']), E(a['en'])) for q, a in FP['faq']))
+    '<div class="ns-blog-q"><h3>%s</h3><p>%s</p></div>' % (E(q['en']), E(a['en'])) for q, a in FP['faq']))
 more = '<section class="ns-blog-src"><h2>%s</h2><ul>%s</ul></section>' % (E(FP['h_more']['en']), ''.join(
     '<li><a href="%s/">%s</a></li>' % (posixpath.relpath(tgt, fd), E(l['en'])) for l, tgt in FP['links']))
 fpage = ('<div class="ns-blog"><header class="ns-blog-hero"><div class="ns-blog-wrap narrow"><p class="ns-blog-eyebrow">%s</p><h1>%s</h1><p class="ns-blog-lead">%s</p></div></header>'

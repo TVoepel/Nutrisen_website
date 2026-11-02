@@ -42,7 +42,8 @@
 /* cards and grids */
 .nb-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))}
 .nb-card{display:flex;flex-direction:column;padding:clamp(22px,3vw,34px);border-radius:18px;background:#fff;box-shadow:0 14px 40px rgba(15,42,94,.10)}
-.nb-section--white .nb-card{background:#f4f6f8;box-shadow:none}
+.nb-section--white .nb-card{background:#fff;border:1px solid #e3e8ee;box-shadow:0 10px 30px rgba(15,42,94,.08)}
+body.home .ns-calc{background:#fff}
 .nb-card--accent{border-top:5px solid var(--green)}
 .nb-card h3{margin:0 0 .5em;font-size:clamp(20px,2.2vw,24px);line-height:1.25;font-weight:700;color:var(--gdk)}
 .nb-card p{margin:0 0 .9em;color:#363c48}
