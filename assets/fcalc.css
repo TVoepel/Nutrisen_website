@@ -12,6 +12,10 @@
 .ns-fc-card{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(15,42,94,.16);padding:clamp(16px,3vw,28px);margin-bottom:20px}
 .ns-fc label{display:block;margin:10px 0 5px;font-size:13px;font-weight:600;color:#4a5160}
 .ns-fc select,.ns-fc input{width:100%;padding:11px 12px;border:1.5px solid #c9d3cd;border-radius:10px;font:inherit;font-size:15px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.ns-fc select,.ns-fc input{height:46px;line-height:normal;box-sizing:border-box;-webkit-appearance:none;appearance:none}
+.ns-fc select{padding-right:38px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234a5160' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 14px center/12px 8px}
+.ns-fc input[type=number]{-moz-appearance:textfield}
+.ns-fc input[type=number]::-webkit-outer-spin-button,.ns-fc input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .ns-fc select:focus,.ns-fc input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(11,78,162,.18)}
 .ns-fc-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 22px;align-items:end}
 .ns-fc-tip{margin-top:16px;padding:12px 14px;border-left:4px solid var(--blue);background:#eef3fa;border-radius:8px;font-size:14px;line-height:1.5}

@@ -168,6 +168,8 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 - **Fertilizer calculator alignment (2026-11-03):** on desktop (901 px and wider) the two columns share one row grid (CSS subgrid, `assets/fcalc.css`), so the
   headers, the three applications, the amount and cost lines and the totals sit at the same height on both sides, whatever the length of the price notes.
   On narrow screens the columns are stacked as before. Run `tools/cachebust.py` after changing the file.
+  All fields of the calculator (country, area, fertilizer, price, N content, target) have the same fixed height of 46 px. The selects use their own arrow
+  (`appearance:none`), because Safari draws native selects with a different height than text inputs.
 
 - **Hero glass boxes (2026-11-03):** the two labels above the headlines have the same width and height, and the figure boxes (15% / 10% and Lactate / Creatinine) are the same size on both sides.
 - **Cache busting (2026-11-03):** `tools/cachebust.py` (last step) adds `?v=<hash>` to every `assets/*.css` and `assets/*.js` reference. The hosting caches
