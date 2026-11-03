@@ -139,10 +139,11 @@ def test():
     p = 'agriculture/test-your-field'; t = rd(p)
     m = re.search(r'<form class="form-form".*?</form>\s*<div class="form-message form-error.*?</div>\s*<div class="form-message form-success.*?</div>', t, re.S); assert m
     box = re.search(r'<div id="form-module-[^"]*"[^>]*class="form-container[^"]*">', t); assert box   # holds the theme's CSS variables for the form
+    form = m.group(0).replace('<input type="text" data-required="true"', '<input id="Name" type="text" data-required="true"', 1).replace('<textarea data-id=', '<textarea id="Message" data-id=', 1)   # the labels point at these ids
     mail = re.search(r'href="(mailto:[^"]+)"', t).group(1); tel = re.search(r'href="(tel:[^"]+)"', t).group(1)
     body = hero(t, p, ('abb51ae4', 'pg-test'), 'Test your field', E('Do you have a farm in Bayern?'), '<p class="nb-lead">%s</p>' % E('We are looking for partners'), sm=True)
     body += sec('<div class="nb-contact"><div class="nb-card nb-form">%s%s</div><div class="nb-card"><h2>%s</h2><p>%s <a href="%s">+49 231 13707127</a></p><p>%s <a href="%s">info@nutrisen.eu</a></p><p>%s</p></div></div>' % (
-        box.group(0), m.group(0) + '</div>', E("Let's measure the nitrate of your plants."), E('Telefon:'), A(tel), E('E-mail:'), A(mail), E('Headquarters: Straubing, Germany.')))
+        box.group(0), form + '</div>', E("Let's measure the nitrate of your plants."), E('Telefon:'), A(tel), E('E-mail:'), A(mail), E('Headquarters: Straubing, Germany.')))
     wr(p, put(t, p, body))
 
 # ================================================================ ABOUT US

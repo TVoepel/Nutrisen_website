@@ -47,8 +47,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Known limitations of a static copy
 
-- The contact form on `/agriculture/test-your-field/` posts to the WordPress backend and will not send anything
-  from this mirror. Wire it to a form service or replace it with a `mailto:` link if you host this copy.
+- The contact form on `/agriculture/test-your-field/` needs `contact.php` (PHP hosting, see below). On a pure static host it shows an error with the e-mail address.
 - Nothing else on the site is dynamic.
 
 ## Changes beyond the mirror
@@ -165,6 +164,17 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
     paragraph) instead of collapsed, since readers skip collapsed content. Checked with Mozilla Readability: 89 to 100% of the text of every page
     is extracted, the rest are buttons. Safari's own Reader could not be tested here.
 
+- **Stress test and contact form (2026-11-03):**
+  - All 34 pages were tested at desktop and phone width: no JavaScript or console errors, no failed requests, no 404s, no horizontal overflow, no broken
+    images, 432 internal links ok, sitemap and hreflang ok, structured data valid, 29 of 33 external links answer (LinkedIn, GitHub and the DOI redirect block
+    automated checks but are fine in a browser). Accessibility fixes: field labels in the calculator and the contact form, accessible names for the logo and the mail icon, unique SVG ids.
+  - Content check against www.nutrisen.eu: the live site is unchanged since the mirror. All differences are the intended ones (new split hero, claims "up to 30% / 90 EUR per ha",
+    no extra revenue, 2025 to 2026 prices, three team members, info@nutrisen.eu, typo fixes, "Get in touch" instead of the booking calendar).
+  - The old contact form needed the WordPress backend (`/wp-admin/admin-ajax.php`) and cannot work on static hosting. `assets/contact.js` replaces it and posts to
+    `contact.php` (PHP, sends one e-mail to info@nutrisen.eu, stores nothing, honeypot and 3-second check against bots, no captcha). On a host without PHP, such as GitHub Pages, the visitor sees
+    a message with the e-mail address. Tested with PHP 8.3 and a mail sink in English and German. `tools/contact_form.py` applies it in the build.
+  - `DEPLOY-IONOS.md` is the step-by-step guide for the move to IONOS. `tools/package.py` builds the upload ZIP. `.htaccess` contains the HTTPS and www redirects as a commented block for the go-live.
+
 - **Fertilizer calculator alignment (2026-11-03):** on desktop (901 px and wider) the two columns share one row grid (CSS subgrid, `assets/fcalc.css`), so the
   headers, the three applications, the amount and cost lines and the totals sit at the same height on both sides, whatever the length of the price notes.
   On narrow screens the columns are stacked as before. Run `tools/cachebust.py` after changing the file.
@@ -216,6 +226,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `seo.py`, `semantic.py`, `cachebust.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `contact_form.py`, `seo.py`, `semantic.py`, `cachebust.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
 `usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`. `i18n.py` refuses to run twice on the same files.
