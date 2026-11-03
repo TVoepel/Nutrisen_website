@@ -165,6 +165,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
     paragraph) instead of collapsed, since readers skip collapsed content. Checked with Mozilla Readability: 89 to 100% of the text of every page
     is extracted, the rest are buttons. Safari's own Reader could not be tested here.
 
+- **Hero glass boxes (2026-11-03):** the two labels above the headlines have the same width and height, and the figure boxes (15% / 10% and Lactate / Creatinine) are the same size on both sides.
 - **Cache busting (2026-11-03):** `tools/cachebust.py` (last step) adds `?v=<hash>` to every `assets/*.css` and `assets/*.js` reference. The hosting caches
   these files for a long time (GitHub Pages 10 minutes, the `.htaccess` for IONOS one month), so without it visitors can keep seeing an old style
   sheet after an update. Run it again after every change to a CSS or JS file in `assets/`. The home buttons no longer move on hover either.

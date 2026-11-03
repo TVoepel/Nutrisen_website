@@ -39,6 +39,8 @@
     .ns-inner{grid-row:2/-1;display:grid;grid-template-rows:subgrid;justify-items:start;align-items:start}
     .ns-inner>*{max-width:100%}
     .ns-inner>.ns-stats,.ns-inner>.ns-cta{justify-self:stretch}
+    .ns-inner>.ns-stats{align-self:stretch}
+    .ns-inner>.ns-tag{min-width:19.5em;text-align:center}
   }
 }
 @media (max-width:860px){
