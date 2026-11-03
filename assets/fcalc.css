@@ -17,6 +17,16 @@
 .ns-fc-tip{margin-top:16px;padding:12px 14px;border-left:4px solid var(--blue);background:#eef3fa;border-radius:8px;font-size:14px;line-height:1.5}
 .ns-fc-ex{display:inline-block;margin-top:10px;padding:5px 12px;border-radius:99px;background:#fff6d6;color:#6b5200;font-size:13px;font-weight:500}
 .ns-fc-cmp{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+/* Desktop: both columns share one row grid, so every application, the amount and cost line and the totals sit at the same height on both sides. */
+@media (min-width:901px){
+  @supports (grid-template-rows:subgrid){
+    .ns-fc-cmp{row-gap:0}
+    .ns-fc-sc{display:grid;grid-column:auto;grid-row:1/span 14;grid-template-rows:subgrid;grid-template-columns:minmax(0,1fr)}
+    .ns-fc-ev{display:grid;grid-row:span 4;grid-template-rows:subgrid;grid-template-columns:minmax(0,1fr)}
+    .ns-fc-ev>*{min-width:0}
+  }
+}
+
 .ns-fc-sc{background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(15,42,94,.12);overflow:hidden}
 .ns-fc-sh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 20px;color:#fff;font-size:19px;font-weight:600;background:linear-gradient(135deg,#0f2a5e,#1f4e9c)}
 .ns-fc-sc--live .ns-fc-sh{background:linear-gradient(135deg,#02733e,#06b262)}
