@@ -171,6 +171,9 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   All fields of the calculator (country, area, fertilizer, price, N content, target) have the same fixed height of 46 px. The selects use their own arrow
   (`appearance:none`), because Safari draws native selects with a different height than text inputs.
 
+- **Europe figures on the Agriculture page (2026-11-03):** the three boxes ("2 Million tons of fertilizers", "2 Billion €", "20 Million tons of CO2") keep each number on one
+  line, with one common font size that scales with the width of the box (`.nb-stat` in `assets/brand.css`, container query units), and the labels start at the same height.
+
 - **Hero glass boxes (2026-11-03):** the two labels above the headlines have the same width and height, and the figure boxes (15% / 10% and Lactate / Creatinine) are the same size on both sides.
 - **Cache busting (2026-11-03):** `tools/cachebust.py` (last step) adds `?v=<hash>` to every `assets/*.css` and `assets/*.js` reference. The hosting caches
   these files for a long time (GitHub Pages 10 minutes, the `.htaccess` for IONOS one month), so without it visitors can keep seeing an old style
