@@ -52,7 +52,14 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
-- **Medical: link to the Science Advances article (2026-11-17):** under the molecule pipeline (Lactate TRL 5, Creatinine TRL 3, Cholesterol TRL 2)
+- **TRL levels of the medical sensors (2026-11-17):** corrected to the results of Zhang et al., Science Advances 11(37): eadw6133 (2025),
+  full text on Europe PMC (PMC12429024). Lactate and creatinine were shown there on single-use, self-filling screen-printed test strips in
+  phosphate buffer (0.5 to 15 mM), with storage stability of under 5 days (lactate) and at least 8 days (creatinine); only glucose was tested
+  in human blood. That is "technology validated in the lab", **TRL 4**, for both (before: lactate TRL 5 "ready to be deployed", creatinine
+  TRL 3 "experimental PoC"). Cholesterol is not part of the paper and stays at TRL 2. Changed on the Medical page, the home hero, the blue
+  closing section, "At a glance", the blog article and in the build scripts, English and German.
+
+- **Medical: link to the Science Advances article (2026-11-17):** under the molecule pipeline (Lactate, Creatinine, Cholesterol)
   a line "Research behind the sensors: New in Science Advances: …" / "Forschung hinter den Sensoren: …" links the blog article
   `/blog/oxygen-scavenger-science-advances/`. Source text in `tools/restyle.py`, German in `tools/i18n_strings.py`.
 

@@ -73,7 +73,7 @@ def medical():
     cards = [('Get lab precision', 'Our biosensor platform can calibrate your device with high precision.'),
              ('Stay ahead', 'Digitalization is only powerful with good data. We can be your new USP.'),
              ('Innovate. Really.', 'The combination of tools is the secret for exceptional results.')]
-    mols = [('Lactate', 'READY TO BE DEPLOYED', '(TRL 5)', 5), ('Creatinine', 'EXPERIMENTAL PoC', '(TRL 3)', 3), ('Cholesterol', 'CONCEPTUAL PHASE', '(TRL 2)', 2)]
+    mols = [('Lactate', 'VALIDATED IN THE LAB', '(TRL 4)', 4), ('Creatinine', 'VALIDATED IN THE LAB', '(TRL 4)', 4), ('Cholesterol', 'CONCEPTUAL PHASE', '(TRL 2)', 2)]
     body = hero(t, p, ('e4fbeee7', 'pg-medical'), 'Medical', E('Biosensors for boosting digital health'),
                 '<p class="nb-lead">%s</p>' % E('A sensor platform for every medical device.'), btn(BOOK, 'Get in touch'))
     body += sec('<h2 class="nb-h2">%s</h2><div class="nb-grid">%s</div>' % (E('Advance digitalization with better DATA'),

@@ -64,7 +64,7 @@ KEEP = {
     'Tobias Vöpel', 'Débora Moretti', 'Alaa Oughli', 'Nicolas Plumeré', 'co-CEO', 'CTO', 'CSO',
     'Lactate', 'Name', 'PoC LiveSEN', 'PoC eConfidence', 'EXIST Research Transfer', 'info@nutrisen.eu',
     'Bio-Security, Bönen.', 'Forum Moderne Landwirtschaft, Berlin.', 'Plan B Competition, Straubing.',
-    'Foto: Food Hub NRW', '(TRL 5)', '(TRL 3)', '(TRL 2)', 'TRL', 'Telefon:',
+    'Foto: Food Hub NRW', '(TRL 4)', '(TRL 2)', 'TRL', 'Telefon:',
 }
 
 # ---------------------------------------------------------------- English -> German (content pages)
@@ -89,9 +89,8 @@ DE.update({
     'Direct molecular sensing for enabling digital health': 'Direkte Molekülmessung für die digitale Gesundheit',
     'We build electrochemical biosensors that measure molecules in body fluids with high precision. Your device, with better data.':
         'Wir entwickeln elektrochemische Biosensoren, die Moleküle in Körperflüssigkeiten hochpräzise messen. Ihr Gerät, mit besseren Daten.',
-    'ready to be deployed (TRL 5)': 'einsatzbereit (TRL 5)',
+    'validated in the lab (TRL 4)': 'im Labor validiert (TRL 4)',
     'Creatinine': 'Kreatinin',
-    'experimental PoC (TRL 3)': 'experimentelles Proof of Concept (TRL 3)',
     'Lactate': 'Laktat',
     'Get in touch': 'Kontakt aufnehmen',
     'Explore the platform': 'Plattform entdecken',
@@ -135,8 +134,7 @@ DE.update({
     'The combination of tools is the secret for exceptional results.':
         'Die Kombination der Werkzeuge ist das Geheimnis außergewöhnlicher Ergebnisse.',
     'Overview of molecules in the pipeline': 'Übersicht der Moleküle in der Pipeline',
-    'READY TO BE DEPLOYED': 'EINSATZBEREIT',
-    'EXPERIMENTAL PoC': 'EXPERIMENTELLES PoC',
+    'VALIDATED IN THE LAB': 'IM LABOR VALIDIERT',
     'Cholesterol': 'Cholesterin',
     'CONCEPTUAL PHASE': 'KONZEPTPHASE',
     'We are all about R&D': 'Bei uns dreht sich alles um F&E',
