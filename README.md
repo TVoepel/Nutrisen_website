@@ -52,6 +52,12 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **"About us" in the menu (2026-11-17):** the page `/agriculture/from-lab-to-field/` ("About us" / "Über uns") is now in the main menu of every page,
+  after "At a glance", in the desktop, mobile and footer menus. Added by `tools/add_about_nav.py` (run after `add_blog.py` and `i18n.py`).
+  The table at the top of this file still says the page is not linked from any menu; that no longer applies.
+- **Fertilizer calculator sources (2026-11-17):** the sources line under the calculator now also links the blog article
+  "Nutrient prices: why the EU reports them and how to use them" / "Nährstoffpreise: Warum die EU sie meldet und wie Sie sie nutzen".
+
 - **Design system from the pitch decks on the home page (2026-11-17):** the home page (EN and DE) now uses the same visual language as the
   NutriSen pitch decks. The source of the system is in `design-system/` (`README.md` with the rules, `Deutsch.md` for German material,
   `tokens.json` with colours, type, spacing and radii); it is not uploaded to the server.
@@ -245,6 +251,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `contact_form.py`, `seo.py`, `semantic.py`, `apply_design_system.py`, `cachebust.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `contact_form.py`, `add_about_nav.py`, `seo.py`, `semantic.py`, `apply_design_system.py`, `cachebust.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
 `usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`, `ds-home.css` and the folder `fonts/`. `i18n.py` refuses to run twice on the same files.

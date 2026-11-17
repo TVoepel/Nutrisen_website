@@ -266,6 +266,8 @@ DE.update({
     'Suggested fertilizer prices come, where shown, from the Eurostat dataset apri_aip_ft “Purchase prices for fertilisers” (annual average 2025, per tonne of nutrient, marked provisional by Eurostat). Values that differ strongly from the EU median are not used. The disclaimer above applies accordingly.':
         'Vorgeschlagene Düngerpreise stammen, soweit angezeigt, aus dem Eurostat-Datensatz apri_aip_ft „Purchase prices for fertilisers“ (Jahresdurchschnitt 2025, je Tonne Nährstoff, von Eurostat als vorläufig gekennzeichnet). Werte, die stark vom EU-Median abweichen, werden nicht verwendet. Der obige Haftungsausschluss gilt entsprechend.',
     'Sources:': 'Quellen:',
+    '· Background:': '· Hintergrund:',
+    'Nutrient prices: why the EU reports them and how to use them': 'Nährstoffpreise: Warum die EU sie meldet und wie Sie sie nutzen',
     'EU Agri-food data portal': 'Agri-Food Data Portal der EU',
     # --- calculator
     'What could NutriSen save on your farm?': 'Was kann NutriSen auf Ihrem Betrieb einsparen?',
