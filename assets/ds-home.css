@@ -2,20 +2,9 @@
    Same tokens as the pitch decks (design-system/tokens.json): Fira Sans, NutriSen blue #004d9d dominates,
    green #06b262 always points at NutriSen, tinted fills instead of borders, no shadows, no gradients
    (only the soft white fade under the hero photos, as on the title slide).
-   Loaded after home-split.css, brand.css and lang.css; every rule is scoped to body.home. */
+   Loaded after home-split.css, brand.css, lang.css and ds.css; every rule is scoped to body.home. */
 
-@font-face{font-family:"Fira Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/fira-sans-regular.woff2) format("woff2")}
-@font-face{font-family:"Fira Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/fira-sans-bold.woff2) format("woff2")}
-
-:root{
-  --ds-surface:#ffffff;--ds-surface-tint:#eaf2fb;--ds-surface-neutral:#f2f2f2;
-  --ds-ink:#3d3d3d;--ds-ink-muted:#7a7a7a;--ds-heading:#004d9d;
-  --ds-brand-blue:#004d9d;--ds-brand-green:#06b262;--ds-green-text:#048048;
-  --ds-eyebrow:#048048;--ds-on-brand:#ffffff;--ds-rule:#d9d9d9;--ds-neutral-icon:#8c8c8c;--ds-negative:#d64545;
-  --ds-font:"Fira Sans",Arial,sans-serif;
-  --ds-space-1:8px;--ds-space-2:16px;--ds-space-3:20px;--ds-space-4:32px;--ds-space-6:48px;
-  --ds-radius-md:16px;--ds-radius-lg:28px;--ds-radius-pill:9999px;
-  --ds-photo:clamp(240px,27vw,400px)}
+/* Tokens and Fira Sans come from ds.css, which is loaded just before this file. */
 
 /* Fira Sans everywhere on the page, including the WordPress header and footer */
 body.home,body.home *{font-family:var(--ds-font)!important}
@@ -82,22 +71,7 @@ body.home .ns-or{top:var(--ds-photo);width:52px;height:52px;background:var(--ds-
 body.home .ns-trust{background:var(--ds-surface-tint);color:var(--ds-ink);font-size:15px;padding:16px 20px}
 body.home .ns-trust b{color:var(--ds-heading);font-weight:700}
 
-/* ---------- Savings calculator: one tinted panel, the result as a green stat on white ---------- */
-body.home .ns-calc{padding:clamp(48px,7vw,96px) 16px 0;background:var(--ds-surface);color:var(--ds-ink)}
-body.home .ns-calc .ns-calc-card{max-width:1100px;border-radius:var(--ds-radius-lg);background:var(--ds-surface-tint);box-shadow:none;gap:0;padding:clamp(8px,1.2vw,16px)}
-body.home .ns-calc .ns-calc-in{background:none;color:var(--ds-ink);padding:clamp(20px,3.4vw,40px)}
-body.home .ns-calc .ns-calc-in h2{margin:0 0 12px;font-size:clamp(28px,3vw,42px);line-height:1;color:var(--ds-heading)}
-body.home .ns-calc .ns-calc-in p{opacity:1;color:var(--ds-ink);font-size:17px}
-body.home .ns-calc .ns-calc-row{font-weight:700;color:var(--ds-ink)}
-body.home .ns-calc .ns-calc-row output{color:var(--ds-heading);font-size:clamp(34px,3.6vw,52px);letter-spacing:-1px}
-body.home .ns-calc #ns-ha{accent-color:var(--ds-brand-green)}
-body.home .ns-calc .ns-calc-scale{opacity:1;color:var(--ds-ink);font-size:13px}
-body.home .ns-calc .ns-calc-out{background:var(--ds-surface);border-radius:var(--ds-radius-md);padding:clamp(22px,3.4vw,40px)}
-body.home .ns-calc .ns-calc-out b{color:var(--ds-brand-green);font-size:clamp(40px,4.6vw,66px);line-height:.9;letter-spacing:-1px}
-body.home .ns-calc .ns-calc-out b em{color:var(--ds-ink);font-weight:400;letter-spacing:0}
-body.home .ns-calc .ns-calc-out span.l{margin-top:10px;font-size:15px;color:var(--ds-ink)}
-body.home .ns-calc .ns-calc-out small{font-size:13px;color:var(--ds-ink)}
-body.home .ns-calc .ns-calc-more{color:var(--ds-brand-blue)!important;font-weight:700;font-size:15px}
+/* The savings calculator styles are in ds.css (shared with the Agriculture page). */
 
 /* ---------- Awards and team (rebuilt .nb sections) ---------- */
 body.home .nb{background:var(--ds-surface);color:var(--ds-ink);font-family:var(--ds-font)}
@@ -145,3 +119,4 @@ body.home .ds-cta-card .ds-mail:hover{color:var(--ds-green-text)!important}
 @media (prefers-reduced-motion:reduce){body.home .ds-btn,body.home .ns-btn{transition:none}}
 body.home .ns-lang a[aria-current]{color:var(--ds-on-brand)}
 body.home .ns-calc .ns-calc-in .ds-eyebrow{margin:0 0 10px;font-size:clamp(14px,1.2vw,16px);color:var(--ds-eyebrow)}
+body.home .ns-calc{padding-bottom:0}

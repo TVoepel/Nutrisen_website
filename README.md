@@ -64,7 +64,12 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   - Savings calculator: one tinted panel, the result as a big green figure on white. Awards: tinted cards. Team: numbered green circles, name in blue, role in green.
   - Every section title has an UPPERCASE eyebrow, and the page ends with the blue closing section ("Let's plan the 2027 season together" /
     "Planen wir die Saison 2027 gemeinsam") with two numbered cards (farms, medical) and a white contact card. These texts are in `tools/apply_design_system.py`.
-  - The other pages still use `brand.css` (Poppins). To roll the system out to them, move the rules from `ds-home.css` into `brand.css`.
+- **Design system on all pages (2026-11-17):** `assets/ds.css` is linked on every page right after `lang.css` and holds the tokens, Fira Sans
+  and the shared components (`brand.css`, `blog.css`, `usecases.css`, `fcalc.css`, the savings calculator) in the pitch-deck look. Page headers are
+  white content-slide headers (green eyebrow, blue title); pages with a photo show it on the right half with a white fade, like the title slide.
+  Cards are tinted, call-to-action bands are the blue closing slide with a white button, the practice-case bars are green for less and blue for more
+  fertilizer, and the fertilizer calculator shows today's practice in neutral grey and NutriSen in green. The emoji in the calculator headings are removed.
+  The old style sheets stay in place underneath; `ds.css` overrides them. `tools/apply_design_system.py` adds the link to every page.
 
 - **Home hero (2026-11-01):** the two stacked banners are replaced by a full-screen audience split. Farmers get
   "Test your field for free" with the 20% fertilizer saving and up to 10% yield figures from the agriculture page.

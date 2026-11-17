@@ -1,0 +1,252 @@
+/* NutriSen design system for the whole site: the same visual language as the pitch decks (design-system/).
+   Tokens and Fira Sans, then the components of brand.css, blog.css, usecases.css, fcalc.css and lang.css in the new look.
+   Loaded after those files on every page (on the home page before ds-home.css). Equal selectors, later file wins.
+   Rules: blue #004d9d dominates, green only for NutriSen and its results, content on white, tinted cards,
+   no shadows, no borders on cards, no gradients (except the soft white fade over hero photos), no accent stripes. */
+
+@font-face{font-family:"Fira Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/fira-sans-regular.woff2) format("woff2")}
+@font-face{font-family:"Fira Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/fira-sans-bold.woff2) format("woff2")}
+
+:root{
+  --ds-surface:#ffffff;--ds-surface-tint:#eaf2fb;--ds-surface-neutral:#f2f2f2;
+  --ds-ink:#3d3d3d;--ds-ink-muted:#7a7a7a;--ds-heading:#004d9d;
+  --ds-brand-blue:#004d9d;--ds-brand-green:#06b262;--ds-green-text:#048048;
+  --ds-eyebrow:#048048;--ds-on-brand:#ffffff;--ds-rule:#d9d9d9;--ds-neutral-icon:#8c8c8c;--ds-negative:#d64545;
+  --ds-blue-tint:#1a63b0;--ds-blue-eyebrow:#9fd9b9;--ds-blue-hover:#003d7d;--ds-green-hover:#036b3c;
+  --ds-font:"Fira Sans",Arial,sans-serif;
+  --ds-space-1:8px;--ds-space-2:16px;--ds-space-3:20px;--ds-space-4:32px;--ds-space-6:48px;
+  --ds-radius-md:16px;--ds-radius-lg:28px;--ds-radius-pill:9999px;
+  --ds-photo:clamp(240px,27vw,400px)}
+
+/* Fira Sans everywhere, including the WordPress header, menu and footer */
+body,body *{font-family:var(--ds-font)!important}
+body{background:var(--ds-surface);color:var(--ds-ink)}
+
+/* ---------- language switcher ---------- */
+.ns-lang a{border-color:var(--ds-rule);color:var(--ds-ink)}
+.ns-lang a:hover,.ns-lang a:focus-visible{background:var(--ds-surface-tint);box-shadow:0 0 0 2px var(--ds-brand-blue)}
+.ns-lang a[aria-current]{background:var(--ds-brand-blue);border-color:var(--ds-brand-blue);color:var(--ds-on-brand)}
+.ns-legal-note{border-left:0;border-radius:var(--ds-radius-md);background:var(--ds-surface-tint);color:var(--ds-ink)}
+
+/* ---------- shared: page, wrap, headings ---------- */
+.nb,.ns-blog,.ns-uc,.ns-fc{--navy:#004d9d;--blue:#004d9d;--blue2:#004d9d;--green:#06b262;--gdk:#048048;--teal:#004d9d;--ink:#3d3d3d;--mute:#3d3d3d;
+  background:var(--ds-surface);color:var(--ds-ink)}
+.nb-wrap,.ns-blog-wrap,.ns-uc-wrap,.ns-fc-wrap{max-width:1180px}
+
+/* ---------- hero: a content-slide header on white ----------
+   eyebrow (green, UPPERCASE), title in blue, lead in ink. With a photo: the title slide,
+   text on the left half, photo bleeding on the right half with a soft white fade. */
+.nb-hero,.ns-blog-hero,.ns-uc-hero,.ns-fc-hero{background:var(--ds-surface);color:var(--ds-ink);padding:clamp(40px,6vw,88px) 0 clamp(24px,3vw,40px)}
+.nb-hero--sm{padding:clamp(36px,5vw,72px) 0 clamp(16px,2vw,24px)}
+.nb-eyebrow,.ns-blog-eyebrow,.ns-uc-eyebrow,.ns-fc-eyebrow{margin:0 0 12px;font-size:clamp(14px,1.2vw,16px);font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--ds-eyebrow)}
+.nb-hero h1,.ns-blog-hero h1,.ns-uc-hero h1,.ns-fc-hero h1{margin:0;max-width:900px;font-size:clamp(34px,4.6vw,66px);line-height:1;font-weight:700;letter-spacing:-.5px;color:var(--ds-heading)}
+.nb-hero h1 span,.ns-uc-hero h1 span,.ns-fc-hero h1 span{color:var(--ds-brand-green)}
+.nb-lead,.ns-blog-lead,.ns-fc-lead{margin:20px 0 0;max-width:720px;font-size:clamp(18px,1.6vw,22px);line-height:1.45;color:var(--ds-ink)}
+.nb-lead strong,.ns-fc-lead strong{color:var(--ds-heading)}
+.nb-hero--img::before{display:none}
+@media (min-width:861px){
+  .nb-hero--img{min-height:clamp(380px,34vw,520px);display:flex;align-items:center}
+  .nb-hero--img .nb-wrap{width:100%}
+  .nb-hero--img .nb-wrap>*{max-width:min(560px,46%)}
+  .nb-hero--img .nb-hero-bg{left:auto;right:0;width:50%;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%);mask-image:linear-gradient(to right,transparent 0,#000 30%)}
+}
+@media (max-width:860px){
+  .nb-hero--img{padding-top:0}
+  .nb-hero--img .nb-hero-bg{position:relative;inset:auto;z-index:0;display:block;height:clamp(200px,52vw,320px);margin-bottom:-24px;
+    -webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent 100%);mask-image:linear-gradient(to bottom,#000 60%,transparent 100%)}
+}
+
+/* content no longer overlaps the (now white) hero */
+.nb-contact,.nb-doc,.ns-blog-grid,.ns-blog-article,.ns-uc-card,.ns-fc-app,.nb-tl{margin-top:0!important}
+
+/* ---------- buttons and links ---------- */
+.nb-btn,.ns-uc-btn,.ns-fc-btn,.ns-blog-article .ns-blog-cta a.ns-blog-btn,.nb-form .form-button{display:inline-block;padding:15px 28px;border:0;border-radius:var(--ds-radius-md);
+  background:var(--ds-green-text);color:var(--ds-on-brand)!important;font-size:17px;font-weight:700;line-height:1.2;text-decoration:none!important;box-shadow:none;transform:none;transition:background .2s}
+.nb-btn:hover,.nb-btn:focus-visible,.nb-form .form-button:hover{background:var(--ds-green-hover);box-shadow:none;transform:none}
+.nb-btn:focus-visible,.ns-uc-btn:focus-visible,.ns-fc-btn:focus-visible,.nb-link:focus-visible{outline:3px solid var(--ds-brand-blue);outline-offset:3px}
+.nb-btn--blue{background:var(--ds-brand-blue);box-shadow:none}
+.nb-btn--blue:hover{background:var(--ds-blue-hover)}
+.nb-btn--white{background:var(--ds-surface);color:var(--ds-heading)!important;box-shadow:none}
+.nb-link{color:var(--ds-brand-blue)!important;font-weight:700}
+.nb-link--dark{color:var(--ds-brand-blue)!important}
+
+/* ---------- sections, cards, grids ---------- */
+.nb-section{padding:clamp(48px,6vw,88px) 0}
+.nb-section--white{background:var(--ds-surface)}
+.nb-h2{margin:0 0 .4em;font-size:clamp(30px,3.6vw,52px);line-height:1;font-weight:700;letter-spacing:-.5px;color:var(--ds-heading)}
+.nb-center,.nb-h2.nb-center{text-align:left}
+.nb-center .nb-sub{margin-left:0}
+.nb-sub{color:var(--ds-ink);font-size:clamp(17px,1.4vw,20px);line-height:1.45}
+.nb-note{color:var(--ds-ink);font-size:13px}
+.nb-grid{gap:var(--ds-space-3)}
+.nb-card,.nb-section--white .nb-card{border:0;border-radius:var(--ds-radius-md);background:var(--ds-surface-tint);box-shadow:none}
+.nb-card--accent{border-top:0}
+.nb-card h3{color:var(--ds-heading);font-size:clamp(21px,2vw,26px);line-height:1.15}
+.nb-card p{color:var(--ds-ink)}
+
+/* blue band (e.g. the Europe figures): the blue closing-slide theme */
+.nb-section--navy{background:var(--ds-brand-blue);color:var(--ds-on-brand)}
+.nb-section--navy .nb-h2{color:var(--ds-on-brand)}
+.nb-section--navy .nb-sub,.nb-section--navy p{color:var(--ds-on-brand)}
+.nb-stat{border:0;border-radius:var(--ds-radius-md);background:var(--ds-blue-tint)}
+.nb-stat b{color:var(--ds-on-brand)}
+.nb-stat span{color:var(--ds-on-brand);font-weight:400}
+
+/* medical pipeline */
+.nb-mol h3{color:var(--ds-heading)}
+.nb-status{color:var(--ds-green-text);font-weight:700}
+.nb-trl{color:var(--ds-ink)}
+.nb-bar{background:var(--ds-surface)}
+.nb-bar i{background:var(--ds-brand-green)}
+
+/* two columns and media */
+.nb-split img{border-radius:var(--ds-radius-md)}
+.nb-media{border-radius:var(--ds-radius-lg);background:var(--ds-surface-tint);box-shadow:none}
+.nb-cardimg{border-radius:12px;background:var(--ds-surface)}
+
+/* how it works: numbered green circles */
+.nb-step::before{background:var(--ds-brand-green);box-shadow:none;font-size:18px}
+
+/* call-to-action bands: the blue closing slide with a white button */
+.nb-cta,.ns-uc-cta,.ns-fc-cta,.ns-blog-cta{background:var(--ds-brand-blue);color:var(--ds-on-brand)}
+.ns-uc-cta,.ns-fc-cta,.ns-blog-cta{border-radius:var(--ds-radius-lg)}
+.nb-cta h2,.ns-uc-cta h2,.ns-fc-cta h2,.ns-blog-cta h2{color:var(--ds-on-brand);line-height:1.05}
+.nb-cta p,.ns-uc-cta p,.ns-fc-cta p,.ns-blog-cta p{color:var(--ds-on-brand)}
+.nb-cta img{border-radius:var(--ds-radius-md);box-shadow:none}
+.nb-cta .nb-btn,.ns-uc-btn,.ns-fc-btn,.ns-blog-article .ns-blog-cta a.ns-blog-btn{background:var(--ds-surface);color:var(--ds-heading)!important}
+.nb-cta .nb-btn:hover,.ns-uc-btn:hover,.ns-fc-btn:hover,.ns-blog-article .ns-blog-cta a.ns-blog-btn:hover{background:var(--ds-surface-tint)}
+.nb-cta .nb-link,.ns-uc-link{color:var(--ds-on-brand)!important;font-weight:700}
+.nb-cta .nb-btn:focus-visible,.ns-uc-btn:focus-visible,.ns-fc-btn:focus-visible{outline-color:var(--ds-on-brand)}
+
+/* about us timeline */
+.nb-tl-item{border-radius:var(--ds-radius-lg);background:var(--ds-surface-tint);box-shadow:none}
+.nb-year{background:var(--ds-brand-blue);font-weight:700}
+.nb-tl-item h2{color:var(--ds-heading);font-size:clamp(26px,2.8vw,38px);line-height:1.05}
+.nb-tl-item p,.nb-tl-item .nb-funding,.nb-tl-item .nb-credit{color:var(--ds-ink)}
+.nb-tl-item .nb-funding a{color:var(--ds-brand-blue)}
+.nb-tl-media img{border-radius:var(--ds-radius-md)}
+
+/* awards and team */
+.nb-award .nb-award-img{background:var(--ds-surface);margin:12px 12px 0;border-radius:12px}
+.nb-award h3{color:var(--ds-heading)}
+.nb-team h3{color:var(--ds-heading)}
+.nb-role{color:var(--ds-green-text);font-weight:700}
+.nb-chip{background:var(--ds-surface);color:var(--ds-brand-blue)!important}
+.nb-chip:hover,.nb-chip:focus-visible{background:var(--ds-brand-blue);color:var(--ds-on-brand)!important}
+
+/* contact page and form */
+.nb-contact h2{color:var(--ds-heading);line-height:1.05}
+.nb-contact a{color:var(--ds-brand-blue)}
+.nb-form label.form-label{color:var(--ds-ink);font-weight:700}
+.nb-form .form-input{border:1.5px solid var(--ds-rule);border-radius:12px;color:var(--ds-ink)}
+.nb-form .form-input:focus{border-color:var(--ds-brand-blue);box-shadow:0 0 0 3px rgba(0,77,157,.18)}
+.nb-form .form-button{width:100%}
+.nb-form .form-checkbox-label{color:var(--ds-ink)}
+
+/* legal pages: text on white, no floating box */
+.nb-doc{padding:0;border-radius:0;background:none;box-shadow:none}
+.nb-doc h2{color:var(--ds-heading)}
+.nb-doc h3,.nb-doc dt{color:var(--ds-green-text)}
+.nb-doc p{color:var(--ds-ink)}
+.nb-doc .nb-legal-note{border-left:0;border-radius:var(--ds-radius-md);background:var(--ds-surface-tint)}
+
+/* ---------- blog and "at a glance" ---------- */
+.ns-blog-eyebrow,.ns-blog-tag{color:var(--ds-eyebrow)}
+.ns-blog-back{color:var(--ds-brand-blue)!important;font-weight:700;opacity:1}
+.ns-blog-meta{color:var(--ds-ink);opacity:1}
+.ns-blog-card{border-radius:var(--ds-radius-md);background:var(--ds-surface-tint);box-shadow:none;transform:none}
+.ns-blog-card:hover{transform:none;box-shadow:none;background:#dde9f7}
+.ns-blog-card .ns-blog-tag{color:var(--ds-green-text);font-size:14px;font-weight:400;letter-spacing:.1em}
+.ns-blog-card h2 a{color:var(--ds-heading)!important}
+.ns-blog-ex,.ns-blog-card .ns-blog-meta{color:var(--ds-ink)}
+.ns-blog-more{color:var(--ds-brand-blue)!important;font-weight:700}
+.ns-blog-article{padding:0;border-radius:0;background:none;box-shadow:none;color:var(--ds-ink)}
+.ns-blog-article .ns-blog-intro{color:var(--ds-ink);font-weight:400}
+.ns-blog-article h2{color:var(--ds-heading);line-height:1.1}
+.ns-blog-article a{color:var(--ds-brand-blue)}
+.ns-blog-link{border-left:0;border-radius:var(--ds-radius-md);background:var(--ds-surface-tint)}
+.ns-blog-cta{padding:clamp(22px,3vw,34px)}
+.ns-blog-note,.ns-blog-src li{color:var(--ds-ink)}
+.ns-blog-src,.ns-blog-faq{border-top-color:var(--ds-rule)}
+.ns-blog-src h2,.ns-blog-faq h2{color:var(--ds-heading)}
+.ns-blog-q{border:0;border-radius:var(--ds-radius-md);background:var(--ds-surface-tint)}
+.ns-blog-q h3{color:var(--ds-heading);font-weight:700}
+.ns-facts,.ns-facts>div{border-color:var(--ds-rule)}
+.ns-facts dt{color:var(--ds-heading)}
+.ns-facts dd{color:var(--ds-ink)}
+
+/* ---------- Savings calculator (home and Agriculture): one tinted panel, the result as a green stat on white ---------- */
+body .ns-calc{padding:clamp(48px,7vw,96px) 16px;background:var(--ds-surface);color:var(--ds-ink)}
+body .ns-calc .ns-calc-card{max-width:1100px;border-radius:var(--ds-radius-lg);background:var(--ds-surface-tint);box-shadow:none;gap:0;padding:clamp(8px,1.2vw,16px)}
+body .ns-calc .ns-calc-in{background:none;color:var(--ds-ink);padding:clamp(20px,3.4vw,40px)}
+body .ns-calc .ns-calc-in h2{margin:0 0 12px;font-size:clamp(28px,3vw,42px);line-height:1;color:var(--ds-heading)}
+body .ns-calc .ns-calc-in p{opacity:1;color:var(--ds-ink);font-size:17px}
+body .ns-calc .ns-calc-row{font-weight:700;color:var(--ds-ink)}
+body .ns-calc .ns-calc-row output{color:var(--ds-heading);font-size:clamp(34px,3.6vw,52px);letter-spacing:-1px}
+body .ns-calc #ns-ha{accent-color:var(--ds-brand-green)}
+body .ns-calc .ns-calc-scale{opacity:1;color:var(--ds-ink);font-size:13px}
+body .ns-calc .ns-calc-out{background:var(--ds-surface);border-radius:var(--ds-radius-md);padding:clamp(22px,3.4vw,40px)}
+body .ns-calc .ns-calc-out b{color:var(--ds-brand-green);font-size:clamp(40px,4.6vw,66px);line-height:.9;letter-spacing:-1px}
+body .ns-calc .ns-calc-out b em{color:var(--ds-ink);font-weight:400;letter-spacing:0}
+body .ns-calc .ns-calc-out span.l{margin-top:10px;font-size:15px;color:var(--ds-ink)}
+body .ns-calc .ns-calc-out small{font-size:13px;color:var(--ds-ink)}
+body .ns-calc .ns-calc-more{color:var(--ds-brand-blue)!important;font-weight:700;font-size:15px}
+
+body .ns-calc .ns-calc-in .ds-eyebrow{margin:0 0 10px;font-size:clamp(14px,1.2vw,16px);color:var(--ds-eyebrow)}
+body .ns-calc .ns-calc-btn{display:inline-block;padding:15px 28px;border-radius:var(--ds-radius-md);background:var(--ds-green-text);color:var(--ds-on-brand)!important;font-size:17px;font-weight:700;box-shadow:none;transform:none}
+body .ns-calc .ns-calc-btn:hover{background:var(--ds-green-hover);transform:none}
+
+/* ---------- practice cases: stat callouts and the results table (ResultRow) ---------- */
+.ns-uc-hero{padding-bottom:clamp(28px,4vw,48px)}
+.ns-uc-kpis{gap:var(--ds-space-4)}
+.ns-uc-kpis li{padding:0;border:0;border-radius:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.ns-uc-kpis b{white-space:nowrap;font-size:clamp(24px,2.4vw,38px);line-height:.95;letter-spacing:-1px;color:var(--ds-brand-green)}
+.ns-uc-kpis span{margin-top:10px;font-size:15px;color:var(--ds-ink)}
+.ns-uc-card{border-radius:var(--ds-radius-lg);background:var(--ds-surface);box-shadow:none;padding:0}
+.ns-uc-table thead th{font-size:15px;font-weight:400;color:var(--ds-ink);border-bottom:1px solid var(--ds-rule)}
+.ns-uc-table tbody tr+tr th,.ns-uc-table tbody tr+tr td{border-top-color:var(--ds-rule)}
+.ns-uc-table tbody th b{color:var(--ds-heading);font-weight:700}
+.ns-uc-table tbody th span,.ns-uc-within{color:var(--ds-ink)}
+.ns-uc-left{border-right:1px solid var(--ds-neutral-icon)}
+.ns-uc-fill{background:var(--ds-brand-green);font-weight:700}
+.ns-uc-pos .ns-uc-fill{background:var(--ds-brand-blue)}
+.ns-uc-yield{color:var(--ds-ink)}
+.ns-uc-eco{font-weight:700;color:var(--ds-green-text)}
+tr:has(.ns-uc-pos .ns-uc-fill) .ns-uc-eco{color:var(--ds-heading)}
+.ns-uc-foot,.ns-uc-foot+.ns-uc-foot{color:var(--ds-ink)}
+@media (max-width:900px){.ns-uc-table tbody tr{border-top-color:var(--ds-rule)}.ns-uc-table td[data-label]::before{color:var(--ds-ink);font-weight:400}}
+
+/* ---------- fertilizer calculator: today's practice in neutral, NutriSen in green ---------- */
+.ns-fc label{color:var(--ds-ink);font-weight:700}
+.ns-fc select,.ns-fc input{border-color:var(--ds-rule);border-radius:12px;color:var(--ds-ink)}
+.ns-fc select:focus,.ns-fc input:focus{border-color:var(--ds-brand-blue);box-shadow:0 0 0 3px rgba(0,77,157,.18)}
+.ns-fc-card{border-radius:var(--ds-radius-lg);background:var(--ds-surface-tint);box-shadow:none}
+.ns-fc-tip{border-left:0;border-radius:12px;background:var(--ds-surface)}
+.ns-fc-ex{background:var(--ds-surface);color:var(--ds-ink)}
+.ns-fc-sc{border-radius:var(--ds-radius-lg);background:var(--ds-surface-neutral);box-shadow:none}
+.ns-fc-sc--live{background:var(--ds-surface-tint)}
+.ns-fc-sh{background:var(--ds-surface-neutral);color:var(--ds-ink);font-weight:700}
+.ns-fc-sc--live .ns-fc-sh{background:var(--ds-green-text);color:var(--ds-on-brand)}
+.ns-fc-brand{box-shadow:none}
+.ns-fc-copy{color:var(--ds-green-text);font-weight:700;transform:none}
+.ns-fc-copy:hover,.ns-fc-copy:focus-visible{transform:none;background:var(--ds-surface-tint)}
+.ns-fc-ev{background:var(--ds-surface)}
+.ns-fc-et{color:var(--ds-heading)}
+.ns-fc-hint,.ns-fc-out{color:var(--ds-ink)}
+.ns-fc-res{background:var(--ds-ink);color:var(--ds-on-brand)}
+.ns-fc-sc--live .ns-fc-res{background:var(--ds-green-text)}
+.ns-fc-sv{border-radius:var(--ds-radius-lg);background:var(--ds-surface-tint);color:var(--ds-ink)}
+.ns-fc-sv b{color:var(--ds-brand-green);font-size:clamp(36px,5vw,66px);letter-spacing:-1px}
+.ns-fc-sv.neg,.ns-fc-sv.neu{background:var(--ds-surface-neutral);color:var(--ds-ink)}
+.ns-fc-sv.neg b,.ns-fc-sv.neu b{color:var(--ds-heading)}
+.ns-fc-sv h2{color:var(--ds-heading);font-weight:700}
+.ns-fc-dt th{background:var(--ds-surface);color:var(--ds-ink);font-weight:700}
+.ns-fc-dt th,.ns-fc-dt td{border-bottom-color:var(--ds-rule)}
+.ns-fc-dt tr.tot td{background:var(--ds-surface)}
+.ns-fc-pos{color:var(--ds-green-text)}
+.ns-fc-card h2.dh{color:var(--ds-heading)}
+.ns-fc-mkt,.ns-fc-disc{color:var(--ds-ink)}
+
+@media (max-width:860px){.ns-uc-btn,.ns-fc-btn{width:100%;text-align:center}}
+@media (prefers-reduced-motion:reduce){.nb-btn,.ns-uc-btn,.ns-fc-btn{transition:none}}

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Apply the NutriSen design system (the same visual language as the pitch decks) to the home pages.
+"""Apply the NutriSen design system (the same visual language as the pitch decks) to the site.
 
-Adds assets/ds-home.css (tokens, Fira Sans, home styles), an UPPERCASE eyebrow above every section title and the
-blue closing call-to-action section, in English (index.html) and German (de/index.html).
+Every page gets assets/ds.css (tokens, Fira Sans, all shared components in the new look) after lang.css.
+The home pages (index.html, de/index.html) also get assets/ds-home.css, an UPPERCASE eyebrow above every
+section title and the blue closing call-to-action section.
 Idempotent. Run after semantic.py (it needs the <article> wrapper), before cachebust.py:
     python3 tools/apply_design_system.py <site root>
 """
-import os, re, sys
+import glob, os, re, sys
 
 ROOT = sys.argv[1] if len(sys.argv) > 1 else '.'
 
@@ -68,8 +69,8 @@ def apply(path, lang, css):
         return
     s = T[lang]
     # style sheet after lang.css, so it wins over home-split.css and brand.css
-    m = re.search(r'<link rel="stylesheet" href="[^"]*lang\.css[^"]*">', t)
-    assert m, 'lang.css link not found in ' + path
+    m = re.search(r'<link rel="stylesheet" href="[^"]*ds\.css[^"]*">', t)
+    assert m, 'ds.css link not found in ' + path
     t = t[:m.end()] + '\n<link rel="stylesheet" href="%s">' % css + t[m.end():]
     # eyebrows
     n = 0
@@ -84,5 +85,22 @@ def apply(path, lang, css):
     print('%s: applied' % path)
 
 
+def link_site_css():
+    """ds.css right after lang.css on every page (lang.css is on every page)."""
+    n = 0
+    for f in sorted(glob.glob(os.path.join(ROOT, '**', 'index.html'), recursive=True)):
+        rel = os.path.relpath(f, ROOT)
+        if rel.startswith(('wp-content', 'tools', 'assets', 'design-system')): continue
+        t = open(f, encoding='utf-8').read()
+        if re.search(r'assets/ds\.css', t): continue
+        m = re.search(r'<link rel="stylesheet" href="((?:\.\./)*)assets/lang\.css[^"]*">', t)
+        if not m:
+            print('skipped (no lang.css):', rel); continue
+        t = t[:m.end()] + '\n<link rel="stylesheet" href="%sassets/ds.css">' % m.group(1) + t[m.end():]
+        open(f, 'w', encoding='utf-8').write(t); n += 1
+    print('ds.css linked on %d pages' % n)
+
+
+link_site_css()
 apply(os.path.join(ROOT, 'index.html'), 'en', 'assets/ds-home.css')
 apply(os.path.join(ROOT, 'de', 'index.html'), 'de', '../assets/ds-home.css')
