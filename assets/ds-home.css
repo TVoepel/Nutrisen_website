@@ -1,0 +1,147 @@
+/* NutriSen design system on the home page (EN and DE).
+   Same tokens as the pitch decks (design-system/tokens.json): Fira Sans, NutriSen blue #004d9d dominates,
+   green #06b262 always points at NutriSen, tinted fills instead of borders, no shadows, no gradients
+   (only the soft white fade under the hero photos, as on the title slide).
+   Loaded after home-split.css, brand.css and lang.css; every rule is scoped to body.home. */
+
+@font-face{font-family:"Fira Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/fira-sans-regular.woff2) format("woff2")}
+@font-face{font-family:"Fira Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/fira-sans-bold.woff2) format("woff2")}
+
+:root{
+  --ds-surface:#ffffff;--ds-surface-tint:#eaf2fb;--ds-surface-neutral:#f2f2f2;
+  --ds-ink:#3d3d3d;--ds-ink-muted:#7a7a7a;--ds-heading:#004d9d;
+  --ds-brand-blue:#004d9d;--ds-brand-green:#06b262;--ds-green-text:#048048;
+  --ds-eyebrow:#048048;--ds-on-brand:#ffffff;--ds-rule:#d9d9d9;--ds-neutral-icon:#8c8c8c;--ds-negative:#d64545;
+  --ds-font:"Fira Sans",Arial,sans-serif;
+  --ds-space-1:8px;--ds-space-2:16px;--ds-space-3:20px;--ds-space-4:32px;--ds-space-6:48px;
+  --ds-radius-md:16px;--ds-radius-lg:28px;--ds-radius-pill:9999px;
+  --ds-photo:clamp(240px,27vw,400px)}
+
+/* Fira Sans everywhere on the page, including the WordPress header and footer */
+body.home,body.home *{font-family:var(--ds-font)!important}
+body.home{background:var(--ds-surface);color:var(--ds-ink)}
+
+/* shared pieces */
+body.home .ds-eyebrow{margin:0 0 10px;font-size:clamp(14px,1.2vw,16px);line-height:1.2;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--ds-eyebrow)}
+body.home .ds-wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+body.home .ds-btn,body.home .ns-btn,body.home .ns-calc .ns-calc-btn{display:inline-block;padding:15px 28px;border-radius:var(--ds-radius-md);
+  background:var(--ds-green-text);color:var(--ds-on-brand)!important;font-size:17px;font-weight:700;line-height:1.2;text-decoration:none!important;
+  box-shadow:none;transform:none;transition:background .2s}
+body.home .ds-btn:hover,body.home .ns-btn:hover,body.home .ns-calc .ns-calc-btn:hover{background:#036b3c;box-shadow:none;transform:none}
+body.home .ns-panel--med .ns-btn{background:var(--ds-brand-blue)}
+body.home .ns-panel--med .ns-btn:hover{background:#003d7d}
+body.home .ds-btn:focus-visible,body.home .ns-btn:focus-visible,body.home .ns-calc-btn:focus-visible,body.home .ns-more:focus-visible,body.home .ns-calc-more:focus-visible{outline:3px solid var(--ds-brand-blue);outline-offset:3px}
+
+/* language switcher in brand blue */
+body.home .ns-lang a{border-color:var(--ds-rule);color:var(--ds-ink)}
+body.home .ns-lang a:hover,body.home .ns-lang a:focus-visible{background:var(--ds-surface-tint);box-shadow:0 0 0 2px var(--ds-brand-blue)}
+body.home .ns-lang a[aria-current]{background:var(--ds-brand-blue);border-color:var(--ds-brand-blue)}
+
+/* ---------- Hero: two title slides side by side ----------
+   Photo bleeds across the top of each half with a soft white fade, text on white below:
+   eyebrow, headline in blue, lead, two stat callouts (green = NutriSen result, blue = context), call to action. */
+body.home .ns-split{background:var(--ds-surface);color:var(--ds-ink);min-height:0;font-family:var(--ds-font)}
+body.home .ns-panel{display:flex;flex-direction:column;align-items:stretch;background:none}
+body.home .ns-panel::before{content:"";position:relative;inset:auto;z-index:1;order:1;display:block;height:140px;margin-top:-140px;
+  background:linear-gradient(to bottom,rgba(255,255,255,0),#fff);opacity:1}
+body.home .ns-panel--med::before{background:linear-gradient(to bottom,rgba(255,255,255,0),#fff)}
+body.home .ns-bg{position:relative;inset:auto;z-index:0;order:0;display:block;width:100%;height:var(--ds-photo);object-fit:cover}
+body.home .ns-panel--ag .ns-bg{object-position:50% 40%}
+body.home .ns-inner{order:2;position:relative;z-index:2;max-width:620px;margin:-48px auto 0;padding:0 clamp(20px,4vw,64px) clamp(40px,5vw,72px)}
+body.home .ns-tag{display:block;padding:0;border:0;border-radius:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none;
+  font-size:clamp(14px,1.2vw,16px);font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--ds-eyebrow);text-align:left}
+body.home .ns-panel h1,body.home .ns-panel h2{margin:10px 0 16px;font-size:clamp(32px,3.6vw,52px);line-height:1;font-weight:700;letter-spacing:-.5px;color:var(--ds-heading)}
+body.home .ns-lead{margin:0 0 28px;font-size:clamp(17px,1.4vw,20px);line-height:1.45;color:var(--ds-ink)}
+body.home .ns-stats{gap:var(--ds-space-4);margin:0 0 32px}
+body.home .ns-stats li{flex:1 1 150px;padding:0;border:0;border-radius:0;background:none}
+body.home .ns-stats b{font-size:clamp(30px,3.1vw,46px);line-height:.95;font-weight:700;letter-spacing:-1px;color:var(--ds-brand-green)}
+body.home .ns-panel--med .ns-stats b{color:var(--ds-heading)}
+body.home .ns-stats span{margin-top:10px;font-size:15px;line-height:1.4;color:var(--ds-ink)}
+body.home .ns-more{color:var(--ds-brand-blue)!important;font-size:16px;font-weight:700}
+body.home .ns-note{font-size:13px;line-height:1.45;color:var(--ds-ink)}
+body.home .ns-or{top:var(--ds-photo);width:52px;height:52px;background:var(--ds-brand-blue);color:var(--ds-on-brand);font-size:15px;font-weight:700;box-shadow:none}
+@media (min-width:861px){
+  body.home .ns-panel--med{border-left:1px solid var(--ds-rule)}
+  @supports (grid-template-rows:subgrid){
+    body.home .ns-split{grid-template-rows:var(--ds-photo) repeat(6,auto)}
+    body.home .ns-panel{display:grid;grid-template-columns:minmax(0,1fr)}
+    body.home .ns-bg{grid-row:1;grid-column:1;height:100%}
+    body.home .ns-panel::before{grid-row:1;grid-column:1;align-self:end;margin:0}
+    body.home .ns-inner{grid-column:1;margin-top:0;padding-top:clamp(8px,1vw,16px)}
+    body.home .ns-inner>.ns-tag{min-width:0}
+  }
+}
+@media (max-width:860px){
+  body.home .ns-panel{min-height:0;flex:none}
+  body.home .ns-panel--med{border-top:1px solid var(--ds-rule)}
+  body.home{--ds-photo:clamp(200px,52vw,320px)}
+  body.home .ns-inner{margin-top:-12px;padding:0 20px 44px}
+}
+
+/* trust line: tinted band, like a partner tile */
+body.home .ns-trust{background:var(--ds-surface-tint);color:var(--ds-ink);font-size:15px;padding:16px 20px}
+body.home .ns-trust b{color:var(--ds-heading);font-weight:700}
+
+/* ---------- Savings calculator: one tinted panel, the result as a green stat on white ---------- */
+body.home .ns-calc{padding:clamp(48px,7vw,96px) 16px 0;background:var(--ds-surface);color:var(--ds-ink)}
+body.home .ns-calc .ns-calc-card{max-width:1100px;border-radius:var(--ds-radius-lg);background:var(--ds-surface-tint);box-shadow:none;gap:0;padding:clamp(8px,1.2vw,16px)}
+body.home .ns-calc .ns-calc-in{background:none;color:var(--ds-ink);padding:clamp(20px,3.4vw,40px)}
+body.home .ns-calc .ns-calc-in h2{margin:0 0 12px;font-size:clamp(28px,3vw,42px);line-height:1;color:var(--ds-heading)}
+body.home .ns-calc .ns-calc-in p{opacity:1;color:var(--ds-ink);font-size:17px}
+body.home .ns-calc .ns-calc-row{font-weight:700;color:var(--ds-ink)}
+body.home .ns-calc .ns-calc-row output{color:var(--ds-heading);font-size:clamp(34px,3.6vw,52px);letter-spacing:-1px}
+body.home .ns-calc #ns-ha{accent-color:var(--ds-brand-green)}
+body.home .ns-calc .ns-calc-scale{opacity:1;color:var(--ds-ink);font-size:13px}
+body.home .ns-calc .ns-calc-out{background:var(--ds-surface);border-radius:var(--ds-radius-md);padding:clamp(22px,3.4vw,40px)}
+body.home .ns-calc .ns-calc-out b{color:var(--ds-brand-green);font-size:clamp(40px,4.6vw,66px);line-height:.9;letter-spacing:-1px}
+body.home .ns-calc .ns-calc-out b em{color:var(--ds-ink);font-weight:400;letter-spacing:0}
+body.home .ns-calc .ns-calc-out span.l{margin-top:10px;font-size:15px;color:var(--ds-ink)}
+body.home .ns-calc .ns-calc-out small{font-size:13px;color:var(--ds-ink)}
+body.home .ns-calc .ns-calc-more{color:var(--ds-brand-blue)!important;font-weight:700;font-size:15px}
+
+/* ---------- Awards and team (rebuilt .nb sections) ---------- */
+body.home .nb{background:var(--ds-surface);color:var(--ds-ink);font-family:var(--ds-font)}
+body.home .nb-section{padding:clamp(56px,7vw,104px) 0 0}
+body.home .nb-section:last-child{padding-bottom:clamp(56px,7vw,104px)}
+body.home .nb-wrap{max-width:1180px}
+body.home .nb-h2,body.home .nb-h2.nb-center{margin:0 0 .35em;text-align:left;font-size:clamp(32px,3.8vw,56px);line-height:1;letter-spacing:-.5px;color:var(--ds-heading)}
+body.home .nb-sub{color:var(--ds-ink);font-size:clamp(17px,1.4vw,20px);line-height:1.45}
+body.home .nb-grid{gap:var(--ds-space-3)}
+body.home .nb-card,body.home .nb-section--white .nb-card{border:0;box-shadow:none;border-radius:var(--ds-radius-md);background:var(--ds-surface-tint)}
+body.home .nb-award .nb-award-img{background:var(--ds-surface);margin:12px 12px 0;border-radius:12px}
+body.home .nb-award h3{color:var(--ds-heading);font-size:22px;line-height:1.15}
+body.home .nb-card p{color:var(--ds-ink)}
+
+/* team: numbered green circles, name in blue, role in green, as on the team slide */
+body.home .nb-grid:has(.nb-team){counter-reset:ds-team}
+body.home .nb-team,body.home .nb-section--white .nb-team{background:none;border-radius:0;counter-increment:ds-team}
+body.home .nb-team>img{border-radius:var(--ds-radius-md)}
+body.home .nb-team-body{padding:20px 0 0}
+body.home .nb-team h3{display:flex;align-items:center;gap:12px;font-size:clamp(22px,2vw,28px);line-height:1.1;color:var(--ds-heading)}
+body.home .nb-team h3::before{content:counter(ds-team);flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:var(--ds-radius-pill);
+  background:var(--ds-brand-green);color:var(--ds-on-brand);font-size:18px;font-weight:700;letter-spacing:0}
+body.home .nb-role{margin:8px 0 12px 48px;font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--ds-green-text)}
+body.home .nb-team p{color:var(--ds-ink)}
+body.home .nb-chip{background:var(--ds-surface-tint);color:var(--ds-brand-blue)!important}
+body.home .nb-chip:hover,body.home .nb-chip:focus-visible{background:var(--ds-brand-blue);color:var(--ds-on-brand)!important}
+
+/* ---------- Closing call to action: the blue slide ---------- */
+body.home .ds-close{background:var(--ds-brand-blue);color:var(--ds-on-brand);padding:clamp(56px,7vw,104px) 0}
+body.home .ds-close .ds-eyebrow{color:#9fd9b9}
+body.home .ds-close h2{margin:0 0 clamp(28px,3.4vw,48px);font-size:clamp(32px,3.8vw,56px);line-height:1;font-weight:700;letter-spacing:-.5px;color:var(--ds-on-brand)}
+body.home .ds-close-grid{display:grid;gap:var(--ds-space-3);grid-template-columns:1fr 1fr 1.15fr;align-items:stretch}
+body.home .ds-goal{padding:clamp(22px,2.4vw,32px);border-radius:var(--ds-radius-md);background:#1a63b0}
+body.home .ds-goal-head{display:flex;align-items:center;gap:12px;margin:0 0 12px}
+body.home .ds-num{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:var(--ds-radius-pill);background:var(--ds-brand-green);color:var(--ds-on-brand);font-size:18px;font-weight:700}
+body.home .ds-goal h3{margin:0;font-size:clamp(20px,1.8vw,26px);line-height:1.1;font-weight:700;color:var(--ds-on-brand)}
+body.home .ds-goal p{margin:0 0 16px;font-size:16px;line-height:1.45;color:var(--ds-on-brand)}
+body.home .ds-goal a{color:var(--ds-on-brand)!important;font-weight:700;text-decoration:underline!important;text-underline-offset:4px}
+body.home .ds-cta-card{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:clamp(22px,2.6vw,36px);border-radius:var(--ds-radius-lg);background:var(--ds-surface);color:var(--ds-ink)}
+body.home .ds-cta-card p{margin:0;font-size:16px;line-height:1.45;color:var(--ds-ink)}
+body.home .ds-cta-card .ds-mail{font-size:clamp(22px,2vw,28px);font-weight:700;color:var(--ds-heading)!important;text-decoration:none!important;border-bottom:1px solid var(--ds-rule);padding-bottom:12px;align-self:stretch}
+body.home .ds-cta-card .ds-mail:hover{color:var(--ds-green-text)!important}
+@media (max-width:960px){body.home .ds-close-grid{grid-template-columns:1fr}}
+@media (max-width:860px){body.home .ds-btn{width:100%;text-align:center}}
+@media (prefers-reduced-motion:reduce){body.home .ds-btn,body.home .ns-btn{transition:none}}
+body.home .ns-lang a[aria-current]{color:var(--ds-on-brand)}
+body.home .ns-calc .ns-calc-in .ds-eyebrow{margin:0 0 10px;font-size:clamp(14px,1.2vw,16px);color:var(--ds-eyebrow)}

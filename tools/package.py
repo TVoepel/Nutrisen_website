@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Make the upload package for the web hosting: python3 tools/package.py [output.zip]
-Contains exactly what belongs on the server. Left out: tools/, .github/, .git/, README.md, DEPLOY-IONOS.md, .gitignore."""
+Contains exactly what belongs on the server. Left out: tools/, design-system/, .github/, .git/, README.md, DEPLOY-IONOS.md, .gitignore."""
 import os, sys, zipfile
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 OUT = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'nutrisen-site.zip'))
-SKIP_DIRS = {'tools', '.github', '.git', '__pycache__', 'node_modules'}
+SKIP_DIRS = {'tools', 'design-system', '.github', '.git', '__pycache__', 'node_modules'}
 SKIP_FILES = {'README.md', 'DEPLOY-IONOS.md', '.gitignore', os.path.basename(OUT)}
 n = size = 0
 with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:

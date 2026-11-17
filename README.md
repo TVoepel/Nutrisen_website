@@ -52,6 +52,20 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **Design system from the pitch decks on the home page (2026-11-17):** the home page (EN and DE) now uses the same visual language as the
+  NutriSen pitch decks. The source of the system is in `design-system/` (`README.md` with the rules, `Deutsch.md` for German material,
+  `tokens.json` with colours, type, spacing and radii); it is not uploaded to the server.
+  - `assets/ds-home.css` holds the tokens and all home styles, scoped to `body.home`, and is loaded after `home-split.css`, `brand.css` and `lang.css`.
+    Font: Fira Sans, self-hosted in `assets/fonts/` (woff2, Latin subset, no request to Google). Colours: NutriSen blue `#004d9d` for titles and structure,
+    green `#06b262` only for NutriSen and its results, `#048048` for green text and buttons (contrast), tint `#eaf2fb` for cards. No shadows, no borders on cards,
+    no gradients except the soft white fade under the hero photos, as on the title slide.
+  - Hero: each half is built like the title slide: photo across the top with a white fade, eyebrow, blue headline, lead, two big stat callouts
+    (green for the farm figures, blue for the medical ones) and the button. Trust line on the tint colour.
+  - Savings calculator: one tinted panel, the result as a big green figure on white. Awards: tinted cards. Team: numbered green circles, name in blue, role in green.
+  - Every section title has an UPPERCASE eyebrow, and the page ends with the blue closing section ("Let's plan the 2027 season together" /
+    "Planen wir die Saison 2027 gemeinsam") with two numbered cards (farms, medical) and a white contact card. These texts are in `tools/apply_design_system.py`.
+  - The other pages still use `brand.css` (Poppins). To roll the system out to them, move the rules from `ds-home.css` into `brand.css`.
+
 - **Home hero (2026-11-01):** the two stacked banners are replaced by a full-screen audience split. Farmers get
   "Test your field for free" with the 20% fertilizer saving and up to 10% yield figures from the agriculture page.
   Medical-device makers get "Get in touch" (mailto info@nutrisen.eu, the old Outlook booking calendar of livesen.eu was removed) with the lactate and creatinine readiness levels. A strip of
@@ -226,6 +240,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `contact_form.py`, `seo.py`, `semantic.py`, `cachebust.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `contact_form.py`, `seo.py`, `semantic.py`, `apply_design_system.py`, `cachebust.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
-`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`. `i18n.py` refuses to run twice on the same files.
+`usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`, `ds-home.css` and the folder `fonts/`. `i18n.py` refuses to run twice on the same files.
