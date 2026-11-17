@@ -267,6 +267,8 @@ DE.update({
         'Vorgeschlagene Düngerpreise stammen, soweit angezeigt, aus dem Eurostat-Datensatz apri_aip_ft „Purchase prices for fertilisers“ (Jahresdurchschnitt 2025, je Tonne Nährstoff, von Eurostat als vorläufig gekennzeichnet). Werte, die stark vom EU-Median abweichen, werden nicht verwendet. Der obige Haftungsausschluss gilt entsprechend.',
     'Sources:': 'Quellen:',
     '· Background:': '· Hintergrund:',
+    'Research behind the sensors:': 'Forschung hinter den Sensoren:',
+    'New in Science Advances: a universal oxygen scavenger for oxidase-based biosensors': 'Neu in Science Advances: ein universeller Sauerstofffänger für Oxidase-Biosensoren',
     'Nutrient prices: why the EU reports them and how to use them': 'Nährstoffpreise: Warum die EU sie meldet und wie Sie sie nutzen',
     'EU Agri-food data portal': 'Agri-Food Data Portal der EU',
     # --- calculator

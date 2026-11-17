@@ -52,6 +52,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **Medical: link to the Science Advances article (2026-11-17):** under the molecule pipeline (Lactate TRL 5, Creatinine TRL 3, Cholesterol TRL 2)
+  a line "Research behind the sensors: New in Science Advances: …" / "Forschung hinter den Sensoren: …" links the blog article
+  `/blog/oxygen-scavenger-science-advances/`. Source text in `tools/restyle.py`, German in `tools/i18n_strings.py`.
+
 - **"About us" in the menu (2026-11-17):** the page `/agriculture/from-lab-to-field/` ("About us" / "Über uns") is now in the main menu of every page,
   after "At a glance", in the desktop, mobile and footer menus. Added by `tools/add_about_nav.py` (run after `add_blog.py` and `i18n.py`).
   The table at the top of this file still says the page is not linked from any menu; that no longer applies.

@@ -78,8 +78,9 @@ def medical():
                 '<p class="nb-lead">%s</p>' % E('A sensor platform for every medical device.'), btn(BOOK, 'Get in touch'))
     body += sec('<h2 class="nb-h2">%s</h2><div class="nb-grid">%s</div>' % (E('Advance digitalization with better DATA'),
         ''.join('<div class="nb-card nb-card--accent"><h3>%s</h3><p>%s</p></div>' % (E(a), E(b)) for a, b in cards)))
-    body += sec('<h2 class="nb-h2">%s</h2><div class="nb-grid" style="margin-top:28px">%s</div>' % (E('Overview of molecules in the pipeline'),
-        ''.join('<div class="nb-card nb-mol"><h3>%s</h3><p class="nb-status">%s</p><p class="nb-trl">%s</p><div class="nb-bar" aria-hidden="true"><i style="width:%d%%"></i></div></div>' % (E(n), E(s), E(trl), round(v / 9 * 100)) for n, s, trl, v in mols)), 'nb-section--white')
+    body += sec('<h2 class="nb-h2">%s</h2><div class="nb-grid" style="margin-top:28px">%s</div>%s' % (E('Overview of molecules in the pipeline'),
+        ''.join('<div class="nb-card nb-mol"><h3>%s</h3><p class="nb-status">%s</p><p class="nb-trl">%s</p><div class="nb-bar" aria-hidden="true"><i style="width:%d%%"></i></div></div>' % (E(n), E(s), E(trl), round(v / 9 * 100)) for n, s, trl, v in mols),
+        '<p class="nb-note nb-paper">Research behind the sensors: <a href="../blog/oxygen-scavenger-science-advances/">New in Science Advances: a universal oxygen scavenger for oxidase-based biosensors</a></p>'), 'nb-section--white')
     body += sec('<div class="nb-split"><div class="nb-media">%s</div><div><h2 class="nb-h2">%s</h2><p>%s</p><p>%s</p><p>%s</p><div class="nb-actions">%s</div></div></div>' % (
         IMG(t, '57d7a0fb', 'Proprietary biosensor plus your medical device', '(max-width:860px) 90vw, 480px'),
         E('We are all about R&D'), E('We build electrochemical biosensors to measure molecules in body fluids with high precision.'),

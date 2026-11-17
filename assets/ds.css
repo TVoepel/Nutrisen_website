@@ -250,3 +250,5 @@ tr:has(.ns-uc-pos .ns-uc-fill) .ns-uc-eco{color:var(--ds-heading)}
 
 @media (max-width:860px){.ns-uc-btn,.ns-fc-btn{width:100%;text-align:center}}
 @media (prefers-reduced-motion:reduce){.nb-btn,.ns-uc-btn,.ns-fc-btn{transition:none}}
+.nb-note a{color:var(--ds-brand-blue);font-weight:700;text-underline-offset:3px}
+.nb-paper{margin-top:24px;font-size:16px}
