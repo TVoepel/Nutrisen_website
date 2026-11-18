@@ -52,6 +52,12 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **Bright Sky article, crop development (2026-11-18):** the third use no longer calls CERES a "Weihenstephan wheat model". CERES-Wheat was developed
+  by J. T. Ritchie and colleagues at the Blackland Research Center in Temple, Texas (USDA-ARS); the old source (Otter & Bergermeier, GIL vol. 38, 1980s)
+  only describes its structure and applications. It is replaced by Rezaei, Siebert, Hüging, Ewert (2018), Scientific Reports 8: 4891
+  (doi 10.1038/s41598-018-23101-2, Universities of Bonn and Göttingen): winter wheat development in Germany as a temperature sum corrected for day length
+  and vernalisation; modern cultivars need 14 to 18% less temperature sum from emergence to flowering than cultivars of the 1950s and 1960s.
+
 - **TRL levels of the medical sensors (2026-11-17):** corrected to the results of Zhang et al., Science Advances 11(37): eadw6133 (2025),
   full text on Europe PMC (PMC12429024). Lactate and creatinine were shown there on single-use, self-filling screen-printed test strips in
   phosphate buffer (0.5 to 15 mM), with storage stability of under 5 days (lactate) and at least 8 days (creatinine); only glucose was tested
