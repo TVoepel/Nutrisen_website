@@ -52,6 +52,15 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **BBCH article, ceiling vs. forecast (2026-11-18):** "40 units" is now "40 kg N per hectare" (ARVALIS writes "unités", i.e. kg N/ha) in the BBCH and
+  JUBIL articles, and it is described as JUBIL® practice, not French practice in general. The France section now explains the legal frame:
+  the national action programme (arrêté of 19 December 2011, as amended) requires a forecast dose by the COMIFER balance method on every field
+  in the vulnerable zones (73% of the agricultural area, about 255,000 farms since 1 September 2021, French government note of July 2022);
+  the regional programmes (e.g. Occitanie, Nouvelle-Aquitaine) require the applied dose to match the forecast but allow more if justified by a
+  steering tool, a higher nitrogen export/yield or a crop accident. The Germany section adds § 3 (3) DüV (at most 10% more after later
+  circumstances) and § 13a (2) no. 1 DüV (red areas: farm total cut by 20%, exemption at 160/80 kg N). "Ceiling or forecast" is now the first point
+  of the comparison, with a new FAQ entry and six new sources. Reading times updated (BBCH 8 min, Bright Sky 4 min).
+
 - **Bright Sky article, crop development (2026-11-18):** the third use no longer calls CERES a "Weihenstephan wheat model". CERES-Wheat was developed
   by J. T. Ritchie and colleagues at the Blackland Research Center in Temple, Texas (USDA-ARS); the old source (Otter & Bergermeier, GIL vol. 38, 1980s)
   only describes its structure and applications. It is replaced by Rezaei, Siebert, Hüging, Ewert (2018), Scientific Reports 8: 4891
