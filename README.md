@@ -52,6 +52,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **Home hero, medical half (2026-11-18):** glucose is the first of three figures: "Glucose, tested in human blood (TRL 5)" / "Glukose, in menschlichem
+  Blut getestet (TRL 5)", then lactate and creatinine (TRL 4). With three figures the list is one row of three with smaller numbers (`ds-home.css`),
+  two columns below 480 px; "TRL" and the number are joined by a non-breaking space.
+
 - **New team photo on "How does it work" (2026-11-18):** the section "We've got your back" / "Wir stehen hinter Ihnen" shows the three founders on the
   wooden bench. The supplied portrait photo (1412 x 1689) is cropped to the 6:5 frame of the section (heads with some sky to the bench) and saved as
   `assets/team-bench-480.webp`, `-768.webp` and `-1200.webp`. `tools/restyle.py` uses these files instead of the old WordPress image.

@@ -137,6 +137,7 @@ DE.update({
     'VALIDATED IN THE LAB': 'IM LABOR VALIDIERT',
     'TESTED IN HUMAN BLOOD': 'IN MENSCHLICHEM BLUT GETESTET',
     'Glucose': 'Glukose',
+    'tested in human blood (TRL 5)': 'in menschlichem Blut getestet (TRL 5)',
     'Cholesterol': 'Cholesterin',
     'CONCEPTUAL PHASE': 'KONZEPTPHASE',
     'We are all about R&D': 'Bei uns dreht sich alles um F&E',

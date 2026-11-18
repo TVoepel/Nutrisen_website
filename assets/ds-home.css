@@ -131,3 +131,8 @@ body.home .ds-cta-card .ds-mail:hover{color:var(--ds-green-text)!important}
 body.home .ns-lang a[aria-current]{color:var(--ds-on-brand)}
 body.home .ns-calc .ns-calc-in .ds-eyebrow{margin:0 0 10px;font-size:clamp(14px,1.2vw,16px);color:var(--ds-eyebrow)}
 body.home .ns-calc{padding-bottom:0}
+/* three figures (medical half): one row of three, smaller numbers */
+body.home .ns-stats:has(li:nth-child(3)){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--ds-space-3)}
+body.home .ns-stats:has(li:nth-child(3)) b{font-size:clamp(24px,2.3vw,34px);letter-spacing:-.5px}
+body.home .ns-stats:has(li:nth-child(3)) span{font-size:14px}
+@media (max-width:480px){body.home .ns-stats:has(li:nth-child(3)){grid-template-columns:repeat(2,minmax(0,1fr))}}
