@@ -13,5 +13,7 @@ for rel in ('agriculture/test-your-field', 'de/agriculture/test-your-field'):
     t = open(f, encoding='utf-8').read()
     up = '../' * (rel.count('/') + 1)
     new = re.sub(r'<script id="gox-script-0-js" src="[^"]*forms/forms\.js"></script>', '<script id="gox-script-0-js" src="%sassets/contact.js"></script>' % up, t)
+    # the phone link of the original site points to a placeholder number; the visible number is +49 231 13707127
+    new = new.replace('href="tel:001555123456789"', 'href="tel:+4923113707127"')
     if new != t: open(f, 'w', encoding='utf-8').write(new); n += 1
 print('contact_form: %d pages switched to assets/contact.js' % n)

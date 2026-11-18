@@ -53,9 +53,9 @@ def closing(s):
     mail = 'info@nutrisen.eu'
     return ('<section class="ds-close" aria-labelledby="ds-close-h"><div class="ds-wrap">' + eyebrow(s['close_eyebrow']) +
             '<h2 id="ds-close-h">%s</h2><div class="ds-close-grid">' % s['close_title'] +
-            '<div class="ds-goal"><div class="ds-goal-head"><span class="ds-num" aria-hidden="true">1</span><h3>%s</h3></div><p>%s</p><a href="%s">%s</a></div>'
+            '<div class="ds-goal"><h3 class="ds-goal-head"><span class="ds-num" aria-hidden="true">1</span>%s</h3><p>%s</p><a href="%s">%s</a></div>'
             % (s['g1_title'], s['g1_text'], s['g1_href'], s['g1_link']) +
-            '<div class="ds-goal"><div class="ds-goal-head"><span class="ds-num" aria-hidden="true">2</span><h3>%s</h3></div><p>%s</p><a href="%s">%s</a></div>'
+            '<div class="ds-goal"><h3 class="ds-goal-head"><span class="ds-num" aria-hidden="true">2</span>%s</h3><p>%s</p><a href="%s">%s</a></div>'
             % (s['g2_title'], s['g2_text'], s['g2_href'], s['g2_link']) +
             '<div class="ds-cta-card"><a class="ds-mail" href="mailto:%s">%s</a><p>%s</p><a class="ds-btn" href="agriculture/test-your-field/">%s</a></div>'
             % (mail, mail, s['cta_text'], s['cta_btn']) +

@@ -52,6 +52,16 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **Reader mode with the full content (2026-11-18):** Safari Reader and Firefox Reader View (Readability) dropped boxes with a few links
+  and short text: the molecule pipeline on Medical, the calculator result on Home and Agriculture, the intro of the fertilizer calculator,
+  the closing cards on Home and the contact card on "Test your field". `tools/reader_mode.py` (after `apply_design_system.py`, before
+  `cachebust.py`) adds the class `ds-content` to the article and the content boxes (no visual effect), gives the closing cards a heading
+  without an extra wrapper and turns the contact card into a `<section>`. Checked with Mozilla Readability on all 34 pages: 95 to 102% of
+  the text of `<main>` is in the reader view; only button rows, the slider scale and the team's LinkedIn/e-mail links are left out.
+  Safari's own Reader could not be tested here.
+- **Phone link (2026-11-18):** the phone link on "Test your field" pointed to a placeholder number of the original site (`tel:001555123456789`);
+  it now dials the number shown, +49 231 13707127 (`tools/contact_form.py`).
+
 - **No dark mode, light only (2026-11-18):** the site deliberately has no dark mode (same look as the pitch decks). Every page carries
   `<meta name="color-scheme" content="only light">`, and `ds.css` / `ds-home.css` set `color-scheme: only light`, so browsers with an automatic
   dark theme (e.g. Chrome on Android) leave the pages light. Added by `tools/apply_design_system.py`.
@@ -292,6 +302,6 @@ python3 tools/build.py /tmp/nutrisen-work /tmp/nutrisen-out
 ```
 
 Then copy the contents of the output directory over this repository and run, in this order (needs `pip install pillow` and Node.js):
-`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `contact_form.py`, `add_about_nav.py`, `seo.py`, `semantic.py`, `apply_design_system.py`, `cachebust.py` (all in `tools/`, each as
+`prune.py`, `apply_home_split.py`, `add_usecases.py`, `add_calculator.py`, `add_fertilizer_calc.py`, `add_blog.py`, `restyle.py`, `i18n.py`, `optimize.py`, `contact_form.py`, `add_about_nav.py`, `seo.py`, `semantic.py`, `apply_design_system.py`, `reader_mode.py`, `cachebust.py` (all in `tools/`, each as
 `python3 tools/<name>.py .`). Copy the new files into a fresh `assets/` first: `home-split.css`, `lang.css`,
 `usecases.css`, `calc.css`, `calc.js`, `fcalc.css`, `fcalc.js`, `fertilizer-prices.json`, `nutrisen-logo.webp`, `blog.css`, `brand.css`, `og-en.jpg`, `og-de.jpg`, `ds-home.css` and the folder `fonts/`. `i18n.py` refuses to run twice on the same files.

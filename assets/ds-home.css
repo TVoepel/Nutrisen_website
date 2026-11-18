@@ -116,7 +116,7 @@ body.home .ds-close .ds-eyebrow{color:#9fd9b9}
 body.home .ds-close h2{margin:0 0 clamp(28px,3.4vw,48px);font-size:clamp(32px,3.8vw,56px);line-height:1;font-weight:700;letter-spacing:-.5px;color:var(--ds-on-brand)}
 body.home .ds-close-grid{display:grid;gap:var(--ds-space-3);grid-template-columns:1fr 1fr 1.15fr;align-items:stretch}
 body.home .ds-goal{padding:clamp(22px,2.4vw,32px);border-radius:var(--ds-radius-md);background:#1a63b0}
-body.home .ds-goal-head{display:flex;align-items:center;gap:12px;margin:0 0 12px}
+body.home .ds-goal h3.ds-goal-head{display:flex;align-items:center;gap:12px;margin:0 0 12px}
 body.home .ds-num{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:var(--ds-radius-pill);background:var(--ds-brand-green);color:var(--ds-on-brand);font-size:18px;font-weight:700}
 body.home .ds-goal h3{margin:0;font-size:clamp(20px,1.8vw,26px);line-height:1.1;font-weight:700;color:var(--ds-on-brand)}
 body.home .ds-goal p{margin:0 0 16px;font-size:16px;line-height:1.45;color:var(--ds-on-brand)}
