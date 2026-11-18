@@ -86,7 +86,7 @@ DE.update({
         'Kostenloses Pilotprojekt für Betriebe in Bayern. *Berechnet für Weizen, Düngemittelpreise 2025–2026.',
     'or': 'oder',
     'For medical-device makers': 'Für Medizinprodukte-Hersteller',
-    'Direct molecular sensing for enabling digital health': 'Laborgenaue Sensorik für digitale Medizinprodukte',
+    'Laboratory precise sensing for digital health solutions': 'Laborgenaue Sensorik für digitale Medizinprodukte',
     'We build electrochemical biosensors that measure molecules in body fluids with high precision. Your device, with better data.':
         'Wir entwickeln elektrochemische Biosensoren, die Moleküle in Körperflüssigkeiten hochpräzise messen. Ihr Gerät, mit besseren Daten.',
     'validated in the lab (TRL 4)': 'im Labor validiert (TRL 4)',

@@ -37,7 +37,7 @@ html = f'''<section class="ns-split" aria-label="Choose your field">
 <span class="ns-or" aria-hidden="true">or</span>
 <div class="ns-panel ns-panel--med">{bg(MD_SET, MD_H, False)}<div class="ns-inner">
 <span class="ns-tag">For medical-device makers</span>
-<h2>Direct molecular sensing for enabling digital health</h2>
+<h2>Laboratory precise sensing for digital health solutions</h2>
 <p class="ns-lead">We build electrochemical biosensors that measure molecules in body fluids with high precision. Your device, with better data.</p>
 <ul class="ns-stats"><li><b>Glucose</b><span>tested in human blood (TRL&nbsp;5)</span></li><li><b>Lactate</b><span>validated in the lab (TRL&nbsp;4)</span></li><li><b>Creatinine</b><span>validated in the lab (TRL&nbsp;4)</span></li></ul>
 <div class="ns-cta"><a class="ns-btn" href="{BOOK}">Get in touch</a><a class="ns-more" href="medical/">Explore the platform</a></div>
