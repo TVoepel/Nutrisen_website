@@ -58,7 +58,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
   in the vulnerable zones (73% of the agricultural area, about 255,000 farms since 1 September 2021, French government note of July 2022);
   the regional programmes (e.g. Occitanie, Nouvelle-Aquitaine) require the applied dose to match the forecast but allow more if justified by a
   steering tool, a higher nitrogen export/yield or a crop accident. The Germany section adds § 3 (3) DüV (at most 10% more after later
-  circumstances) and § 13a (2) no. 1 DüV (red areas: farm total cut by 20%, exemption at 160/80 kg N). "Ceiling or forecast" is now the first point
+  circumstances) and § 13a (2) no. 1 DüV (red areas: farm total cut by 20%, exemption at 160/80 kg N). Update: the red-area rule is described as still in the ordinance but currently inactive (ruling of the Federal Administrative Court of 24 October 2025 on the Bavarian implementing regulation; six states lifted their red areas, the others suspended controls and sanctions; new ordinance expected from 2028, top agrar 14 September 2026). "Ceiling or forecast" is now the first point
   of the comparison, with a new FAQ entry and six new sources. Reading times updated (BBCH 8 min, Bright Sky 4 min).
 
 - **Bright Sky article, crop development (2026-11-18):** the third use no longer calls CERES a "Weihenstephan wheat model". CERES-Wheat was developed
