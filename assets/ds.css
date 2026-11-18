@@ -7,7 +7,7 @@
 @font-face{font-family:"Fira Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/fira-sans-regular.woff2) format("woff2")}
 @font-face{font-family:"Fira Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/fira-sans-bold.woff2) format("woff2")}
 
-:root{
+:root{color-scheme:only light;
   --ds-surface:#ffffff;--ds-surface-tint:#eaf2fb;--ds-surface-neutral:#f2f2f2;
   --ds-ink:#3d3d3d;--ds-ink-muted:#7a7a7a;--ds-heading:#004d9d;
   --ds-brand-blue:#004d9d;--ds-brand-green:#06b262;--ds-green-text:#048048;

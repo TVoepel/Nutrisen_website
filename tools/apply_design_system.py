@@ -85,6 +85,22 @@ def apply(path, lang, css):
     print('%s: applied' % path)
 
 
+def color_scheme_meta():
+    """<meta name="color-scheme" content="only light"> after the viewport meta: the site has no dark mode, so browsers
+    with an automatic dark theme (e.g. Chrome on Android) leave it light."""
+    n = 0
+    for f in sorted(glob.glob(os.path.join(ROOT, '**', 'index.html'), recursive=True)):
+        rel = os.path.relpath(f, ROOT)
+        if rel.startswith(('wp-content', 'tools', 'assets', 'design-system')): continue
+        t = open(f, encoding='utf-8').read()
+        if 'name="color-scheme"' in t: continue
+        m = re.search(r'<meta name="viewport"[^>]*>', t)
+        if not m: print('skipped (no viewport meta):', rel); continue
+        t = t[:m.end()] + '\n<meta name="color-scheme" content="only light">' + t[m.end():]
+        open(f, 'w', encoding='utf-8').write(t); n += 1
+    print('color-scheme meta on %d pages' % n)
+
+
 def link_site_css():
     """ds.css right after lang.css on every page (lang.css is on every page)."""
     n = 0
@@ -102,5 +118,6 @@ def link_site_css():
 
 
 link_site_css()
+color_scheme_meta()
 apply(os.path.join(ROOT, 'index.html'), 'en', 'assets/ds-home.css')
 apply(os.path.join(ROOT, 'de', 'index.html'), 'de', '../assets/ds-home.css')

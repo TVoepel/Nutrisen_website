@@ -52,6 +52,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **No dark mode, light only (2026-11-18):** the site deliberately has no dark mode (same look as the pitch decks). Every page carries
+  `<meta name="color-scheme" content="only light">`, and `ds.css` / `ds-home.css` set `color-scheme: only light`, so browsers with an automatic
+  dark theme (e.g. Chrome on Android) leave the pages light. Added by `tools/apply_design_system.py`.
+
 - **Home hero, medical half (2026-11-18):** glucose is the first of three figures: "Glucose, tested in human blood (TRL 5)" / "Glukose, in menschlichem
   Blut getestet (TRL 5)", then lactate and creatinine (TRL 4). With three figures the list is one row of three with smaller numbers (`ds-home.css`),
   two columns below 480 px; "TRL" and the number are joined by a non-breaking space.
