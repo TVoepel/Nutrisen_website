@@ -52,6 +52,10 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
 
 ## Changes beyond the mirror
 
+- **New team photo on "How does it work" (2026-11-18):** the section "We've got your back" / "Wir stehen hinter Ihnen" shows the three founders on the
+  wooden bench. The supplied portrait photo (1412 x 1689) is cropped to the 6:5 frame of the section (heads with some sky to the bench) and saved as
+  `assets/team-bench-480.webp`, `-768.webp` and `-1200.webp`. `tools/restyle.py` uses these files instead of the old WordPress image.
+
 - **BBCH article, ceiling vs. forecast (2026-11-18):** "40 units" is now "40 kg N per hectare" (ARVALIS writes "unités", i.e. kg N/ha) in the BBCH and
   JUBIL articles, and it is described as JUBIL® practice, not French practice in general. The France section now explains the legal frame:
   the national action programme (arrêté of 19 December 2011, as amended) requires a forecast dose by the COMIFER balance method on every field

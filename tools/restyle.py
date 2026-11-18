@@ -130,7 +130,7 @@ def how():
         '<div class="nb-card nb-step"><div class="nb-cardimg">%s</div><h3>%s</h3>%s</div>' % (
             IMG(t, iid, alt, '(max-width:860px) 90vw, 330px'), E(title), ''.join('<p>%s</p>' % E(x) for x in paras)) for iid, alt, title, paras in steps))
     body += '<section class="nb-cta"><div class="nb-wrap"><div class="nb-split"><div>%s</div><div><h2>%s</h2><p>%s</p><p>%s</p><div class="nb-actions">%s</div></div></div></div></section>' % (
-        IMG(t, '0e0edb61', 'The NutriSen team', '(max-width:860px) 90vw, 520px'), E("We've got your back"),
+        ('<img src="../../assets/team-bench-768.webp" srcset="../../assets/team-bench-480.webp 480w,../../assets/team-bench-768.webp 768w,../../assets/team-bench-1200.webp 1200w" sizes="(max-width:860px) 90vw, 520px" alt="%s" decoding="async" width="1200" height="1002">' % A('The NutriSen team')), E("We've got your back"),
         E('Power up the experience that you have, with the technology we can provide.'), E(S("The climate and environment")),
         btn(L(p, 'agriculture/test-your-field'), 'Test your field', 'nb-btn--white'))
     wr(p, put(t, p, body))
