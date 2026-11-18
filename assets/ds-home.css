@@ -100,15 +100,12 @@ body.home .nb-award .nb-award-img{background:var(--ds-surface);margin:12px 12px 
 body.home .nb-award h3{color:var(--ds-heading);font-size:22px;line-height:1.15}
 body.home .nb-card p{color:var(--ds-ink)}
 
-/* team: numbered green circles, name in blue, role in green, as on the team slide */
-body.home .nb-grid:has(.nb-team){counter-reset:ds-team}
-body.home .nb-team,body.home .nb-section--white .nb-team{background:none;border-radius:0;counter-increment:ds-team}
+/* team: name in blue, role in green (no number circles) */
+body.home .nb-team,body.home .nb-section--white .nb-team{background:none;border-radius:0}
 body.home .nb-team>img{border-radius:var(--ds-radius-md)}
 body.home .nb-team-body{padding:20px 0 0}
-body.home .nb-team h3{display:flex;align-items:center;gap:12px;font-size:clamp(22px,2vw,28px);line-height:1.1;color:var(--ds-heading)}
-body.home .nb-team h3::before{content:counter(ds-team);flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:var(--ds-radius-pill);
-  background:var(--ds-brand-green);color:var(--ds-on-brand);font-size:18px;font-weight:700;letter-spacing:0}
-body.home .nb-role{margin:8px 0 12px 48px;font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--ds-green-text)}
+body.home .nb-team h3{font-size:clamp(22px,2vw,28px);line-height:1.1;color:var(--ds-heading)}
+body.home .nb-role{margin:8px 0 12px;font-size:15px;font-weight:700;letter-spacing:.04em;color:var(--ds-green-text)}
 body.home .nb-team p{color:var(--ds-ink)}
 body.home .nb-chip{background:var(--ds-surface-tint);color:var(--ds-brand-blue)!important}
 body.home .nb-chip:hover,body.home .nb-chip:focus-visible{background:var(--ds-brand-blue);color:var(--ds-on-brand)!important}

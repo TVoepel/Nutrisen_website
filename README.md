@@ -81,7 +81,7 @@ The page `/the-npknowledge/` (placeholder text, not linked anywhere) was removed
     no gradients except the soft white fade under the hero photos, as on the title slide.
   - Hero: each half is built like the title slide: photo across the top with a white fade, eyebrow, blue headline, lead, two big stat callouts
     (green for the farm figures, blue for the medical ones) and the button. Trust line on the tint colour.
-  - Savings calculator: one tinted panel, the result as a big green figure on white. Awards: tinted cards. Team: numbered green circles, name in blue, role in green.
+  - Savings calculator: one tinted panel, the result as a big green figure on white. Awards: tinted cards. Team: name in blue, role in green.
   - Every section title has an UPPERCASE eyebrow, and the page ends with the blue closing section ("Let's plan the 2027 season together" /
     "Planen wir die Saison 2027 gemeinsam") with two numbered cards (farms, medical) and a white contact card. These texts are in `tools/apply_design_system.py`.
 - **Design system on all pages (2026-11-17):** `assets/ds.css` is linked on every page right after `lang.css` and holds the tokens, Fira Sans
